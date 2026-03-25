@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Azaad Saffron</title>
+<link rel="icon" type="image/png" href="azaad_avatar.png">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --crimson:      #7A1515;
+  --crimson-deep: #4A0A0A;
+  --gold:         #C8860A;
+  --cream:        #FAF6EE;
+  --cream-dk:     #EDE4D0;
+  --earth:        #2C1810;
+  --earth-mid:    #5C3A1E;
+  --earth-lt:     #8B6040;
+  --ink:          #1A0E08;
+}
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  min-height: 100vh;
+}
+
+/* ── NAV ── */
+nav {
+  background: var(--crimson-deep);
+  padding: 0 2.5rem;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-brand {
+  font-family: 'Cinzel', serif;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 5px;
+  color: var(--cream);
+  text-decoration: none;
+}
+
+.nav-back {
+  font-family: 'Cinzel', serif;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: rgba(250,246,238,0.55);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+.nav-back:hover { color: var(--cream); }
+
+/* ── CONTENT ── */
+.page-wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 5rem 2rem 6rem;
+}
+
+.page-tag {
+  font-family: 'Cinzel', serif;
+  font-size: 9px;
+  letter-spacing: 5px;
+  color: var(--gold);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+.page-tag::before {
+  content: '';
+  width: 24px;
+  height: 1px;
+  background: var(--gold);
+}
+
+h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 300;
+  color: var(--ink);
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+h1 em { font-style: italic; color: var(--crimson); }
+
+.effective {
+  font-size: 13px;
+  font-style: italic;
+  color: var(--earth-lt);
+  margin-bottom: 3rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(200,134,10,0.2);
+}
+
+.policy-intro {
+  font-size: 17px;
+  font-style: italic;
+  color: var(--earth-mid);
+  line-height: 1.8;
+  margin-bottom: 3rem;
+  padding: 1.5rem 2rem;
+  border-left: 3px solid var(--gold);
+  background: var(--cream-dk);
+  font-weight: 300;
+}
+
+h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 13px;
+  letter-spacing: 3px;
+  color: var(--crimson);
+  text-transform: uppercase;
+  margin: 2.5rem 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(200,134,10,0.15);
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.85;
+  color: var(--earth-mid);
+  margin-bottom: 1.25rem;
+  font-weight: 300;
+}
+
+ul {
+  margin: 0 0 1.25rem 1.5rem;
+}
+
+li {
+  font-size: 16px;
+  line-height: 1.85;
+  color: var(--earth-mid);
+  margin-bottom: 0.5rem;
+  font-weight: 300;
+}
+
+strong {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.ccpa-box {
+  background: var(--cream-dk);
+  border: 1px solid rgba(200,134,10,0.2);
+  padding: 1.5rem 2rem;
+  margin: 2rem 0;
+}
+
+.ccpa-box h3 {
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.contact-block {
+  background: var(--crimson-deep);
+  padding: 2rem;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.contact-block p {
+  color: rgba(237,228,208,0.7);
+  font-size: 15px;
+}
+
+.contact-block a {
+  color: var(--gold);
+  text-decoration: none;
+}
+
+.gold-rule {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  opacity: 0.3;
+  margin: 3rem 0;
+}
+
+/* footer */
+.page-footer {
+  background: var(--ink);
+  padding: 1.5rem 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.footer-copy {
+  font-size: 11px;
+  color: rgba(237,228,208,0.3);
+  font-style: italic;
+}
+.footer-home {
+  font-family: 'Cinzel', serif;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: rgba(200,134,10,0.5);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+.footer-home:hover { color: var(--gold); }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-brand">AZAAD</a>
+  <a href="index.html" class="nav-back">← Back to Site</a>
+</nav>
+
+<div class="page-wrap">
+
+  <div class="page-tag">Legal</div>
+  <h1>Privacy <em>Policy</em></h1>
+  <div class="effective">Effective Date: March 2026 · Applies to azaadsaffron.com</div>
+
+  <div class="policy-intro">
+    Azaad Saffron is built on one principle — you deserve to know exactly what you are getting. That applies to what is in your jar and to how we handle your information. This policy tells you both, plainly.
+  </div>
+
+  <h2>Who We Are</h2>
+  <p>Azaad Saffron operates azaadsaffron.com, a brand website for premium certified saffron based in California. References to "we," "us," or "Azaad" in this policy refer to Azaad Saffron and its owner.</p>
+
+  <h2>Information We Collect</h2>
+  <p>We collect only the minimum information necessary to operate this website and communicate with you. This currently includes:</p>
+  <ul>
+    <li><strong>Contact information</strong> you voluntarily provide — such as your name and email address if you contact us directly via Instagram or any future contact form.</li>
+    <li><strong>Usage data</strong> — standard information collected automatically when you visit our website, including your IP address, browser type, pages visited, and time spent on the site. This is collected through standard web hosting logs.</li>
+    <li><strong>Communications</strong> — if you send us a message via Instagram or email, we retain that correspondence to respond to your enquiry.</li>
+  </ul>
+  <p>We do not currently operate an e-commerce store. We do not collect payment information, shipping addresses, or order history at this time.</p>
+
+  <h2>How We Use Your Information</h2>
+  <p>We use the information we collect exclusively to:</p>
+  <ul>
+    <li>Respond to enquiries and messages you send us directly.</li>
+    <li>Notify you of product launches, farmers market dates, or brand updates if you have opted in to receive communications.</li>
+    <li>Understand how visitors use our website so we can improve it.</li>
+    <li>Comply with applicable legal obligations.</li>
+  </ul>
+  <p>We do not use your information for automated decision-making or profiling. We do not send unsolicited marketing communications.</p>
+
+  <h2>How We Share Your Information</h2>
+  <p>We do not sell, rent, trade, or otherwise share your personal information with third parties for their marketing purposes. Full stop.</p>
+  <p>We may share information only in the following limited circumstances:</p>
+  <ul>
+    <li><strong>Service providers</strong> — companies that help us operate our website, such as our web hosting provider (GitHub) and domain registrar (GoDaddy). These providers access information only as necessary to provide their services and are bound by their own privacy policies.</li>
+    <li><strong>Legal requirements</strong> — if required by law, court order, or government authority, we may disclose information as legally required.</li>
+  </ul>
+
+  <h2>Cookies and Tracking</h2>
+  <p>Our website does not currently use advertising cookies, tracking pixels, or third-party analytics services such as Google Analytics. Standard web server logs may capture basic visit information as described above. We do not use cookies to track your activity across other websites.</p>
+
+  <div class="gold-rule"></div>
+
+  <div class="ccpa-box">
+    <h3>California Residents — Your Rights Under CCPA</h3>
+    <p>If you are a California resident, the California Consumer Privacy Act (CCPA) provides you with specific rights regarding your personal information. These rights include:</p>
+    <ul>
+      <li><strong>The right to know</strong> — you may request disclosure of the categories and specific pieces of personal information we have collected about you, the sources of that information, the purposes for which we use it, and any third parties with whom we share it.</li>
+      <li><strong>The right to delete</strong> — you may request that we delete personal information we have collected from you, subject to certain exceptions permitted by law.</li>
+      <li><strong>The right to opt out of sale</strong> — we do not sell personal information. There is nothing to opt out of.</li>
+      <li><strong>The right to non-discrimination</strong> — we will not discriminate against you for exercising any of your CCPA rights. Exercising these rights will have no effect on the service or experience we provide you.</li>
+      <li><strong>The right to correct</strong> — you may request that we correct inaccurate personal information we hold about you.</li>
+    </ul>
+    <p>To exercise any of these rights, contact us via Instagram at @azaadsaffron. We will respond to verified requests within 45 days as required by California law. We may need to verify your identity before processing your request.</p>
+    <p>California residents may also contact the California Attorney General's office at oag.ca.gov/privacy if you have concerns about our privacy practices.</p>
+  </div>
+
+  <h2>Data Retention</h2>
+  <p>We retain personal information only for as long as necessary to fulfil the purpose for which it was collected, or as required by law. If you contact us and subsequently request deletion of your information, we will remove it from our records within 30 days.</p>
+
+  <h2>Children's Privacy</h2>
+  <p>Our website is not directed at children under the age of 13. We do not knowingly collect personal information from children. If you believe we have inadvertently collected information from a child, please contact us immediately via @azaadsaffron on Instagram and we will delete it promptly.</p>
+
+  <h2>Security</h2>
+  <p>We take reasonable measures to protect the information we hold. Our website is served over HTTPS. We do not store sensitive personal information beyond what is necessary for communications. However, no method of transmission over the internet is completely secure, and we cannot guarantee absolute security.</p>
+
+  <h2>Links to Other Sites</h2>
+  <p>Our website contains a link to our Instagram account (@azaadsaffron). Instagram's privacy practices are governed by Meta's Privacy Policy, which is separate from this document. We encourage you to review it.</p>
+
+  <h2>Changes to This Policy</h2>
+  <p>We may update this Privacy Policy as our business grows and our data practices evolve. When we make material changes, we will update the effective date at the top of this page. We encourage you to review this policy periodically. Continued use of our website following any changes constitutes your acceptance of the revised policy.</p>
+
+  <h2>Contact</h2>
+  <p>For any privacy-related questions, requests to exercise your California rights, or concerns about how we handle your information, please contact us via Instagram at <a href="https://www.instagram.com/azaadsaffron" target="_blank" style="color:var(--crimson);text-decoration:none">@azaadsaffron</a>. We will respond promptly.</p>
+
+  <div class="contact-block">
+    <p>Questions about this policy?<br>
+    Reach us at <a href="https://www.instagram.com/azaadsaffron" target="_blank">@azaadsaffron</a> on Instagram.</p>
+  </div>
+
+</div>
+
+<footer class="page-footer">
+  <div class="footer-copy">© 2026 Azaad Saffron · azaadsaffron.com</div>
+  <a href="index.html" class="footer-home">Return to Site</a>
+</footer>
+
+</body>
+</html>
