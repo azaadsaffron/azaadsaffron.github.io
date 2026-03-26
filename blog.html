@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Azaad Journal — Saffron Blog | Knowledge, Culture & Craft</title>
+<meta name="description" content="The Azaad Journal — a saffron blog covering how to identify real saffron, ISO 3632 Grade I quality standards, and the role of saffron in Persian, Indian, and Middle Eastern cooking.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.azaadsaffron.com/blog.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="The Azaad Journal — Saffron Knowledge & Culture">
+<meta property="og:description" content="Stories about saffron — how to identify the real thing, how to use it, and why it matters.">
+<meta property="og:image" content="https://www.azaadsaffron.com/azaad_avatar.png">
+<link rel="icon" type="image/png" href="azaad_avatar.png">
+<link rel="apple-touch-icon" href="azaad_avatar.png">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Cinzel:wght@400;500;600&family=Noto+Nastaliq+Urdu:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --crimson:      #7A1515;
+  --crimson-deep: #4A0A0A;
+  --gold:         #C8860A;
+  --gold-lt:      #E8A820;
+  --gold-pale:    #F5D98A;
+  --cream:        #FAF6EE;
+  --cream-dk:     #EDE4D0;
+  --parchment:    #D4C4A0;
+  --earth:        #2C1810;
+  --earth-mid:    #5C3A1E;
+  --earth-lt:     #8B6040;
+  --ink:          #1A0E08;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  overflow-x: hidden;
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: rgba(250,246,238,0.96);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(200,134,10,0.15);
+  padding: 0 2.5rem;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-brand {
+  display: flex; flex-direction: column;
+  align-items: flex-start; gap: 1px;
+  text-decoration: none;
+}
+.nav-brand-en {
+  font-family: 'Cinzel', serif;
+  font-size: 18px; font-weight: 600;
+  letter-spacing: 5px; color: var(--crimson); line-height: 1;
+}
+.nav-brand-fa {
+  font-family: 'Noto Nastaliq Urdu', serif;
+  font-size: 11px; color: var(--gold);
+  direction: rtl; line-height: 1;
+}
+.nav-links {
+  display: flex; gap: 2.5rem;
+  list-style: none; align-items: center;
+}
+.nav-links a {
+  font-family: 'Cinzel', serif;
+  font-size: 9px; letter-spacing: 3px;
+  color: var(--earth-mid); text-decoration: none;
+  text-transform: uppercase; transition: color 0.2s;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--crimson); }
+.nav-cta {
+  font-family: 'Cinzel', serif; font-size: 8.5px;
+  letter-spacing: 2px; color: var(--cream) !important;
+  background: var(--crimson); padding: 8px 18px;
+  text-transform: uppercase; text-decoration: none;
+  transition: background 0.2s;
+}
+.nav-cta:hover { background: var(--crimson-deep) !important; }
+
+/* ── BLOG HERO ── */
+.blog-hero {
+  padding: 120px 6rem 5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+}
+.blog-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(60deg, rgba(200,134,10,0.03) 0, rgba(200,134,10,0.03) 1px, transparent 0, transparent 28px),
+    repeating-linear-gradient(-60deg, rgba(200,134,10,0.03) 0, rgba(200,134,10,0.03) 1px, transparent 0, transparent 28px);
+  pointer-events: none;
+}
+.blog-tag {
+  font-family: 'Cinzel', serif;
+  font-size: 9px; letter-spacing: 5px;
+  color: var(--gold); text-transform: uppercase;
+  display: flex; align-items: center; gap: 10px;
+  position: relative; z-index: 1;
+}
+.blog-tag::before {
+  content: ''; width: 24px; height: 1px;
+  background: var(--gold);
+}
+.blog-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(36px, 5vw, 60px);
+  font-weight: 300; line-height: 1.15;
+  color: var(--ink); position: relative; z-index: 1;
+}
+.blog-title em { font-style: italic; color: var(--crimson); }
+.blog-sub {
+  font-size: 17px; font-style: italic;
+  color: var(--earth-mid); line-height: 1.7;
+  font-weight: 300; max-width: 540px;
+  position: relative; z-index: 1;
+}
+
+/* ── GOLD RULE ── */
+.gold-rule {
+  width: 100%; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  opacity: 0.3;
+}
+
+/* ── ARTICLE GRID ── */
+.articles-section {
+  padding: 4rem 6rem 6rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2px;
+  background: rgba(200,134,10,0.1);
+  margin-top: 3rem;
+}
+
+/* featured article - spans full width */
+.article-card {
+  background: var(--cream);
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+.article-card:hover { background: var(--cream-dk); }
+.article-card.featured {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  padding: 3rem 2.5rem;
+}
+
+.article-cat {
+  font-family: 'Cinzel', serif;
+  font-size: 8px; letter-spacing: 4px;
+  color: var(--gold); text-transform: uppercase;
+}
+.article-title {
+  font-size: clamp(20px, 2.5vw, 28px);
+  font-weight: 400; line-height: 1.25;
+  color: var(--ink);
+}
+.article-title em { font-style: italic; color: var(--crimson); }
+.article-excerpt {
+  font-size: 15px; font-style: italic;
+  color: var(--earth-mid); line-height: 1.7;
+  font-weight: 300; flex: 1;
+}
+.article-meta {
+  display: flex; align-items: center;
+  gap: 1rem; flex-wrap: wrap;
+}
+.article-date {
+  font-family: 'Cinzel', serif;
+  font-size: 9px; letter-spacing: 2px;
+  color: var(--earth-lt); text-transform: uppercase;
+}
+.article-read {
+  font-family: 'Cinzel', serif;
+  font-size: 9px; letter-spacing: 2px;
+  color: var(--crimson); text-transform: uppercase;
+  display: flex; align-items: center; gap: 8px;
+  margin-top: auto;
+}
+.article-read::after {
+  content: ''; flex: 0 0 24px; height: 1px;
+  background: var(--crimson); opacity: 0.4;
+}
+.article-card:hover .article-read::after { opacity: 0.8; }
+
+.featured-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.featured-panel {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background: var(--crimson-deep);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+.featured-panel::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    repeating-linear-gradient(45deg, rgba(200,134,10,0.05) 0, rgba(200,134,10,0.05) 1px, transparent 0, transparent 24px),
+    repeating-linear-gradient(-45deg, rgba(200,134,10,0.05) 0, rgba(200,134,10,0.05) 1px, transparent 0, transparent 24px);
+}
+.panel-number {
+  font-family: 'Cinzel', serif;
+  font-size: 72px; font-weight: 600;
+  color: rgba(200,134,10,0.15);
+  line-height: 1; position: absolute;
+  top: 1rem; right: 1.5rem;
+}
+.panel-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px; font-style: italic;
+  color: var(--cream-dk); text-align: center;
+  line-height: 1.6; z-index: 1;
+  max-width: 240px; opacity: 0.75;
+}
+.panel-fa {
+  font-family: 'Noto Nastaliq Urdu', serif;
+  font-size: 22px; color: var(--gold-lt);
+  direction: rtl; z-index: 1; line-height: 1.8;
+}
+
+/* ── FULL ARTICLE VIEW ── */
+.article-full {
+  display: none;
+  padding: 80px 0 0;
+}
+.article-full.active { display: block; }
+
+.article-header {
+  background: var(--crimson-deep);
+  padding: 5rem 6rem 4rem;
+  position: relative;
+  overflow: hidden;
+}
+.article-header::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    repeating-linear-gradient(60deg, rgba(200,134,10,0.05) 0, rgba(200,134,10,0.05) 1px, transparent 0, transparent 32px),
+    repeating-linear-gradient(-60deg, rgba(200,134,10,0.05) 0, rgba(200,134,10,0.05) 1px, transparent 0, transparent 32px);
+}
+.article-header-inner {
+  max-width: 760px;
+  margin: 0 auto;
+  position: relative; z-index: 1;
+}
+.article-header-cat {
+  font-family: 'Cinzel', serif;
+  font-size: 9px; letter-spacing: 5px;
+  color: var(--gold-pale); text-transform: uppercase;
+  opacity: 0.7; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 10px;
+}
+.article-header-cat::before {
+  content: ''; width: 24px; height: 1px;
+  background: var(--gold-pale); opacity: 0.7;
+}
+.article-header-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 300; color: var(--cream);
+  line-height: 1.2; margin-bottom: 1.25rem;
+}
+.article-header-title em { font-style: italic; color: var(--gold-lt); }
+.article-header-sub {
+  font-size: 18px; font-style: italic;
+  color: rgba(237,228,208,0.65);
+  line-height: 1.7; font-weight: 300;
+  max-width: 580px;
+}
+.article-header-meta {
+  margin-top: 2rem;
+  font-family: 'Cinzel', serif;
+  font-size: 9px; letter-spacing: 3px;
+  color: rgba(212,196,160,0.45);
+  text-transform: uppercase;
+}
+
+.article-body {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 4rem 2rem 6rem;
+}
+.article-body p {
+  font-size: 18px; line-height: 1.9;
+  color: var(--earth-mid); font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+.article-body h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 12px; letter-spacing: 4px;
+  color: var(--crimson); text-transform: uppercase;
+  margin: 3rem 0 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(200,134,10,0.15);
+}
+.article-body blockquote {
+  font-size: 20px; font-style: italic;
+  color: var(--crimson); line-height: 1.55;
+  border-left: 3px solid var(--gold);
+  padding: 1rem 1.5rem;
+  margin: 2rem 0;
+  font-weight: 300;
+  background: var(--cream-dk);
+}
+.article-body ul, .article-body ol {
+  margin: 0 0 1.5rem 2rem;
+}
+.article-body li {
+  font-size: 17px; line-height: 1.8;
+  color: var(--earth-mid); font-weight: 300;
+  margin-bottom: 0.5rem;
+}
+.article-body strong { color: var(--ink); font-weight: 500; }
+
+.article-back {
+  display: inline-flex;
+  align-items: center; gap: 8px;
+  font-family: 'Cinzel', serif;
+  font-size: 9px; letter-spacing: 3px;
+  color: var(--gold); text-transform: uppercase;
+  cursor: pointer; margin-bottom: 3rem;
+  background: none; border: none;
+  padding: 0; transition: color 0.2s;
+}
+.article-back::before {
+  content: '←'; font-size: 12px;
+}
+.article-back:hover { color: var(--crimson); }
+
+.article-cta {
+  background: var(--crimson-deep);
+  padding: 2.5rem;
+  margin-top: 3rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.article-cta-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px; font-style: italic;
+  color: var(--cream); line-height: 1.5;
+}
+.article-cta-btn {
+  font-family: 'Cinzel', serif;
+  font-size: 9px; letter-spacing: 3px;
+  background: var(--gold);
+  color: var(--ink); padding: 12px 28px;
+  text-decoration: none; text-transform: uppercase;
+  transition: background 0.2s;
+  display: inline-block;
+}
+.article-cta-btn:hover { background: var(--gold-lt); }
+
+/* ── NEWSLETTER ── */
+.newsletter-section {
+  background: var(--cream-dk);
+  padding: 4rem 6rem;
+  text-align: center;
+}
+.newsletter-inner {
+  max-width: 500px; margin: 0 auto;
+  display: flex; flex-direction: column;
+  align-items: center; gap: 1.25rem;
+}
+.newsletter-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 300; color: var(--ink); line-height: 1.3;
+}
+.newsletter-heading em { font-style: italic; color: var(--crimson); }
+.newsletter-sub {
+  font-size: 15px; font-style: italic;
+  color: var(--earth-mid); line-height: 1.6;
+}
+.newsletter-note {
+  font-size: 12px; color: var(--earth-lt);
+  font-style: italic; opacity: 0.7;
+}
+
+/* ── FOOTER ── */
+footer {
+  background: var(--ink);
+  color: var(--cream);
+  padding: 2rem 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; gap: 1rem;
+}
+.footer-brand-sm {
+  font-family: 'Cinzel', serif;
+  font-size: 14px; font-weight: 500;
+  letter-spacing: 5px; color: var(--cream);
+}
+.footer-links-sm {
+  display: flex; gap: 2rem; flex-wrap: wrap;
+}
+.footer-links-sm a {
+  font-size: 12px; font-style: italic;
+  color: rgba(237,228,208,0.45);
+  text-decoration: none; transition: color 0.2s;
+}
+.footer-links-sm a:hover { color: var(--cream); }
+.footer-copy-sm {
+  font-size: 11px; font-style: italic;
+  color: rgba(237,228,208,0.25);
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  nav { padding: 0 1.5rem; }
+  .nav-links { display: none; }
+  .blog-hero { padding: 100px 2rem 3rem; }
+  .articles-section { padding: 3rem 2rem 4rem; }
+  .article-card.featured { grid-template-columns: 1fr; }
+  .featured-visual { display: none; }
+  .article-header { padding: 4rem 2rem 3rem; }
+  .article-body { padding: 3rem 1.5rem 4rem; }
+  .newsletter-section { padding: 3rem 2rem; }
+  footer { padding: 2rem 1.5rem; flex-direction: column; gap: 1rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav>
+  <a href="index.html" class="nav-brand">
+    <span class="nav-brand-en">AZAAD</span>
+    <span class="nav-brand-fa">آزاد</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#story">Our Story</a></li>
+    <li><a href="index.html#verify">Verify</a></li>
+    <li><a href="index.html#shop">Shop</a></li>
+    <li><a href="blog.html" class="active">Journal</a></li>
+    <li><a href="index.html#find">Find Us</a></li>
+    <li><a href="index.html#shop" class="nav-cta">Order Now</a></li>
+  </ul>
+</nav>
+
+<!-- ── BLOG INDEX ── -->
+<div id="blog-index">
+
+  <div class="blog-hero">
+    <div class="blog-tag">The Azaad Journal</div>
+    <h1 class="blog-title">Stories about saffron.<br><em>No compromise.</em></h1>
+    <p class="blog-sub">Everything you should know about the ingredient your family has cooked with for generations — honestly told.</p>
+  </div>
+
+  <div class="gold-rule"></div>
+
+  <div class="articles-section">
+
+    <div class="articles-grid">
+
+      <!-- Article 1 - Featured -->
+      <div class="article-card featured" onclick="showArticle('article1')">
+        <div style="display:flex;flex-direction:column;gap:1rem;justify-content:center">
+          <div class="article-cat">Know Your Ingredient</div>
+          <div class="article-title">How to tell if your saffron is <em>real</em> — the simple tests every buyer should know</div>
+          <div class="article-excerpt">Most saffron sold in the United States is not what it claims to be. Safflower, synthetic dyes, and turmeric-stained threads are everywhere. Here is how to know the difference before you cook with it.</div>
+          <div class="article-meta">
+            <span class="article-date">March 2026 · 5 min read</span>
+          </div>
+          <div class="article-read">Read Article</div>
+        </div>
+        <div class="featured-visual">
+          <div class="featured-panel">
+            <div class="panel-number">01</div>
+            <svg width="80" height="80" viewBox="0 0 140 140" fill="none">
+              <path d="M70 68 Q58 52 50 30" stroke="#C8860A" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+              <ellipse cx="50" cy="27" rx="5" ry="8.5" fill="#C23232" transform="rotate(-16 50 27)" opacity="0.9"/>
+              <path d="M70 68 Q70 50 70 28" stroke="#C8860A" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+              <ellipse cx="70" cy="25" rx="5" ry="8.5" fill="#8B1515" opacity="0.9"/>
+              <path d="M70 68 Q82 52 90 30" stroke="#C8860A" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+              <ellipse cx="90" cy="27" rx="5" ry="8.5" fill="#C23232" transform="rotate(16 90 27)" opacity="0.9"/>
+              <circle cx="70" cy="73" r="6" fill="#C8860A" opacity="0.8"/>
+              <circle cx="70" cy="73" r="3" fill="#E8A820"/>
+            </svg>
+            <div class="panel-text">"Real saffron releases colour slowly. Slowly is the tell."</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article 2 -->
+      <div class="article-card" onclick="showArticle('article2')">
+        <div class="article-cat">Culture & Tradition</div>
+        <div class="article-title">زعفران — The role of saffron in <em>Persian cuisine</em> and why it is never optional</div>
+        <div class="article-excerpt">From tahdig to sholeh zard, from the sofreh on Nowruz to the chai on a winter morning — saffron in Persian cooking is not a spice. It is an act of care.</div>
+        <div class="article-meta">
+          <span class="article-date">March 2026 · 4 min read</span>
+        </div>
+        <div class="article-read">Read Article</div>
+      </div>
+
+      <!-- Article 3 -->
+      <div class="article-card" onclick="showArticle('article3')">
+        <div class="article-cat">Understanding Quality</div>
+        <div class="article-title">What is ISO 3632 — and why it is the <em>only number that matters</em> when buying saffron</div>
+        <div class="article-excerpt">Every saffron package makes claims. ISO 3632 Grade I is the only claim that requires independent verification. Here is what it means, how it is measured, and why it matters to you.</div>
+        <div class="article-meta">
+          <span class="article-date">March 2026 · 6 min read</span>
+        </div>
+        <div class="article-read">Read Article</div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Newsletter -->
+  <div class="newsletter-section">
+    <div class="newsletter-inner">
+      <div class="blog-tag" style="justify-content:center">Stay Informed</div>
+      <h2 class="newsletter-heading">New articles on saffron,<br><em>culture, and craft.</em></h2>
+      <p class="newsletter-sub">Follow @azaadsaffron on Instagram to be notified when new articles are published.</p>
+      <a href="https://www.instagram.com/azaadsaffron" target="_blank" style="font-family:'Cinzel',serif;font-size:9px;letter-spacing:3px;background:var(--crimson);color:var(--cream);padding:12px 28px;text-decoration:none;text-transform:uppercase;transition:background 0.2s" onmouseover="this.style.background='#4A0A0A'" onmouseout="this.style.background='#7A1515'">Follow on Instagram</a>
+      <p class="newsletter-note">We do not collect email addresses on this page. No forms. No sign-ups.</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- ── ARTICLE 1 ── -->
+<!-- ══════════════════════════════════════════ -->
+<div id="article1" class="article-full">
+
+  <div class="article-header">
+    <div class="article-header-inner">
+      <div class="article-header-cat">Know Your Ingredient</div>
+      <h1 class="article-header-title">How to tell if your saffron is <em>real</em> — the simple tests every buyer should know</h1>
+      <p class="article-header-sub">Most saffron sold in the United States is not what it claims to be. Here is how to know the difference before you cook with it.</p>
+      <div class="article-header-meta">March 2026 · 5 minute read</div>
+    </div>
+  </div>
+
+  <div class="article-body">
+    <button class="article-back" onclick="showIndex()">Back to Journal</button>
+
+    <p>If you have ever opened a jar of saffron, added it to your rice, and wondered why the colour was pale or the aroma was faint — you were probably right to wonder. Saffron fraud is one of the most widespread problems in the global spice trade. Studies suggest that a significant proportion of saffron sold commercially contains adulterants including safflower petals, turmeric-stained threads, synthetic dyes, or simply very poor quality filaments with almost no active compounds.</p>
+
+    <p>The good news is that real saffron — genuine ISO 3632 Grade I saffron — behaves in ways that fakes cannot replicate. And testing it requires nothing more than a glass of cold water and your own senses.</p>
+
+    <h2>The Water Test</h2>
+
+    <p>Drop a few threads into a small glass of cold water and watch carefully. Genuine saffron releases colour very slowly — a deep golden orange that spreads gradually over ten to fifteen minutes. The thread itself should remain red or deep orange. It does not bleach white or lose all its colour into the water.</p>
+
+    <blockquote>Real saffron releases its colour slowly. The pace is the tell.</blockquote>
+
+    <p>A fake — particularly safflower, which is the most common adulterant — will release its colour almost immediately and turn completely white or pale. The water turns a flat yellow rather than the rich golden orange of true crocin. If your threads lose all their colour in under two minutes, they are not saffron.</p>
+
+    <h2>The Smell Test</h2>
+
+    <p>Real saffron has one of the most distinctive aromas in the culinary world — a complex combination of honey, hay, and something faintly metallic. The compound responsible is called safranal. It is unique to Crocus sativus and cannot be replicated synthetically without making the smell obviously chemical.</p>
+
+    <p>Cheap saffron often smells of very little. Fake saffron sometimes smells sweet or floral in a way that feels artificial. If your saffron smells faint, flat, or reminiscent of perfume, treat that as a warning.</p>
+
+    <h2>The Taste Test</h2>
+
+    <p>Place a single thread on your tongue. Real saffron tastes slightly bitter and earthy — almost medicinal. This bitterness comes from picrocrocin, one of the key compounds measured in ISO 3632 testing. Safflower and other adulterants are tasteless or mildly sweet. If your saffron has no perceptible flavour, it is almost certainly not Grade I — and may not be saffron at all.</p>
+
+    <h2>What the Label Tells You — and What It Does Not</h2>
+
+    <p>The words "premium," "pure," "Grade A+," and "authentic" on a saffron label mean nothing legally. Any producer can print these words on any product. The only claim that requires independent verification is ISO 3632 Grade I certification — and even that is meaningful only if it comes with a batch-specific laboratory record, not just a general certification printed on the box.</p>
+
+    <p>What to look for on a label: the ISO 3632 standard cited specifically, a batch or lot number, and ideally a way to verify the findings for that specific batch. A QR code linked to actual laboratory data is the gold standard. A general "certified" stamp with no traceability is not.</p>
+
+    <h2>Why This Matters Beyond the Recipe</h2>
+
+    <p>Saffron fraud is not just a culinary inconvenience. It is a cultural one. The communities that use saffron most — Persian, South Asian, Middle Eastern, and Afghan households — have a deep and long-standing relationship with this ingredient. They know what it should smell like. They know what the rice should look like. When they pay for real saffron and receive a synthetic imitation, they are being deceived about something that carries genuine cultural significance.</p>
+
+    <p>Testing your saffron before you use it costs nothing. Knowing what you are buying — really knowing — is the whole point.</p>
+
+    <div class="article-cta">
+      <div class="article-cta-text">"Every jar of Azaad shows you its independent batch findings before you open it."</div>
+      <a href="index.html#verify" class="article-cta-btn">See How We Verify</a>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- ── ARTICLE 2 ── -->
+<!-- ══════════════════════════════════════════ -->
+<div id="article2" class="article-full">
+
+  <div class="article-header">
+    <div class="article-header-inner">
+      <div class="article-header-cat">Culture & Tradition</div>
+      <h1 class="article-header-title">زعفران — The role of saffron in <em>Persian cuisine</em> and why it is never optional</h1>
+      <p class="article-header-sub">From tahdig to the sofreh on Nowruz — saffron in Persian cooking is not a spice. It is an act of care.</p>
+      <div class="article-header-meta">March 2026 · 4 minute read</div>
+    </div>
+  </div>
+
+  <div class="article-body">
+    <button class="article-back" onclick="showIndex()">Back to Journal</button>
+
+    <p>There are ingredients that season food. And there are ingredients that define it. In Persian cuisine, زعفران — zeafaran — belongs firmly in the second category. It is not added for colour alone, or flavour alone, or aroma alone. It is added because without it, the dish is something else. Something incomplete.</p>
+
+    <p>This is not sentimentality. It is culinary architecture. Persian rice — chelow, polo — is built around the interplay of saffron water and fat, the blooming of threads in warm liquid before they meet the rice. The resulting colour is not decoration. It is evidence of care.</p>
+
+    <h2>Nowruz and the Sofreh</h2>
+
+    <p>On the Persian New Year, the haft-sin table is set with seven symbolic items beginning with the letter sin. Saffron — in the form of sholeh zard, a saffron rice pudding — appears at the table not as one of the seven items but as the offering that accompanies them. It is the food you bring when you want to say something matters.</p>
+
+    <p>Sholeh zard is made with patience. The rice is cooked long and slow. The saffron is bloomed carefully. The rosewater is added at the end. The result is a dish that tastes like it was made by someone who had time for you.</p>
+
+    <blockquote>Saffron in Persian cooking is the difference between feeding someone and caring for them.</blockquote>
+
+    <h2>The Rituals of Preparation</h2>
+
+    <p>Serious Persian cooks do not add saffron directly to a pot. They bloom it. A pinch of threads is ground gently with a small amount of sugar using the back of a spoon, then dissolved in warm — not boiling — water. This process, done correctly, releases the crocin and safranal compounds in a way that direct addition never achieves. The resulting liquid is a deep, vivid gold. A few tablespoons can colour and flavour an entire pot of rice.</p>
+
+    <p>This is why the quality of the saffron matters so profoundly. A thread with low crocin content — low colour strength — produces a pale, insipid liquid regardless of how carefully it is bloomed. The ritual is only as good as the ingredient.</p>
+
+    <h2>A Note on Khoresh and Tea</h2>
+
+    <p>Saffron appears throughout the Persian kitchen beyond rice. Khoresh-e-fesenjaan, the walnut and pomegranate stew, sometimes includes a bloom of saffron to balance its darkness. Bastani — Persian ice cream — gets its colour and its haunting flavour from a generous amount of real saffron. And on winter mornings, a small pot of saffron tea — nothing more than threads steeped in near-boiling water with a little honey — is both medicine and comfort.</p>
+
+    <p>Each of these uses requires the same thing: saffron that actually tastes and smells and colours as it should. There is no substitute. There is no workaround. The ingredient has to be real.</p>
+
+    <div class="article-cta">
+      <div class="article-cta-text">"Grade I saffron. Batch verified. For every dish that deserves the real thing."</div>
+      <a href="index.html#shop" class="article-cta-btn">Shop Azaad Saffron</a>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- ── ARTICLE 3 ── -->
+<!-- ══════════════════════════════════════════ -->
+<div id="article3" class="article-full">
+
+  <div class="article-header">
+    <div class="article-header-inner">
+      <div class="article-header-cat">Understanding Quality</div>
+      <h1 class="article-header-title">What is ISO 3632 — and why it is the <em>only number that matters</em> when buying saffron</h1>
+      <p class="article-header-sub">Every saffron package makes claims. ISO 3632 Grade I is the only one that requires independent verification. Here is what it means.</p>
+      <div class="article-header-meta">March 2026 · 6 minute read</div>
+    </div>
+  </div>
+
+  <div class="article-body">
+    <button class="article-back" onclick="showIndex()">Back to Journal</button>
+
+    <p>Walk into any grocery store that sells saffron and you will find packages using words like premium, authentic, Grade A+, pure, and superior. None of these words have a legal definition. None require testing. None mean anything beyond the marketing intent of whoever printed them.</p>
+
+    <p>ISO 3632 is different. It is an international standard developed by the International Organization for Standardization that establishes measurable, testable criteria for saffron quality. It is the only quality framework in the global saffron trade that requires independent laboratory verification to claim.</p>
+
+    <h2>What ISO 3632 Actually Measures</h2>
+
+    <p>The standard measures three chemical compounds that are unique to genuine Crocus sativus saffron and directly responsible for its colour, flavour, and aroma.</p>
+
+    <p><strong>Crocin</strong> — measured as the colour strength, expressed as a number at 440nm absorbance. This tells you how much colour the saffron will release. Grade I requires a minimum of 200. High-quality saffron regularly exceeds 250. Safflower and synthetic dyes produce an entirely different colour profile that does not meet this standard.</p>
+
+    <p><strong>Picrocrocin</strong> — the flavour compound, measured at 257nm. This is what makes saffron taste bitter and earthy in the way that only saffron does. Grade I minimum is 70. A thread with no perceptible taste likely scores very low on picrocrocin.</p>
+
+    <p><strong>Safranal</strong> — the aroma compound, measured at 330nm. The range for Grade I is 20 to 50. This is the compound responsible for saffron's distinctive hay-and-honey fragrance. It is also the most volatile — saffron stored improperly or for too long loses its safranal first, which is why aroma is often the first quality indicator to degrade.</p>
+
+    <blockquote>ISO 3632 does not measure how premium a brand's packaging looks. It measures what is actually in the thread.</blockquote>
+
+    <h2>The Four Grades</h2>
+
+    <p>ISO 3632 defines four grades — I, II, III, and IV — with Grade I representing the highest quality. Most commodity saffron sold globally falls into Grade III or Grade IV. Grade II is common in mid-range retail. Grade I is what serious cooks, Persian households, and discerning buyers seek out — and it is what every jar of Azaad is verified to meet before it reaches you.</p>
+
+    <h2>Why Batch-Specific Verification Matters</h2>
+
+    <p>A general ISO 3632 certification on a package tells you that at some point, some saffron from that producer met the standard. It does not tell you that the specific threads in the jar you are holding were tested. Saffron quality varies by harvest year, storage conditions, and handling. A producer certified last year may be selling this year's inferior harvest under the same certification.</p>
+
+    <p>Batch-specific verification — where a laboratory analyses a sample from the precise shipment that was packaged — is the only way to know that the threads in your jar, specifically, meet Grade I. This is the standard Azaad is built around. Every batch, documented. Every jar, traceable.</p>
+
+    <h2>How to Use This Information as a Buyer</h2>
+
+    <p>When evaluating any saffron purchase, ask three questions. Does the packaging cite ISO 3632 Grade I specifically — not just "Grade A" or "premium" or "certified"? Is there a batch or lot number that allows traceability? And is there a way to see the laboratory findings for that specific batch — a QR code, a certificate, a verification page?</p>
+
+    <p>If all three answers are yes, you have a product worth buying. If any of them is no, you are taking the seller's word for something that should be verifiable.</p>
+
+    <div class="article-cta">
+      <div class="article-cta-text">"Azaad publishes the independent batch findings for every jar. Scan and see."</div>
+      <a href="index.html#verify" class="article-cta-btn">See Our Batch Findings</a>
+    </div>
+  </div>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-brand-sm">AZAAD</div>
+  <div class="footer-links-sm">
+    <a href="index.html">Home</a>
+    <a href="index.html#story">Our Story</a>
+    <a href="index.html#shop">Shop</a>
+    <a href="https://www.instagram.com/azaadsaffron" target="_blank">@azaadsaffron</a>
+    <a href="privacy.html">Privacy Policy</a>
+  </div>
+  <div class="footer-copy-sm">© 2026 Azaad Saffron</div>
+</footer>
+
+<script>
+function showArticle(id) {
+  document.getElementById('blog-index').style.display = 'none';
+  document.querySelectorAll('.article-full').forEach(a => a.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  window.scrollTo(0, 0);
+}
+function showIndex() {
+  document.getElementById('blog-index').style.display = 'block';
+  document.querySelectorAll('.article-full').forEach(a => a.classList.remove('active'));
+  window.scrollTo(0, 0);
+}
+</script>
+
+</body>
+</html>
