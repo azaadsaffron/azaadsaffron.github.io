@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Batch Verification — Azaad Saffron</title>
+<meta name="description" content="Verify the independent batch findings for your Azaad Saffron jar. Every batch is independently tested and the results are published here.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.azaadsaffron.com/verify.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Cinzel:wght@400;500;600&family=Noto+Nastaliq+Urdu:wght@400&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="azaad_avatar.png">
+<style>
+*, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+:root {
+  --crimson:#7A1515; --crimson-deep:#4A0A0A;
+  --gold:#C8860A; --gold-lt:#E8A820; --gold-pale:#F5D98A;
+  --cream:#FAF6EE; --cream-dk:#EDE4D0; --parchment:#D4C4A0;
+  --earth:#2C1810; --earth-mid:#5C3A1E; --earth-lt:#8B6040;
+  --ink:#1A0E08;
+}
+body { background:var(--cream); color:var(--ink); font-family:'Cormorant Garamond',Georgia,serif; }
+
+nav {
+  background:var(--crimson-deep); padding:0 2.5rem;
+  height:64px; display:flex; align-items:center; justify-content:space-between;
+}
+.nav-brand { font-family:'Cinzel',serif; font-size:18px; font-weight:600; letter-spacing:5px; color:var(--cream); text-decoration:none; }
+.nav-back { font-family:'Cinzel',serif; font-size:9px; letter-spacing:3px; color:rgba(250,246,238,0.55); text-decoration:none; text-transform:uppercase; }
+.nav-back:hover { color:var(--cream); }
+
+.hero {
+  background:var(--crimson-deep); padding:5rem 6rem 4rem;
+  position:relative; overflow:hidden;
+}
+.hero::before {
+  content:''; position:absolute; inset:0;
+  background-image:
+    repeating-linear-gradient(60deg, rgba(200,134,10,0.05) 0, rgba(200,134,10,0.05) 1px, transparent 0, transparent 32px),
+    repeating-linear-gradient(-60deg, rgba(200,134,10,0.05) 0, rgba(200,134,10,0.05) 1px, transparent 0, transparent 32px);
+}
+.hero-inner { max-width:800px; margin:0 auto; position:relative; z-index:1; }
+.hero-tag { font-family:'Cinzel',serif; font-size:9px; letter-spacing:5px; color:var(--gold-pale); text-transform:uppercase; opacity:0.7; margin-bottom:1rem; display:flex; align-items:center; gap:10px; }
+.hero-tag::before { content:''; width:24px; height:1px; background:var(--gold-pale); opacity:0.7; }
+h1 { font-family:'Cormorant Garamond',serif; font-size:clamp(28px,4vw,48px); font-weight:300; color:var(--cream); line-height:1.2; margin-bottom:1rem; }
+h1 em { font-style:italic; color:var(--gold-lt); }
+.hero-sub { font-size:17px; font-style:italic; color:rgba(237,228,208,0.65); line-height:1.7; font-weight:300; max-width:560px; }
+
+.page-body { max-width:860px; margin:0 auto; padding:4rem 2rem 6rem; }
+
+/* batch status card */
+.status-card {
+  border:1px solid rgba(200,134,10,0.3);
+  padding:2.5rem; margin-bottom:3rem;
+  background:var(--cream);
+  position:relative;
+}
+.status-card::before {
+  content:''; position:absolute;
+  top:0; left:0; right:0; height:3px;
+  background:linear-gradient(90deg, var(--crimson), var(--gold), var(--crimson));
+}
+.status-header {
+  display:flex; justify-content:space-between;
+  align-items:flex-start; flex-wrap:wrap; gap:1rem;
+  margin-bottom:2rem; padding-bottom:1.5rem;
+  border-bottom:1px solid rgba(200,134,10,0.15);
+}
+.status-title { font-family:'Cinzel',serif; font-size:12px; letter-spacing:3px; color:var(--crimson); text-transform:uppercase; margin-bottom:4px; }
+.status-batch { font-size:22px; font-weight:400; color:var(--ink); }
+.status-badge {
+  font-family:'Cinzel',serif; font-size:8px; letter-spacing:2px;
+  padding:6px 14px; background:rgba(29,158,117,0.1);
+  border:1px solid rgba(29,158,117,0.4); color:#1D6B4F;
+  text-transform:uppercase; white-space:nowrap;
+}
+
+/* findings grid */
+.findings-grid {
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:2px; background:rgba(200,134,10,0.1); margin-bottom:2rem;
+}
+.finding {
+  background:var(--cream); padding:1.5rem;
+  display:flex; flex-direction:column; gap:6px;
+}
+.finding-n { font-family:'Cinzel',serif; font-size:32px; font-weight:500; color:var(--crimson); line-height:1; }
+.finding-label { font-size:11px; letter-spacing:2px; color:var(--earth-lt); text-transform:uppercase; font-style:italic; }
+.finding-ref { font-size:11px; color:var(--parchment); }
+.finding-bar { height:4px; background:rgba(200,134,10,0.1); margin-top:6px; border-radius:2px; overflow:hidden; }
+.finding-fill { height:100%; background:linear-gradient(90deg,var(--crimson),var(--gold)); border-radius:2px; }
+
+/* additional details */
+.detail-grid {
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:1px; background:rgba(200,134,10,0.1);
+}
+.detail { background:var(--cream-dk); padding:1rem 1.25rem; }
+.detail-label { font-family:'Cinzel',serif; font-size:8px; letter-spacing:2px; color:var(--earth-lt); text-transform:uppercase; margin-bottom:4px; }
+.detail-val { font-size:15px; color:var(--ink); }
+.detail-val.good { color:#1D6B4F; font-weight:500; }
+
+/* what numbers mean */
+.explainer {
+  background:var(--cream-dk); padding:2rem 2.5rem; margin-bottom:2rem;
+}
+.explainer h2 { font-family:'Cinzel',serif; font-size:10px; letter-spacing:4px; color:var(--gold); text-transform:uppercase; margin-bottom:1.25rem; padding-bottom:0.5rem; border-bottom:1px solid rgba(200,134,10,0.2); }
+.explainer-row { display:grid; grid-template-columns:120px 1fr; gap:1rem; margin-bottom:0.75rem; align-items:baseline; }
+.explainer-term { font-family:'Cinzel',serif; font-size:10px; letter-spacing:1px; color:var(--crimson); text-transform:uppercase; }
+.explainer-def { font-size:14px; color:var(--earth-mid); font-style:italic; line-height:1.5; }
+
+/* coming soon state */
+.coming-soon {
+  text-align:center; padding:4rem 2rem;
+  border:1px dashed rgba(200,134,10,0.3);
+  margin-bottom:3rem;
+}
+.cs-icon { font-size:40px; margin-bottom:1.25rem; opacity:0.4; }
+.cs-heading { font-family:'Cinzel',serif; font-size:12px; letter-spacing:4px; color:var(--earth-lt); text-transform:uppercase; margin-bottom:0.75rem; }
+.cs-text { font-size:16px; font-style:italic; color:var(--earth-mid); line-height:1.7; max-width:480px; margin:0 auto; }
+
+.promise-box {
+  background:var(--crimson-deep); padding:2rem 2.5rem; text-align:center;
+}
+.promise-text { font-family:'Cormorant Garamond',serif; font-size:18px; font-style:italic; color:var(--cream-dk); line-height:1.6; margin-bottom:1rem; }
+.promise-link { font-family:'Cinzel',serif; font-size:9px; letter-spacing:3px; color:var(--gold); text-decoration:none; text-transform:uppercase; }
+
+footer {
+  background:var(--ink); padding:1.5rem 2.5rem;
+  display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;
+}
+.fc { font-size:11px; font-style:italic; color:rgba(237,228,208,0.3); }
+.fh { font-family:'Cinzel',serif; font-size:9px; letter-spacing:3px; color:rgba(200,134,10,0.5); text-decoration:none; text-transform:uppercase; }
+.fh:hover { color:var(--gold); }
+
+@media(max-width:700px){
+  .hero { padding:4rem 1.5rem 3rem; }
+  .page-body { padding:3rem 1.5rem 4rem; }
+  nav { padding:0 1.5rem; }
+  .status-card { padding:1.5rem; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-brand">AZAAD</a>
+  <a href="index.html" class="nav-back">← Back to Site</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-tag">Batch Verification</div>
+    <h1>See exactly what is<br><em>in your jar.</em></h1>
+    <p class="hero-sub">Every batch of Azaad Saffron is independently tested before it reaches you. The findings for the current batch are published below. Nothing hidden.</p>
+  </div>
+</div>
+
+<div class="page-body">
+
+  <!-- CURRENT BATCH — will be populated after Juan call confirms supply -->
+  <div class="coming-soon">
+    <div class="cs-icon">◆</div>
+    <div class="cs-heading">Batch Findings — Launching Soon</div>
+    <p class="cs-text">
+      Our first batch is currently being sourced and independently verified. The complete findings — colour strength, flavour depth, and aroma reading — will be published here before any product reaches a customer. Check back soon, or follow <a href="https://www.instagram.com/azaadsaffron" target="_blank" style="color:var(--crimson)">@azaadsaffron</a> for our launch announcement.
+    </p>
+  </div>
+
+  <!-- SAMPLE FORMAT — shown so visitors understand what they will see -->
+  <div style="margin-bottom:1rem">
+    <div style="font-family:'Cinzel',serif;font-size:9px;letter-spacing:4px;color:var(--earth-lt);text-transform:uppercase;opacity:0.6;margin-bottom:1rem">Example — What Every Batch Record Will Show</div>
+  </div>
+
+  <div class="status-card">
+    <div class="status-header">
+      <div>
+        <div class="status-title">Current Batch</div>
+        <div class="status-batch">Batch #AZ-001 · Saffron Threads 2g</div>
+      </div>
+      <div class="status-badge">Grade I Verified</div>
+    </div>
+
+    <div class="findings-grid">
+      <div class="finding">
+        <div class="finding-n">—</div>
+        <div class="finding-label">Colour Strength</div>
+        <div class="finding-ref">Grade I minimum: 200</div>
+        <div class="finding-bar"><div class="finding-fill" style="width:0%"></div></div>
+      </div>
+      <div class="finding">
+        <div class="finding-n">—</div>
+        <div class="finding-label">Flavour Depth</div>
+        <div class="finding-ref">Grade I minimum: 70</div>
+        <div class="finding-bar"><div class="finding-fill" style="width:0%"></div></div>
+      </div>
+      <div class="finding">
+        <div class="finding-n">—</div>
+        <div class="finding-label">Aroma Reading</div>
+        <div class="finding-ref">Grade I range: 20–50</div>
+        <div class="finding-bar"><div class="finding-fill" style="width:0%"></div></div>
+      </div>
+    </div>
+
+    <div class="detail-grid">
+      <div class="detail">
+        <div class="detail-label">Moisture</div>
+        <div class="detail-val">—</div>
+      </div>
+      <div class="detail">
+        <div class="detail-label">Foreign Material</div>
+        <div class="detail-val good">—</div>
+      </div>
+      <div class="detail">
+        <div class="detail-label">Artificial Colorants</div>
+        <div class="detail-val good">—</div>
+      </div>
+      <div class="detail">
+        <div class="detail-label">Test Date</div>
+        <div class="detail-val">—</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- What the numbers mean -->
+  <div class="explainer">
+    <h2>What These Numbers Mean</h2>
+    <div class="explainer-row">
+      <div class="explainer-term">Colour Strength</div>
+      <div class="explainer-def">Measures the crocin content — the compound responsible for saffron's golden colour. The higher the number, the richer the colour in your cooking. Grade I requires a minimum of 200.</div>
+    </div>
+    <div class="explainer-row">
+      <div class="explainer-term">Flavour Depth</div>
+      <div class="explainer-def">Measures picrocrocin — the compound responsible for saffron's distinctive bitter, earthy taste. This is what makes Persian rice taste like Persian rice. Grade I minimum is 70.</div>
+    </div>
+    <div class="explainer-row">
+      <div class="explainer-term">Aroma Reading</div>
+      <div class="explainer-def">Measures safranal — the volatile compound responsible for saffron's unmistakeable fragrance. It is the first quality indicator to degrade with poor storage. Grade I range is 20 to 50.</div>
+    </div>
+    <div class="explainer-row">
+      <div class="explainer-term">Moisture</div>
+      <div class="explainer-def">Saffron should contain less than 12% moisture. Excess moisture accelerates degradation and can indicate improper storage or adulteration with added water weight.</div>
+    </div>
+  </div>
+
+  <div class="promise-box">
+    <p class="promise-text">"Every jar tells you exactly what it holds.<br>This page is how we keep that promise."</p>
+    <a href="index.html" class="promise-link">Return to Azaad Saffron →</a>
+  </div>
+
+</div>
+
+<footer>
+  <div class="fc">© 2026 Azaad Saffron · azaadsaffron.com</div>
+  <a href="index.html" class="fh">Return to Site</a>
+</footer>
+
+</body>
+</html>
