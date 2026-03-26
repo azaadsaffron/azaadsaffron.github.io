@@ -1381,7 +1381,7 @@ footer {
       <h2 class="section-heading">Scan.<br><em>See everything.</em></h2>
 
       <p class="verify-promise">
-        Every jar of Azaad will carry a QR code linked to the independent findings for that specific batch — colour strength, flavour depth, and aroma reading. Updated with every new shipment. Scan and see exactly what is in your jar before you open it.
+        Every jar of Azaad will carry a link to the independent findings for that specific batch — colour strength, flavour depth, and aroma reading. See exactly what is in your jar before you open it.
       </p>
 
       <div class="verify-qr-row">
@@ -1395,8 +1395,9 @@ footer {
           <div class="qd"></div><div class="qd"></div><div class="qd"></div><div class="qp"></div><div class="qd"></div><div class="qp"></div><div class="qd"></div>
         </div>
         <div class="qr-text-block">
-          <div class="qr-main">Scan to Verify</div>
-          <div class="qr-sub">See the independent findings<br>for your specific batch.</div>
+          <div class="qr-main">Batch Findings</div>
+          <div class="qr-sub">See the independent findings<br>for the current batch.</div>
+          <a href="verify.html" style="font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;color:var(--crimson);text-decoration:none;text-transform:uppercase;margin-top:8px;display:inline-block;border-bottom:1px solid rgba(122,21,21,0.3);padding-bottom:2px">View Batch Record →</a>
         </div>
       </div>
     </div>
@@ -1643,6 +1644,35 @@ footer {
       <div class="find-desc">Azaad will be available at select specialty grocery stores. Follow us for announcements.</div>
       <div class="find-detail">Retail locations announced via @azaadsaffron</div>
     </div>
+  </div>
+</div>
+
+<!-- ═══ EMAIL SIGNUP ═══ -->
+<div style="background:var(--cream-dk);padding:5rem 6rem;text-align:center">
+  <div style="max-width:520px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:1.25rem">
+    <div style="font-family:'Cinzel',serif;font-size:9px;letter-spacing:5px;color:var(--gold);text-transform:uppercase;display:flex;align-items:center;gap:10px">
+      <span style="display:block;width:24px;height:1px;background:var(--gold)"></span>
+      Stay Informed
+    </div>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(22px,3vw,34px);font-weight:300;color:var(--ink);line-height:1.3">
+      Be the first to know<br><em style="font-style:italic;color:var(--crimson)">when Azaad launches.</em>
+    </h2>
+    <p style="font-size:16px;font-style:italic;color:var(--earth-mid);line-height:1.7;font-weight:300">
+      Farmers market dates, new batch announcements, and early access — direct to your inbox. Nothing else.
+    </p>
+    <!-- Mailchimp embed form - replace action URL with your Mailchimp list URL -->
+    <form action="https://azaadsaffron.us21.list-manage.com/subscribe/post" method="POST" target="_blank" style="display:flex;gap:0;width:100%;max-width:420px;margin-top:0.5rem">
+      <input type="email" name="EMAIL" placeholder="Your email address" required
+        style="flex:1;padding:12px 16px;border:1px solid rgba(200,134,10,0.3);border-right:none;background:var(--cream);font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--ink);outline:none;font-style:italic">
+      <button type="submit"
+        style="font-family:'Cinzel',serif;font-size:8.5px;letter-spacing:2px;background:var(--crimson);color:var(--cream);padding:12px 20px;border:none;cursor:pointer;text-transform:uppercase;white-space:nowrap;transition:background 0.2s"
+        onmouseover="this.style.background='#4A0A0A'" onmouseout="this.style.background='#7A1515'">
+        Notify Me
+      </button>
+    </form>
+    <p style="font-size:11px;color:var(--earth-lt);font-style:italic;opacity:0.7">
+      We will never share your email. Unsubscribe any time. See our <a href="privacy.html" style="color:var(--earth-lt)">Privacy Policy</a>.
+    </p>
   </div>
 </div>
 
