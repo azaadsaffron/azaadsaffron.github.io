@@ -491,7 +491,7 @@ footer {
     <p class="blog-sub">Everything you should know about the ingredient your family has cooked with for generations — honestly told.</p>
     <div style="margin-top:1.5rem;padding:1.25rem 1.5rem;background:rgba(200,134,10,0.06);border-left:3px solid rgba(200,134,10,0.3);max-width:560px">
       <div style="font-family:'Cinzel',serif;font-size:8px;letter-spacing:3px;color:var(--earth-lt);text-transform:uppercase;margin-bottom:6px">About This Journal</div>
-      <p style="font-size:14px;font-style:italic;color:var(--earth-mid);line-height:1.7">Articles in The Azaad Journal are written by the Azaad Saffron team, drawing on supplier documentation, ISO 3632 testing standards, and direct experience sourcing and evaluating certified saffron. Factual claims about quality standards reference the ISO 3632:2010 international standard for saffron specification. We update content when new information becomes available.</p>
+      <p style="font-size:14px;font-style:italic;color:var(--earth-mid);line-height:1.7">Articles in The Azaad Journal are written by the Azaad Saffron team, drawing on supplier documentation, ISO 3632 testing standards, and direct experience sourcing and evaluating certified saffron. Factual claims reference the ISO 3632:2010 international standard. We update content when new information becomes available.</p>
     </div>
   </div>
 
@@ -499,67 +499,78 @@ footer {
 
   <div class="articles-section">
 
-    <div class="articles-grid">
+    <!-- LATEST POST - featured full width -->
+    <div style="font-family:'Cinzel',serif;font-size:9px;letter-spacing:4px;color:var(--gold);text-transform:uppercase;margin-bottom:1.5rem;display:flex;align-items:center;gap:10px">
+      <span style="display:block;width:20px;height:1px;background:var(--gold)"></span>
+      Latest Article
+    </div>
 
-      <!-- Article 1 - Featured -->
-      <div class="article-card featured" onclick="showArticle('article1')">
-        <div style="display:flex;flex-direction:column;gap:1rem;justify-content:center">
-          <div class="article-cat">Know Your Ingredient</div>
-          <div class="article-title">How to tell if your saffron is <em>real</em> — the simple tests every buyer should know</div>
-          <div class="article-excerpt">Most saffron sold in the United States is not what it claims to be. Safflower, synthetic dyes, and turmeric-stained threads are everywhere. Here is how to know the difference before you cook with it.</div>
-          <div class="article-meta">
-            <span class="article-date">March 25, 2026 · 5 min read</span>
-          </div>
-          <div class="article-read">Read Article</div>
-        </div>
-        <div class="featured-visual">
-          <div class="featured-panel">
-            <div class="panel-number">01</div>
-            <svg width="80" height="80" viewBox="0 0 140 140" fill="none">
-              <path d="M70 68 Q58 52 50 30" stroke="#C8860A" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
-              <ellipse cx="50" cy="27" rx="5" ry="8.5" fill="#C23232" transform="rotate(-16 50 27)" opacity="0.9"/>
-              <path d="M70 68 Q70 50 70 28" stroke="#C8860A" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
-              <ellipse cx="70" cy="25" rx="5" ry="8.5" fill="#8B1515" opacity="0.9"/>
-              <path d="M70 68 Q82 52 90 30" stroke="#C8860A" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
-              <ellipse cx="90" cy="27" rx="5" ry="8.5" fill="#C23232" transform="rotate(16 90 27)" opacity="0.9"/>
-              <circle cx="70" cy="73" r="6" fill="#C8860A" opacity="0.8"/>
-              <circle cx="70" cy="73" r="3" fill="#E8A820"/>
-            </svg>
-            <div class="panel-text">"Real saffron releases colour slowly. Slowly is the tell."</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Article 2 -->
-      <div class="article-card" onclick="showArticle('article2')">
-        <div class="article-cat">Culture & Tradition</div>
-        <div class="article-title">زعفران — The role of saffron in <em>Persian cuisine</em> and why it is never optional</div>
-        <div class="article-excerpt">From tahdig to sholeh zard, from the sofreh on Nowruz to the chai on a winter morning — saffron in Persian cooking is not a spice. It is an act of care.</div>
+    <div class="article-card featured" onclick="showArticle('article5')" style="margin-bottom:2px">
+      <div style="display:flex;flex-direction:column;gap:1rem;justify-content:center">
+        <div class="article-cat">Health &amp; Wellness</div>
+        <div style="font-family:'Cinzel',serif;font-size:8px;letter-spacing:3px;color:var(--crimson);text-transform:uppercase;padding:3px 10px;border:1px solid rgba(122,21,21,0.3);display:inline-block;width:fit-content">New — March 27, 2026</div>
+        <div class="article-title">What saffron actually does for your body — <em>separating research from claims</em></div>
+        <div class="article-excerpt">Saffron has been used in traditional medicine for thousands of years. Modern research is beginning to understand why. Here is what the science actually says — and what it does not.</div>
         <div class="article-meta">
-          <span class="article-date">March 25, 2026 · 4 min read</span>
+          <span class="article-date">March 27, 2026 · 6 min read</span>
         </div>
         <div class="article-read">Read Article</div>
       </div>
-
-      <!-- Article 3 -->
-      <div class="article-card" onclick="showArticle('article3')">
-        <div class="article-cat">Understanding Quality</div>
-        <div class="article-title">What is ISO 3632 — and why it is the <em>only number that matters</em> when buying saffron</div>
-        <div class="article-excerpt">Every saffron package makes claims. ISO 3632 Grade I is the only claim that requires independent verification. Here is what it means, how it is measured, and why it matters to you.</div>
-        <div class="article-meta">
-          <span class="article-date">March 25, 2026 · 6 min read</span>
+      <div class="featured-visual">
+        <div class="featured-panel">
+          <div class="panel-number">05</div>
+          <svg width="70" height="70" viewBox="0 0 140 140" fill="none">
+            <circle cx="70" cy="70" r="50" stroke="#C8860A" stroke-width="1" opacity="0.2" stroke-dasharray="3 3"/>
+            <circle cx="70" cy="70" r="35" stroke="#C8860A" stroke-width="0.75" opacity="0.15"/>
+            <circle cx="70" cy="70" r="18" fill="#C8860A" opacity="0.15"/>
+            <circle cx="70" cy="70" r="8" fill="#C8860A" opacity="0.7"/>
+            <path d="M70 20 Q80 45 70 70" stroke="#C23232" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+            <path d="M70 20 Q60 45 70 70" stroke="#C23232" stroke-width="1" stroke-linecap="round" opacity="0.4"/>
+            <path d="M120 70 Q95 60 70 70" stroke="#C23232" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+            <path d="M20 70 Q45 80 70 70" stroke="#C23232" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+          </svg>
+          <div class="panel-text">"The same compounds that colour your rice may also protect your cells."</div>
         </div>
-        <div class="article-read">Read Article</div>
       </div>
+    </div>
 
-      <!-- Article 4 -->
+    <!-- OLDER ARTICLES heading -->
+    <div style="font-family:'Cinzel',serif;font-size:9px;letter-spacing:4px;color:var(--earth-lt);text-transform:uppercase;margin:3rem 0 1.5rem;display:flex;align-items:center;gap:10px;opacity:0.7">
+      <span style="display:block;width:20px;height:1px;background:var(--earth-lt)"></span>
+      Previous Articles
+    </div>
+
+    <div class="articles-grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
+
       <div class="article-card" onclick="showArticle('article4')">
         <div class="article-cat">How To Use It</div>
         <div class="article-title">How to use saffron correctly — why <em>most people are wasting it</em></div>
-        <div class="article-excerpt">Adding saffron threads directly to a pot is one of the most common mistakes in the kitchen. Here is the technique that releases everything the thread has to offer — and why it makes all the difference.</div>
-        <div class="article-meta">
-          <span class="article-date">March 25, 2026 · 5 min read</span>
-        </div>
+        <div class="article-excerpt">Adding saffron directly to a pot wastes most of what you paid for. Here is the technique that releases everything the thread has to offer.</div>
+        <div class="article-meta"><span class="article-date">March 25, 2026 · 5 min read</span></div>
+        <div class="article-read">Read Article</div>
+      </div>
+
+      <div class="article-card" onclick="showArticle('article3')">
+        <div class="article-cat">Understanding Quality</div>
+        <div class="article-title">What is ISO 3632 — and why it is the <em>only number that matters</em></div>
+        <div class="article-excerpt">Every saffron package makes claims. ISO 3632 Grade I is the only one requiring independent verification. Here is what it actually means.</div>
+        <div class="article-meta"><span class="article-date">March 25, 2026 · 6 min read</span></div>
+        <div class="article-read">Read Article</div>
+      </div>
+
+      <div class="article-card" onclick="showArticle('article2')">
+        <div class="article-cat">Culture &amp; Tradition</div>
+        <div class="article-title">زعفران — Saffron in <em>Persian cuisine</em> and why it is never optional</div>
+        <div class="article-excerpt">From tahdig to sholeh zard — saffron in Persian cooking is not a spice. It is an act of care.</div>
+        <div class="article-meta"><span class="article-date">March 25, 2026 · 4 min read</span></div>
+        <div class="article-read">Read Article</div>
+      </div>
+
+      <div class="article-card" onclick="showArticle('article1')">
+        <div class="article-cat">Know Your Ingredient</div>
+        <div class="article-title">How to tell if your saffron is <em>real</em> — the simple tests every buyer should know</div>
+        <div class="article-excerpt">Most saffron sold in the US is not what it claims. Here is how to know before you cook with it.</div>
+        <div class="article-meta"><span class="article-date">March 25, 2026 · 5 min read</span></div>
         <div class="article-read">Read Article</div>
       </div>
 
@@ -574,7 +585,6 @@ footer {
       <h2 class="newsletter-heading">New articles on saffron,<br><em>culture, and craft.</em></h2>
       <p class="newsletter-sub">Follow @azaadsaffron on Instagram to be notified when new articles are published.</p>
       <a href="https://www.instagram.com/azaadsaffron" target="_blank" style="font-family:'Cinzel',serif;font-size:9px;letter-spacing:3px;background:var(--crimson);color:var(--cream);padding:12px 28px;text-decoration:none;text-transform:uppercase;transition:background 0.2s" onmouseover="this.style.background='#4A0A0A'" onmouseout="this.style.background='#7A1515'">Follow on Instagram</a>
-      <p class="newsletter-note">We do not collect email addresses on this page. No forms. No sign-ups.</p>
     </div>
   </div>
 
