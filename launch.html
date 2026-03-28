@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get Early Access — Azaad Saffron · Grade I Certified Saffron</title>
+<meta name="description" content="Be first to know when Azaad Saffron launches. Grade I certified saffron threads, independently batch verified, delivered to your door in Southern California.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://www.azaadsaffron.com/launch.html">
+<link rel="icon" type="image/png" href="azaad_avatar.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Cinzel:wght@400;500;600&family=Noto+Nastaliq+Urdu:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --crimson:#7A1515; --crimson-deep:#4A0A0A;
+  --gold:#C8860A; --gold-lt:#E8A820; --gold-pale:#F5D98A;
+  --cream:#FAF6EE; --cream-dk:#EDE4D0; --parchment:#D4C4A0;
+  --earth:#2C1810; --earth-mid:#5C3A1E; --earth-lt:#8B6040;
+  --ink:#1A0E08;
+}
+html, body {
+  min-height: 100vh;
+  background: var(--ink);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  color: var(--cream);
+}
+/* geometric background */
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background-image:
+    repeating-linear-gradient(60deg, rgba(200,134,10,0.04) 0, rgba(200,134,10,0.04) 1px, transparent 0, transparent 36px),
+    repeating-linear-gradient(-60deg, rgba(200,134,10,0.04) 0, rgba(200,134,10,0.04) 1px, transparent 0, transparent 36px);
+  pointer-events: none; z-index: 0;
+}
+.page {
+  position: relative; z-index: 1;
+  min-height: 100vh;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  padding: 3rem 1.5rem;
+}
+/* top bar */
+.top-bar {
+  position: fixed; top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--crimson), var(--gold), var(--crimson));
+  z-index: 10;
+}
+.card {
+  width: 100%;
+  max-width: 580px;
+  background: rgba(250,246,238,0.05);
+  border: 1px solid rgba(200,134,10,0.2);
+  padding: 3.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  text-align: center;
+  animation: fadeUp 1s cubic-bezier(.16,1,.3,1) both;
+}
+@keyframes fadeUp {
+  from { opacity:0; transform:translateY(24px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+
+/* crocus */
+.crocus { margin-bottom: 1.5rem; }
+
+.brand {
+  font-family: 'Cinzel', serif;
+  font-size: 36px; font-weight: 600;
+  letter-spacing: 10px; color: var(--cream);
+  line-height: 1; margin-bottom: 6px;
+}
+.brand-fa {
+  font-family: 'Noto Nastaliq Urdu', serif;
+  font-size: 20px; color: var(--gold-lt);
+  direction: rtl; line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.divider {
+  display: flex; align-items: center; gap: 14px;
+  width: 240px; margin-bottom: 1.5rem;
+}
+.div-l { flex:1; height:1px; background: linear-gradient(90deg, transparent, rgba(200,134,10,0.6), transparent); }
+.div-d { width:6px; height:6px; background:var(--gold); transform:rotate(45deg); flex-shrink:0; }
+
+.headline {
+  font-size: clamp(24px, 4vw, 36px);
+  font-weight: 300; line-height: 1.3;
+  color: var(--cream); margin-bottom: 1rem;
+}
+.headline em { font-style: italic; color: var(--gold-lt); }
+
+.subhead {
+  font-size: 17px; font-style: italic; font-weight: 300;
+  color: rgba(237,228,208,0.65); line-height: 1.7;
+  max-width: 440px; margin-bottom: 2rem;
+}
+
+/* trust signals */
+.trust-row {
+  display: flex; gap: 0;
+  width: 100%; margin-bottom: 2rem;
+  border: 1px solid rgba(200,134,10,0.15);
+}
+.trust-item {
+  flex: 1; padding: 1rem 0.5rem;
+  border-right: 1px solid rgba(200,134,10,0.12);
+  display: flex; flex-direction: column;
+  align-items: center; gap: 4px;
+}
+.trust-item:last-child { border-right: none; }
+.trust-n {
+  font-family: 'Cinzel', serif;
+  font-size: 14px; font-weight: 500;
+  color: var(--gold-lt); line-height: 1;
+}
+.trust-l {
+  font-size: 9px; letter-spacing: 1px;
+  color: rgba(212,196,160,0.5);
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.3;
+}
+
+/* form */
+.form-wrap { width: 100%; margin-bottom: 1rem; }
+.form-wrap form {
+  display: flex; flex-direction: column; gap: 10px;
+}
+.form-wrap input[type="email"] {
+  width: 100%;
+  padding: 14px 18px;
+  border: 1px solid rgba(200,134,10,0.3);
+  background: rgba(250,246,238,0.06);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px; font-style: italic;
+  color: var(--cream); outline: none;
+  transition: border-color 0.2s;
+}
+.form-wrap input[type="email"]:focus {
+  border-color: rgba(200,134,10,0.6);
+}
+.form-wrap input[type="email"]::placeholder { color: rgba(237,228,208,0.35); }
+.form-wrap button[type="submit"] {
+  width: 100%;
+  font-family: 'Cinzel', serif;
+  font-size: 10px; letter-spacing: 4px;
+  background: var(--crimson);
+  color: var(--cream);
+  padding: 15px;
+  border: none; cursor: pointer;
+  text-transform: uppercase;
+  transition: background 0.2s;
+}
+.form-wrap button[type="submit"]:hover { background: var(--crimson-deep); }
+
+.privacy-note {
+  font-size: 11px; font-style: italic;
+  color: rgba(212,196,160,0.4); line-height: 1.5;
+  margin-bottom: 2rem;
+}
+.privacy-note a { color: rgba(212,196,160,0.4); text-decoration: underline; }
+
+.back-link {
+  font-family: 'Cinzel', serif;
+  font-size: 8px; letter-spacing: 3px;
+  color: rgba(212,196,160,0.3);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+.back-link:hover { color: var(--gold); }
+
+/* what you get section */
+.what-row {
+  display: flex; flex-direction: column; gap: 10px;
+  width: 100%; margin-bottom: 2rem;
+}
+.what-item {
+  display: flex; align-items: flex-start; gap: 12px;
+  text-align: left;
+}
+.what-dot {
+  width: 6px; height: 6px;
+  background: var(--gold);
+  transform: rotate(45deg);
+  flex-shrink: 0; margin-top: 6px;
+}
+.what-text {
+  font-size: 14px; font-style: italic;
+  color: rgba(237,228,208,0.6); line-height: 1.5;
+}
+
+@media (max-width: 520px) {
+  .card { padding: 2.5rem 1.5rem; }
+  .trust-row { flex-direction: column; }
+  .trust-item { border-right: none; border-bottom: 1px solid rgba(200,134,10,0.12); }
+  .trust-item:last-child { border-bottom: none; }
+}
+</style>
+</head>
+<body>
+<div class="top-bar"></div>
+<div class="page">
+  <div class="card">
+
+    <!-- crocus mark -->
+    <div class="crocus">
+      <svg width="56" height="56" viewBox="0 0 140 140" fill="none">
+        <circle cx="70" cy="70" r="60" stroke="#C8860A" stroke-width="0.75" stroke-dasharray="3 3" opacity="0.25"/>
+        <path d="M70 68 Q58 52 50 30" stroke="#C8860A" stroke-width="2" stroke-linecap="round" opacity="0.85"/>
+        <ellipse cx="50" cy="27" rx="5.5" ry="9" fill="#C23232" transform="rotate(-16 50 27)" opacity="0.9"/>
+        <path d="M70 68 Q70 50 70 28" stroke="#C8860A" stroke-width="2" stroke-linecap="round" opacity="0.85"/>
+        <ellipse cx="70" cy="25" rx="5.5" ry="9" fill="#8B1515" opacity="0.9"/>
+        <path d="M70 68 Q82 52 90 30" stroke="#C8860A" stroke-width="2" stroke-linecap="round" opacity="0.85"/>
+        <ellipse cx="90" cy="27" rx="5.5" ry="9" fill="#C23232" transform="rotate(16 90 27)" opacity="0.9"/>
+        <path d="M70 73 Q48 65 34 50 Q48 60 62 76Z" fill="#8B1515" opacity="0.22"/>
+        <path d="M70 73 Q92 65 106 50 Q92 60 78 76Z" fill="#8B1515" opacity="0.22"/>
+        <circle cx="70" cy="73" r="6" fill="#C8860A" opacity="0.82"/>
+        <circle cx="70" cy="73" r="3" fill="#E8A820" opacity="0.95"/>
+      </svg>
+    </div>
+
+    <div class="brand">AZAAD</div>
+    <div class="brand-fa">آزاد · زعفران</div>
+
+    <div class="divider"><div class="div-l"></div><div class="div-d"></div><div class="div-l"></div></div>
+
+    <h1 class="headline">
+      The saffron your instincts<br>
+      always knew was <em>missing.</em>
+    </h1>
+
+    <p class="subhead">
+      Grade I certified. Independently batch verified. Every jar shows you exactly what is inside before you open it. Coming soon to Southern California.
+    </p>
+
+    <!-- trust signals -->
+    <div class="trust-row">
+      <div class="trust-item">
+        <div class="trust-n">Grade I</div>
+        <div class="trust-l">ISO 3632 Certified</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-n">Batch</div>
+        <div class="trust-l">Independently Verified</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-n">100%</div>
+        <div class="trust-l">All-Red Stigmas</div>
+      </div>
+    </div>
+
+    <!-- what they get -->
+    <div class="what-row">
+      <div class="what-item">
+        <div class="what-dot"></div>
+        <div class="what-text">First access when we launch at local farmers markets</div>
+      </div>
+      <div class="what-item">
+        <div class="what-dot"></div>
+        <div class="what-text">New batch announcements with full independent findings</div>
+      </div>
+      <div class="what-item">
+        <div class="what-dot"></div>
+        <div class="what-text">Saffron guides, recipes, and knowledge — from The Azaad Journal</div>
+      </div>
+    </div>
+
+    <!-- Mailchimp form -->
+    <div class="form-wrap">
+      <form action="https://azaadsaffron.us17.list-manage.com/subscribe/post?u=cd7199c77af040962b23ff481&amp;id=9cc8bc795a&amp;f_id=008c4fe0f0" method="POST" target="_blank">
+        <input type="email" name="EMAIL" placeholder="Your email address" required>
+        <!-- Mailchimp bot protection - do not remove -->
+        <div aria-hidden="true" style="position:absolute;left:-5000px">
+          <input type="text" name="b_cd7199c77af040962b23ff481_9cc8bc795a" tabindex="-1" value="">
+        </div>
+        <button type="submit">Get Early Access</button>
+      </form>
+    </div>
+
+    <p class="privacy-note">
+      We will never share your email. Unsubscribe any time.<br>
+      <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms</a>
+    </p>
+
+    <a href="index.html" class="back-link">← Back to Azaad Saffron</a>
+
+  </div>
+</div>
+</body>
+</html>
