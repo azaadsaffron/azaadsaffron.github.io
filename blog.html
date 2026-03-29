@@ -3,447 +3,72 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Azaad Journal — Saffron Blog | Knowledge, Culture & Craft</title>
-<meta name="description" content="The Azaad Journal — a saffron blog covering how to identify real saffron, ISO 3632 Grade I quality standards, and the role of saffron in Persian, Indian, and Middle Eastern cooking.">
+<title>The Azaad Journal — Saffron Blog | Knowledge, Culture &amp; Craft</title>
+<meta name="description" content="The Azaad Journal — articles on how to identify real saffron, ISO 3632 Grade I quality standards, how to use saffron, and its role in Persian, Indian, and Middle Eastern cooking.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://www.azaadsaffron.com/blog.html">
 <meta property="og:type" content="website">
-<meta property="og:title" content="The Azaad Journal — Saffron Knowledge & Culture">
+<meta property="og:title" content="The Azaad Journal — Saffron Knowledge &amp; Culture">
 <meta property="og:description" content="Stories about saffron — how to identify the real thing, how to use it, and why it matters.">
 <meta property="og:image" content="https://www.azaadsaffron.com/azaad_avatar.png">
 <link rel="icon" type="image/png" href="azaad_avatar.png">
 <link rel="apple-touch-icon" href="azaad_avatar.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Cinzel:wght@400;500;600&family=Noto+Nastaliq+Urdu:wght@400;500&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
 :root {
-  --crimson:      #7A1515;
-  --crimson-deep: #4A0A0A;
-  --gold:         #C8860A;
-  --gold-lt:      #E8A820;
-  --gold-pale:    #F5D98A;
-  --cream:        #FAF6EE;
-  --cream-dk:     #EDE4D0;
-  --parchment:    #D4C4A0;
-  --earth:        #2C1810;
-  --earth-mid:    #5C3A1E;
-  --earth-lt:     #8B6040;
-  --ink:          #1A0E08;
+  --crimson: #7A1515; --crimson-deep: #4A0A0A; --gold: #C8860A; --gold-lt: #E8A820;
+  --gold-pale: #F5D98A; --cream: #FAF6EE; --cream-dk: #EDE4D0; --parchment: #D4C4A0;
+  --earth: #2C1810; --earth-mid: #5C3A1E; --earth-lt: #8B6040; --ink: #1A0E08;
 }
-
 html { scroll-behavior: smooth; }
-body {
-  background: var(--cream);
-  color: var(--ink);
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  overflow-x: hidden;
-}
-
-/* ── NAV ── */
-nav {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 100;
-  background: rgba(250,246,238,0.96);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(200,134,10,0.15);
-  padding: 0 2.5rem;
-  height: 64px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.nav-brand {
-  display: flex; flex-direction: column;
-  align-items: flex-start; gap: 1px;
-  text-decoration: none;
-}
-.nav-brand-en {
-  font-family: 'Cinzel', serif;
-  font-size: 18px; font-weight: 600;
-  letter-spacing: 5px; color: var(--crimson); line-height: 1;
-}
-.nav-brand-fa {
-  font-family: 'Noto Nastaliq Urdu', serif;
-  font-size: 11px; color: var(--gold);
-  direction: rtl; line-height: 1;
-}
-.nav-links {
-  display: flex; gap: 2.5rem;
-  list-style: none; align-items: center;
-}
-.nav-links a {
-  font-family: 'Cinzel', serif;
-  font-size: 9px; letter-spacing: 3px;
-  color: var(--earth-mid); text-decoration: none;
-  text-transform: uppercase; transition: color 0.2s;
-}
+body { background: var(--cream); color: var(--ink); font-family: 'Cormorant Garamond', Georgia, serif; overflow-x: hidden; }
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(250,246,238,0.96); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(200,134,10,0.15); padding: 0 2.5rem; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+.nav-brand { display: flex; flex-direction: column; align-items: flex-start; gap: 1px; text-decoration: none; }
+.nav-brand-en { font-family: 'Cinzel', serif; font-size: 18px; font-weight: 600; letter-spacing: 5px; color: var(--crimson); line-height: 1; }
+.nav-brand-fa { font-family: 'Noto Nastaliq Urdu', serif; font-size: 11px; color: var(--gold); direction: rtl; line-height: 1; }
+.nav-links { display: flex; gap: 2.5rem; list-style: none; align-items: center; }
+.nav-links a { font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 3px; color: var(--earth-mid); text-decoration: none; text-transform: uppercase; transition: color 0.2s; }
 .nav-links a:hover, .nav-links a.active { color: var(--crimson); }
-.nav-cta {
-  font-family: 'Cinzel', serif; font-size: 8.5px;
-  letter-spacing: 2px; color: var(--cream) !important;
-  background: var(--crimson); padding: 8px 18px;
-  text-transform: uppercase; text-decoration: none;
-  transition: background 0.2s;
-}
+.nav-cta { font-family: 'Cinzel', serif; font-size: 8.5px; letter-spacing: 2px; color: var(--cream) !important; background: var(--crimson); padding: 8px 18px; text-transform: uppercase; text-decoration: none; transition: background 0.2s; }
 .nav-cta:hover { background: var(--crimson-deep) !important; }
-
-/* ── BLOG HERO ── */
-.blog-hero {
-  padding: 120px 6rem 5rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  position: relative;
-}
-.blog-hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image:
-    repeating-linear-gradient(60deg, rgba(200,134,10,0.03) 0, rgba(200,134,10,0.03) 1px, transparent 0, transparent 28px),
-    repeating-linear-gradient(-60deg, rgba(200,134,10,0.03) 0, rgba(200,134,10,0.03) 1px, transparent 0, transparent 28px);
-  pointer-events: none;
-}
-.blog-tag {
-  font-family: 'Cinzel', serif;
-  font-size: 9px; letter-spacing: 5px;
-  color: var(--gold); text-transform: uppercase;
-  display: flex; align-items: center; gap: 10px;
-  position: relative; z-index: 1;
-}
-.blog-tag::before { display: none; }
-.blog-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(36px, 5vw, 60px);
-  font-weight: 300; line-height: 1.15;
-  color: var(--ink); position: relative; z-index: 1;
-}
+.blog-hero { padding: 120px 6rem 5rem; max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem; position: relative; }
+.blog-hero::before { content: ''; position: absolute; inset: 0; background-image: repeating-linear-gradient(60deg, rgba(200,134,10,0.03) 0, rgba(200,134,10,0.03) 1px, transparent 0, transparent 28px), repeating-linear-gradient(-60deg, rgba(200,134,10,0.03) 0, rgba(200,134,10,0.03) 1px, transparent 0, transparent 28px); pointer-events: none; }
+.blog-tag { font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 5px; color: var(--gold); text-transform: uppercase; position: relative; z-index: 1; }
+.blog-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 5vw, 60px); font-weight: 300; line-height: 1.15; color: var(--ink); position: relative; z-index: 1; }
 .blog-title em { font-style: italic; color: var(--crimson); }
-.blog-sub {
-  font-size: 17px; font-style: italic;
-  color: var(--earth-mid); line-height: 1.7;
-  font-weight: 300; max-width: 540px;
-  position: relative; z-index: 1;
-}
-
-/* ── GOLD RULE ── */
-.gold-rule {
-  width: 100%; height: 1px;
-  background: linear-gradient(90deg, transparent, var(--gold), transparent);
-  opacity: 0.3;
-}
-
-/* ── ARTICLE GRID ── */
-.articles-section {
-  padding: 4rem 6rem 6rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.articles-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2px;
-  background: rgba(200,134,10,0.1);
-  margin-top: 3rem;
-}
-
-/* featured article - spans full width */
-.article-card {
-  background: var(--cream);
-  padding: 2.5rem 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  text-decoration: none;
-  color: inherit;
-  transition: background 0.2s;
-  cursor: pointer;
-}
+.blog-sub { font-size: 17px; font-style: italic; color: var(--earth-mid); line-height: 1.7; font-weight: 300; max-width: 540px; position: relative; z-index: 1; }
+.articles-section { padding: 4rem 6rem 6rem; max-width: 1200px; margin: 0 auto; }
+.articles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2px; background: rgba(200,134,10,0.1); margin-top: 3rem; }
+.article-card { background: var(--cream); padding: 2.5rem 2rem; display: flex; flex-direction: column; gap: 1rem; text-decoration: none; color: inherit; transition: background 0.2s; }
 .article-card:hover { background: var(--cream-dk); }
-.article-card.featured {
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  padding: 3rem 2.5rem;
-}
-
-.article-cat {
-  font-family: 'Cinzel', serif;
-  font-size: 8px; letter-spacing: 4px;
-  color: var(--gold); text-transform: uppercase;
-}
-.article-title {
-  font-size: clamp(20px, 2.5vw, 28px);
-  font-weight: 400; line-height: 1.25;
-  color: var(--ink);
-}
+.article-card.featured { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; padding: 3rem 2.5rem; }
+.article-cat { font-family: 'Cinzel', serif; font-size: 8px; letter-spacing: 4px; color: var(--gold); text-transform: uppercase; }
+.article-title { font-size: clamp(20px, 2.5vw, 28px); font-weight: 400; line-height: 1.25; color: var(--ink); }
 .article-title em { font-style: italic; color: var(--crimson); }
-.article-excerpt {
-  font-size: 15px; font-style: italic;
-  color: var(--earth-mid); line-height: 1.7;
-  font-weight: 300; flex: 1;
-}
-.article-meta {
-  display: flex; align-items: center;
-  gap: 1rem; flex-wrap: wrap;
-}
-.article-date {
-  font-family: 'Cinzel', serif;
-  font-size: 9px; letter-spacing: 2px;
-  color: var(--earth-lt); text-transform: uppercase;
-}
-.article-read {
-  font-family: 'Cinzel', serif;
-  font-size: 9px; letter-spacing: 2px;
-  color: var(--crimson); text-transform: uppercase;
-  display: flex; align-items: center; gap: 8px;
-  margin-top: auto;
-}
-.article-read::after {
-  content: ''; flex: 0 0 24px; height: 1px;
-  background: var(--crimson); opacity: 0.4;
-}
+.article-excerpt { font-size: 15px; font-style: italic; color: var(--earth-mid); line-height: 1.7; font-weight: 300; flex: 1; }
+.article-date { font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 2px; color: var(--earth-lt); text-transform: uppercase; }
+.article-read { font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 2px; color: var(--crimson); text-transform: uppercase; display: flex; align-items: center; gap: 8px; margin-top: auto; }
+.article-read::after { content: ''; flex: 0 0 24px; height: 1px; background: var(--crimson); opacity: 0.4; }
 .article-card:hover .article-read::after { opacity: 0.8; }
-
-.featured-visual {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.featured-panel {
-  width: 100%;
-  aspect-ratio: 4/3;
-  background: var(--crimson-deep);
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  padding: 2rem;
-}
-.featured-panel::before {
-  content: '';
-  position: absolute; inset: 0;
-  background-image:
-    repeating-linear-gradient(45deg, rgba(200,134,10,0.05) 0, rgba(200,134,10,0.05) 1px, transparent 0, transparent 24px),
-    repeating-linear-gradient(-45deg, rgba(200,134,10,0.05) 0, rgba(200,134,10,0.05) 1px, transparent 0, transparent 24px);
-}
-.panel-number {
-  font-family: 'Cinzel', serif;
-  font-size: 72px; font-weight: 600;
-  color: rgba(200,134,10,0.15);
-  line-height: 1; position: absolute;
-  top: 1rem; right: 1.5rem;
-}
-.panel-text {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 18px; font-style: italic;
-  color: var(--cream-dk); text-align: center;
-  line-height: 1.6; z-index: 1;
-  max-width: 240px; opacity: 0.75;
-}
-.panel-fa {
-  font-family: 'Noto Nastaliq Urdu', serif;
-  font-size: 22px; color: var(--gold-lt);
-  direction: rtl; z-index: 1; line-height: 1.8;
-}
-
-/* ── FULL ARTICLE VIEW ── */
-.article-full {
-  display: none;
-  padding: 80px 0 0;
-}
-.article-full.active { display: block; }
-
-.article-header {
-  background: var(--crimson-deep);
-  padding: 5rem 6rem 4rem;
-  position: relative;
-  overflow: hidden;
-}
-.article-header::before {
-  content: '';
-  position: absolute; inset: 0;
-  background-image:
-    repeating-linear-gradient(60deg, rgba(200,134,10,0.05) 0, rgba(200,134,10,0.05) 1px, transparent 0, transparent 32px),
-    repeating-linear-gradient(-60deg, rgba(200,134,10,0.05) 0, rgba(200,134,10,0.05) 1px, transparent 0, transparent 32px);
-}
-.article-header-inner {
-  max-width: 760px;
-  margin: 0 auto;
-  position: relative; z-index: 1;
-}
-.article-header-cat {
-  font-family: 'Cinzel', serif;
-  font-size: 9px; letter-spacing: 5px;
-  color: var(--gold-pale); text-transform: uppercase;
-  opacity: 0.7; margin-bottom: 1.25rem;
-  display: flex; align-items: center; gap: 10px;
-}
-.article-header-cat::before { display: none; }
-.article-header-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(28px, 4vw, 48px);
-  font-weight: 300; color: var(--cream);
-  line-height: 1.2; margin-bottom: 1.25rem;
-}
-.article-header-title em { font-style: italic; color: var(--gold-lt); }
-.article-header-sub {
-  font-size: 18px; font-style: italic;
-  color: rgba(237,228,208,0.65);
-  line-height: 1.7; font-weight: 300;
-  max-width: 580px;
-}
-.article-header-meta {
-  margin-top: 2rem;
-  font-family: 'Cinzel', serif;
-  font-size: 9px; letter-spacing: 3px;
-  color: rgba(212,196,160,0.45);
-  text-transform: uppercase;
-}
-
-.article-body {
-  max-width: 760px;
-  margin: 0 auto;
-  padding: 4rem 2rem 6rem;
-}
-.article-body p {
-  font-size: 18px; line-height: 1.9;
-  color: var(--earth-mid); font-weight: 300;
-  margin-bottom: 1.5rem;
-}
-.article-body h2 {
-  font-family: 'Cinzel', serif;
-  font-size: 12px; letter-spacing: 4px;
-  color: var(--crimson); text-transform: uppercase;
-  margin: 3rem 0 1.25rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid rgba(200,134,10,0.15);
-}
-.article-body blockquote {
-  font-size: 20px; font-style: italic;
-  color: var(--crimson); line-height: 1.55;
-  border-left: 3px solid var(--gold);
-  padding: 1rem 1.5rem;
-  margin: 2rem 0;
-  font-weight: 300;
-  background: var(--cream-dk);
-}
-.article-body ul, .article-body ol {
-  margin: 0 0 1.5rem 2rem;
-}
-.article-body li {
-  font-size: 17px; line-height: 1.8;
-  color: var(--earth-mid); font-weight: 300;
-  margin-bottom: 0.5rem;
-}
-.article-body strong { color: var(--ink); font-weight: 500; }
-
-.article-back {
-  display: inline-flex;
-  align-items: center; gap: 8px;
-  font-family: 'Cinzel', serif;
-  font-size: 9px; letter-spacing: 3px;
-  color: var(--gold); text-transform: uppercase;
-  cursor: pointer; margin-bottom: 3rem;
-  background: none; border: none;
-  padding: 0; transition: color 0.2s;
-}
-.article-back::before {
-  content: '←'; font-size: 12px;
-}
-.article-back:hover { color: var(--crimson); }
-
-.article-cta {
-  background: var(--crimson-deep);
-  padding: 2.5rem;
-  margin-top: 3rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-}
-.article-cta-text {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 20px; font-style: italic;
-  color: var(--cream); line-height: 1.5;
-}
-.article-cta-btn {
-  font-family: 'Cinzel', serif;
-  font-size: 9px; letter-spacing: 3px;
-  background: var(--gold);
-  color: var(--ink); padding: 12px 28px;
-  text-decoration: none; text-transform: uppercase;
-  transition: background 0.2s;
-  display: inline-block;
-}
-.article-cta-btn:hover { background: var(--gold-lt); }
-
-/* ── NEWSLETTER ── */
-.newsletter-section {
-  background: var(--cream-dk);
-  padding: 4rem 6rem;
-  text-align: center;
-}
-.newsletter-inner {
-  max-width: 500px; margin: 0 auto;
-  display: flex; flex-direction: column;
-  align-items: center; gap: 1.25rem;
-}
-.newsletter-heading {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(22px, 3vw, 32px);
-  font-weight: 300; color: var(--ink); line-height: 1.3;
-}
+.featured-visual { display: flex; align-items: center; justify-content: center; }
+.featured-panel { width: 100%; aspect-ratio: 4/3; background: var(--crimson-deep); position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; padding: 2rem; }
+.featured-panel::before { content: ''; position: absolute; inset: 0; background-image: repeating-linear-gradient(45deg, rgba(200,134,10,0.05) 0, rgba(200,134,10,0.05) 1px, transparent 0, transparent 24px), repeating-linear-gradient(-45deg, rgba(200,134,10,0.05) 0, rgba(200,134,10,0.05) 1px, transparent 0, transparent 24px); }
+.panel-number { font-family: 'Cinzel', serif; font-size: 72px; font-weight: 600; color: rgba(200,134,10,0.15); line-height: 1; position: absolute; top: 1rem; right: 1.5rem; }
+.panel-text { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-style: italic; color: var(--cream-dk); text-align: center; line-height: 1.6; z-index: 1; max-width: 240px; opacity: 0.75; }
+.newsletter-section { background: var(--cream-dk); padding: 4rem 6rem; text-align: center; }
+.newsletter-inner { max-width: 500px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 1.25rem; }
+.newsletter-heading { font-family: 'Cormorant Garamond', serif; font-size: clamp(22px, 3vw, 32px); font-weight: 300; color: var(--ink); line-height: 1.3; }
 .newsletter-heading em { font-style: italic; color: var(--crimson); }
-.newsletter-sub {
-  font-size: 15px; font-style: italic;
-  color: var(--earth-mid); line-height: 1.6;
-}
-.newsletter-note {
-  font-size: 12px; color: var(--earth-lt);
-  font-style: italic; opacity: 0.7;
-}
-
-/* ── FOOTER ── */
-footer {
-  background: var(--ink);
-  color: var(--cream);
-  padding: 2rem 6rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap; gap: 1rem;
-}
-.footer-brand-sm {
-  font-family: 'Cinzel', serif;
-  font-size: 14px; font-weight: 500;
-  letter-spacing: 5px; color: var(--cream);
-}
-.footer-links-sm {
-  display: flex; gap: 2rem; flex-wrap: wrap;
-}
-.footer-links-sm a {
-  font-size: 12px; font-style: italic;
-  color: rgba(237,228,208,0.45);
-  text-decoration: none; transition: color 0.2s;
-}
+.newsletter-sub { font-size: 15px; font-style: italic; color: var(--earth-mid); line-height: 1.6; }
+footer { background: var(--ink); color: var(--cream); padding: 2rem 6rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+.footer-brand-sm { font-family: 'Cinzel', serif; font-size: 14px; font-weight: 500; letter-spacing: 5px; color: var(--cream); }
+.footer-links-sm { display: flex; gap: 2rem; flex-wrap: wrap; }
+.footer-links-sm a { font-size: 12px; font-style: italic; color: rgba(237,228,208,0.45); text-decoration: none; transition: color 0.2s; }
 .footer-links-sm a:hover { color: var(--cream); }
-.footer-copy-sm {
-  font-size: 11px; font-style: italic;
-  color: rgba(237,228,208,0.25);
-}
-
-/* responsive */
+.footer-copy-sm { font-size: 11px; font-style: italic; color: rgba(237,228,208,0.25); }
 @media (max-width: 900px) {
   nav { padding: 0 1.5rem; }
   .nav-links { display: none; }
@@ -451,8 +76,6 @@ footer {
   .articles-section { padding: 3rem 2rem 4rem; }
   .article-card.featured { grid-template-columns: 1fr; }
   .featured-visual { display: none; }
-  .article-header { padding: 4rem 2rem 3rem; }
-  .article-body { padding: 3rem 1.5rem 4rem; }
   .newsletter-section { padding: 3rem 2rem; }
   footer { padding: 2rem 1.5rem; flex-direction: column; gap: 1rem; }
 }
@@ -476,7 +99,6 @@ footer {
 </head>
 <body>
 
-<!-- ── NAV ── -->
 <nav>
   <a href="index.html" class="nav-brand">
     <span class="nav-brand-en">AZAAD</span>
@@ -492,573 +114,115 @@ footer {
   </ul>
 </nav>
 
-<!-- ── BLOG INDEX ── -->
-<div id="blog-index">
+<div class="blog-hero">
+  <div class="blog-tag">The Azaad Journal</div>
+  <h1 class="blog-title">Stories about saffron.<br><em>No compromise.</em></h1>
+  <p class="blog-sub">Everything you should know about the ingredient your family has cooked with for generations, honestly told.</p>
+  <div style="margin-top:1.5rem;padding:1.25rem 1.5rem;background:rgba(200,134,10,0.06);border-left:3px solid rgba(200,134,10,0.3);max-width:560px">
+    <div style="font-family:'Cinzel',serif;font-size:8px;letter-spacing:3px;color:var(--earth-lt);text-transform:uppercase;margin-bottom:6px">About This Journal</div>
+    <p style="font-size:14px;font-style:italic;color:var(--earth-mid);line-height:1.7">Articles in The Azaad Journal are written by the Azaad Saffron team, drawing on supplier documentation, ISO 3632 testing standards, and direct experience sourcing and evaluating certified saffron. Factual claims reference the ISO 3632:2010 international standard. We update content when new information becomes available.</p>
+  </div>
+</div>
 
-  <div class="blog-hero">
-    <div class="blog-tag">The Azaad Journal</div>
-    <h1 class="blog-title">Stories about saffron.<br><em>No compromise.</em></h1>
-    <p class="blog-sub">Everything you should know about the ingredient your family has cooked with for generations — honestly told.</p>
-    <div style="margin-top:1.5rem;padding:1.25rem 1.5rem;background:rgba(200,134,10,0.06);border-left:3px solid rgba(200,134,10,0.3);max-width:560px">
-      <div style="font-family:'Cinzel',serif;font-size:8px;letter-spacing:3px;color:var(--earth-lt);text-transform:uppercase;margin-bottom:6px">About This Journal</div>
-      <p style="font-size:14px;font-style:italic;color:var(--earth-mid);line-height:1.7">Articles in The Azaad Journal are written by the Azaad Saffron team, drawing on supplier documentation, ISO 3632 testing standards, and direct experience sourcing and evaluating certified saffron. Factual claims reference the ISO 3632:2010 international standard. We update content when new information becomes available.</p>
-    </div>
+<div class="articles-section">
+
+  <div style="font-family:'Cinzel',serif;font-size:9px;letter-spacing:4px;color:var(--gold);text-transform:uppercase;margin-bottom:1.5rem">
+    Latest Article
   </div>
 
-  <div class="articles-section">
-
-    <!-- LATEST POST - featured full width -->
-    <div style="font-family:'Cinzel',serif;font-size:9px;letter-spacing:4px;color:var(--gold);text-transform:uppercase;margin-bottom:1.5rem">
-      Latest Article
+  <a href="blog/where-to-buy-saffron-orange-county.html" class="article-card featured" style="margin-bottom:2px">
+    <div style="display:flex;flex-direction:column;gap:1rem;justify-content:center">
+      <div class="article-cat">Local &amp; Community</div>
+      <div style="font-family:'Cinzel',serif;font-size:8px;letter-spacing:3px;color:var(--crimson);text-transform:uppercase;padding:3px 10px;border:1px solid rgba(122,21,21,0.3);display:inline-block;width:fit-content">New — March 29, 2026</div>
+      <div class="article-title">Where to buy real saffron in Orange County. <em>What to look for and what to avoid</em></div>
+      <div class="article-excerpt">Orange County has a large Persian, South Asian, and Middle Eastern community that knows exactly what real saffron should be. Finding it locally is harder than it should be. Here is an honest guide.</div>
+      <div><span class="article-date">March 29, 2026 · 5 min read</span></div>
+      <div class="article-read">Read Article</div>
     </div>
-
-    <div class="article-card featured" onclick="showArticle('article7')" style="margin-bottom:2px">
-      <div style="display:flex;flex-direction:column;gap:1rem;justify-content:center">
-        <div class="article-cat">Local &amp; Community</div>
-        <div style="font-family:'Cinzel',serif;font-size:8px;letter-spacing:3px;color:var(--crimson);text-transform:uppercase;padding:3px 10px;border:1px solid rgba(122,21,21,0.3);display:inline-block;width:fit-content">New — March 29, 2026</div>
-        <div class="article-title">Where to buy real saffron in Orange County. <em>What to look for and what to avoid</em></div>
-        <div class="article-excerpt">Orange County has a large Persian, South Asian, and Middle Eastern community that knows exactly what real saffron should be. Finding it locally is harder than it should be. Here is an honest guide.</div>
-        <div class="article-meta">
-          <span class="article-date">March 29, 2026 · 5 min read</span>
-        </div>
-        <div class="article-read">Read Article</div>
-      </div>
-      <div class="featured-visual">
-        <div class="featured-panel">
-          <div class="panel-number">07</div>
-          <svg width="70" height="70" viewBox="0 0 140 140" fill="none">
-            <circle cx="70" cy="62" r="32" stroke="#C8860A" stroke-width="1" opacity="0.25" fill="none"/>
-            <circle cx="70" cy="62" r="10" fill="#C8860A" opacity="0.5"/>
-            <circle cx="70" cy="62" r="5" fill="#C8860A" opacity="0.9"/>
-            <path d="M70 94 L70 118" stroke="#C8860A" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
-            <path d="M70 30 Q78 44 70 62" stroke="#C23232" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
-            <path d="M70 30 Q62 44 70 62" stroke="#C23232" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
-            <ellipse cx="70" cy="27" rx="4" ry="6" fill="#C23232" opacity="0.85"/>
-            <circle cx="45" cy="55" r="3" fill="#C8860A" opacity="0.3"/>
-            <circle cx="95" cy="55" r="3" fill="#C8860A" opacity="0.3"/>
-            <circle cx="55" cy="80" r="3" fill="#C8860A" opacity="0.3"/>
-            <circle cx="85" cy="80" r="3" fill="#C8860A" opacity="0.3"/>
-          </svg>
-          <div class="panel-text">"Grade I saffron, grown to a standard, now available in Southern California."</div>
-        </div>
+    <div class="featured-visual">
+      <div class="featured-panel">
+        <div class="panel-number">07</div>
+        <svg width="70" height="70" viewBox="0 0 140 140" fill="none">
+          <circle cx="70" cy="62" r="32" stroke="#C8860A" stroke-width="1" opacity="0.25" fill="none"/>
+          <circle cx="70" cy="62" r="10" fill="#C8860A" opacity="0.5"/>
+          <circle cx="70" cy="62" r="5" fill="#C8860A" opacity="0.9"/>
+          <path d="M70 94 L70 118" stroke="#C8860A" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+          <path d="M70 30 Q78 44 70 62" stroke="#C23232" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+          <path d="M70 30 Q62 44 70 62" stroke="#C23232" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+          <ellipse cx="70" cy="27" rx="4" ry="6" fill="#C23232" opacity="0.85"/>
+        </svg>
+        <div class="panel-text">"Grade I saffron, grown to a standard, now available in Southern California."</div>
       </div>
     </div>
+  </a>
 
-    <!-- OLDER ARTICLES heading -->
-    <div style="font-family:'Cinzel',serif;font-size:9px;letter-spacing:4px;color:var(--earth-lt);text-transform:uppercase;margin:3rem 0 1.5rem;opacity:0.7">
-      Previous Articles
-    </div>
-
-    <div class="articles-grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
-
-      <div class="article-card" onclick="showArticle('article6')">
-        <div class="article-cat">Buying &amp; Storage</div>
-        <div class="article-title">How long does saffron last. <em>And why the grade you buy determines the answer</em></div>
-        <div class="article-excerpt">Saffron does not expire the way food does. But it loses its colour, aroma, and flavour faster than most people realise. Here is what actually governs shelf life.</div>
-        <div class="article-meta"><span class="article-date">March 28, 2026 · 5 min read</span></div>
-        <div class="article-read">Read Article</div>
-      </div>
-
-            <div class="article-card" onclick="showArticle('article5')">
-        <div class="article-cat">Health &amp; Wellness</div>
-        <div class="article-title">What saffron actually does for your body. <em>Separating research from claims</em></div>
-        <div class="article-excerpt">Saffron has been used in traditional medicine for thousands of years. Modern research is beginning to understand why. Here is what the science actually says, and what it does not.</div>
-        <div class="article-meta"><span class="article-date">March 27, 2026 · 6 min read</span></div>
-        <div class="article-read">Read Article</div>
-      </div>
-
-      <div class="article-card" onclick="showArticle('article4')">
-        <div class="article-cat">How To Use It</div>
-        <div class="article-title">How to use saffron correctly. <em>Most people are wasting it</em></div>
-        <div class="article-excerpt">Adding saffron directly to a pot wastes most of what you paid for. Here is the technique that releases everything the thread has to offer.</div>
-        <div class="article-meta"><span class="article-date">March 25, 2026 · 5 min read</span></div>
-        <div class="article-read">Read Article</div>
-      </div>
-
-      <div class="article-card" onclick="showArticle('article3')">
-        <div class="article-cat">Understanding Quality</div>
-        <div class="article-title">What is ISO 3632, and why it is the <em>only number that matters</em></div>
-        <div class="article-excerpt">Every saffron package makes claims. ISO 3632 Grade I is the only one requiring independent verification. Here is what it actually means.</div>
-        <div class="article-meta"><span class="article-date">March 25, 2026 · 6 min read</span></div>
-        <div class="article-read">Read Article</div>
-      </div>
-
-      <div class="article-card" onclick="showArticle('article2')">
-        <div class="article-cat">Culture &amp; Tradition</div>
-        <div class="article-title">زعفران. Saffron in <em>Persian cuisine</em> and why it is never optional</div>
-        <div class="article-excerpt">From tahdig to sholeh zard, saffron in Persian cooking is not a spice. It is an act of care.</div>
-        <div class="article-meta"><span class="article-date">March 25, 2026 · 4 min read</span></div>
-        <div class="article-read">Read Article</div>
-      </div>
-
-      <div class="article-card" onclick="showArticle('article1')">
-        <div class="article-cat">Know Your Ingredient</div>
-        <div class="article-title">How to tell if your saffron is <em>real.</em> The simple tests every buyer should know</div>
-        <div class="article-excerpt">Most saffron sold in the US is not what it claims. Here is how to know before you cook with it.</div>
-        <div class="article-meta"><span class="article-date">March 25, 2026 · 5 min read</span></div>
-        <div class="article-read">Read Article</div>
-      </div>
-
-    </div>
-
+  <div style="font-family:'Cinzel',serif;font-size:9px;letter-spacing:4px;color:var(--earth-lt);text-transform:uppercase;margin:3rem 0 1.5rem;opacity:0.7">
+    Previous Articles
   </div>
 
-  <!-- Newsletter -->
-  <div class="newsletter-section">
-    <div class="newsletter-inner">
-      <div class="blog-tag" style="justify-content:center">Stay Informed</div>
-      <h2 class="newsletter-heading">New articles on saffron,<br><em>culture, and craft.</em></h2>
-      <p class="newsletter-sub">Follow @azaadsaffron on Instagram to be notified when new articles are published.</p>
-      <a href="https://www.instagram.com/azaadsaffron" target="_blank" style="font-family:'Cinzel',serif;font-size:9px;letter-spacing:3px;background:var(--crimson);color:var(--cream);padding:12px 28px;text-decoration:none;text-transform:uppercase;transition:background 0.2s" onmouseover="this.style.background='#4A0A0A'" onmouseout="this.style.background='#7A1515'">Follow on Instagram</a>
-    </div>
+  <div class="articles-grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
+
+    <a href="blog/how-long-does-saffron-last.html" class="article-card">
+      <div class="article-cat">Buying &amp; Storage</div>
+      <div class="article-title">How long does saffron last. <em>And why the grade you buy determines the answer</em></div>
+      <div class="article-excerpt">Saffron does not expire the way food does. But it loses its colour, aroma, and flavour faster than most people realise. Here is what actually governs shelf life.</div>
+      <div><span class="article-date">March 28, 2026 · 5 min read</span></div>
+      <div class="article-read">Read Article</div>
+    </a>
+
+    <a href="blog/saffron-health-benefits-research.html" class="article-card">
+      <div class="article-cat">Health &amp; Wellness</div>
+      <div class="article-title">What saffron actually does for your body. <em>Separating research from claims</em></div>
+      <div class="article-excerpt">Saffron has been used in traditional medicine for thousands of years. Modern research is beginning to understand why. Here is what the science actually says, and what it does not.</div>
+      <div><span class="article-date">March 27, 2026 · 6 min read</span></div>
+      <div class="article-read">Read Article</div>
+    </a>
+
+    <a href="blog/how-to-bloom-saffron.html" class="article-card">
+      <div class="article-cat">How To Use It</div>
+      <div class="article-title">How to use saffron correctly. <em>Most people are wasting it</em></div>
+      <div class="article-excerpt">Adding saffron directly to a pot wastes most of what you paid for. Here is the technique that releases everything the thread has to offer.</div>
+      <div><span class="article-date">March 25, 2026 · 5 min read</span></div>
+      <div class="article-read">Read Article</div>
+    </a>
+
+    <a href="blog/what-is-iso-3632-saffron-grade.html" class="article-card">
+      <div class="article-cat">Understanding Quality</div>
+      <div class="article-title">What is ISO 3632, and why it is the <em>only number that matters</em></div>
+      <div class="article-excerpt">Every saffron package makes claims. ISO 3632 Grade I is the only one requiring independent verification. Here is what it actually means.</div>
+      <div><span class="article-date">March 25, 2026 · 6 min read</span></div>
+      <div class="article-read">Read Article</div>
+    </a>
+
+    <a href="blog/saffron-in-persian-cuisine.html" class="article-card">
+      <div class="article-cat">Culture &amp; Tradition</div>
+      <div class="article-title">زعفران. Saffron in <em>Persian cuisine</em> and why it is never optional</div>
+      <div class="article-excerpt">From tahdig to sholeh zard, saffron in Persian cooking is not a spice. It is an act of care.</div>
+      <div><span class="article-date">March 25, 2026 · 4 min read</span></div>
+      <div class="article-read">Read Article</div>
+    </a>
+
+    <a href="blog/how-to-tell-if-saffron-is-real.html" class="article-card">
+      <div class="article-cat">Know Your Ingredient</div>
+      <div class="article-title">How to tell if your saffron is <em>real.</em> The simple tests every buyer should know</div>
+      <div class="article-excerpt">Most saffron sold in the US is not what it claims. Here is how to know before you cook with it.</div>
+      <div><span class="article-date">March 25, 2026 · 5 min read</span></div>
+      <div class="article-read">Read Article</div>
+    </a>
+
   </div>
 
 </div>
 
-<!-- ══════════════════════════════════════════ -->
-<!-- ── ARTICLE 1 ── -->
-<!-- ══════════════════════════════════════════ -->
-<div id="article1" class="article-full">
-
-  <div class="article-header">
-    <div class="article-header-inner">
-      <div class="article-header-cat">Know Your Ingredient</div>
-      <h1 class="article-header-title">How to tell if your saffron is <em>real.</em> The simple tests every buyer should know</h1>
-      <p class="article-header-sub">Most saffron sold in the United States is not what it claims to be. Here is how to know the difference before you cook with it.</p>
-      <div class="article-header-meta">March 25, 2026 · 5 minute read · By the Azaad Saffron Team</div>
-    </div>
-  </div>
-
-  <div class="article-body">
-    <button class="article-back" onclick="showIndex()">Back to Journal</button>
-
-    <p>If you have ever opened a jar of saffron, added it to your rice, and wondered why the colour was pale or the aroma was faint, you were probably right to wonder. Saffron fraud is one of the most widespread problems in the global spice trade. Studies suggest that a significant proportion of saffron sold commercially contains adulterants including safflower petals, turmeric-stained threads, synthetic dyes, or simply very poor quality filaments with almost no active compounds.</p>
-
-    <p>The good news is that real saffron, genuine ISO 3632 Grade I saffron, behaves in ways that fakes cannot replicate. And testing it requires nothing more than a glass of cold water and your own senses.</p>
-
-    <h2>The Water Test</h2>
-
-    <p>Drop a few threads into a small glass of cold water and watch carefully. Genuine saffron releases colour very slowly, a deep golden orange that spreads gradually over ten to fifteen minutes. The thread itself should remain red or deep orange. It does not bleach white or lose all its colour into the water.</p>
-
-    <blockquote>Real saffron releases its colour slowly. The pace is the tell.</blockquote>
-
-    <p>Safflower is the most common adulterant, and a fake will release its colour almost immediately and turn completely white or pale. The water turns a flat yellow rather than the rich golden orange of true crocin. If your threads lose all their colour in under two minutes, they are not saffron.</p>
-
-    <h2>The Smell Test</h2>
-
-    <p>Real saffron has one of the most distinctive aromas in the culinary world: a complex combination of honey, hay, and something faintly metallic. The compound responsible is called safranal. It is unique to Crocus sativus and cannot be replicated synthetically without making the smell obviously chemical.</p>
-
-    <p>Cheap saffron often smells of very little. Fake saffron sometimes smells sweet or floral in a way that feels artificial. If your saffron smells faint, flat, or reminiscent of perfume, treat that as a warning.</p>
-
-    <h2>The Taste Test</h2>
-
-    <p>Place a single thread on your tongue. Real saffron tastes slightly bitter and earthy, almost medicinal. This bitterness comes from picrocrocin, one of the key compounds measured in ISO 3632 testing. Safflower and other adulterants are tasteless or mildly sweet. If your saffron has no perceptible flavour, it is almost certainly not Grade I and may not be saffron at all.</p>
-
-    <h2>What the Label Tells You, and What It Does Not</h2>
-
-    <p>The words "premium," "pure," "Grade A+," and "authentic" on a saffron label mean nothing legally. Any producer can print these words on any product. The only claim that requires independent verification is ISO 3632 Grade I certification, and even that is meaningful only if it comes with a batch-specific laboratory record, not just a general certification printed on the box.</p>
-
-    <p>What to look for on a label: the ISO 3632 standard cited specifically, a batch or lot number, and ideally a way to verify the findings for that specific batch. A QR code linked to actual laboratory data is the gold standard. A general "certified" stamp with no traceability is not.</p>
-
-    <h2>Why This Matters Beyond the Recipe</h2>
-
-    <p>Saffron fraud is not just a culinary inconvenience. It is a cultural one. Persian, South Asian, Middle Eastern, and Afghan households have a deep and long-standing relationship with this ingredient. They know what it should smell like. They know what the rice should look like. When they pay for real saffron and receive a synthetic imitation, they are being deceived about something that carries genuine cultural significance.</p>
-
-    <p>Testing your saffron before you use it costs nothing. Really knowing what you are buying is the whole point.</p>
-
-    <div class="article-cta">
-      <div class="article-cta-text">"Every jar of Azaad shows you its independent batch findings before you open it."</div>
-      <a href="index.html#verify" class="article-cta-btn">See How We Verify</a>
-    </div>
+<div class="newsletter-section">
+  <div class="newsletter-inner">
+    <div class="blog-tag" style="text-align:center">Stay Informed</div>
+    <h2 class="newsletter-heading">New articles on saffron,<br><em>culture, and craft.</em></h2>
+    <p class="newsletter-sub">Follow @azaadsaffron on Instagram to be notified when new articles are published.</p>
+    <a href="https://www.instagram.com/azaadsaffron" target="_blank" style="font-family:'Cinzel',serif;font-size:9px;letter-spacing:3px;background:var(--crimson);color:var(--cream);padding:12px 28px;text-decoration:none;text-transform:uppercase;transition:background 0.2s" onmouseover="this.style.background='#4A0A0A'" onmouseout="this.style.background='#7A1515'">Follow on Instagram</a>
   </div>
 </div>
 
-<!-- ══════════════════════════════════════════ -->
-<!-- ── ARTICLE 2 ── -->
-<!-- ══════════════════════════════════════════ -->
-<div id="article2" class="article-full">
-
-  <div class="article-header">
-    <div class="article-header-inner">
-      <div class="article-header-cat">Culture & Tradition</div>
-      <h1 class="article-header-title">زعفران. The role of saffron in <em>Persian cuisine</em> and why it is never optional</h1>
-      <p class="article-header-sub">From tahdig to the sofreh on Nowruz, saffron in Persian cooking is not a spice. It is an act of care.</p>
-      <div class="article-header-meta">March 25, 2026 · 4 minute read · By the Azaad Saffron Team</div>
-    </div>
-  </div>
-
-  <div class="article-body">
-    <button class="article-back" onclick="showIndex()">Back to Journal</button>
-
-    <p>There are ingredients that season food. And there are ingredients that define it. In Persian cuisine, زعفران (zeafaran) belongs firmly in the second category. It is not added for colour alone, or flavour alone, or aroma alone. It is added because without it, the dish is something else. Something incomplete.</p>
-
-    <p>This is not sentimentality. It is culinary architecture. Persian rice, chelow and polo, is built around the interplay of saffron water and fat, the blooming of threads in warm liquid before they meet the rice. The resulting colour is not decoration. It is evidence of care.</p>
-
-    <h2>Nowruz and the Sofreh</h2>
-
-    <p>On the Persian New Year, the haft-sin table is set with seven symbolic items beginning with the letter sin. Saffron appears at the table in the form of sholeh zard, a saffron rice pudding, not as one of the seven items but as the offering that accompanies them. It is the food you bring when you want to say something matters.</p>
-
-    <p>Sholeh zard is made with patience. The rice is cooked long and slow. The saffron is bloomed carefully. The rosewater is added at the end. The result is a dish that tastes like it was made by someone who had time for you.</p>
-
-    <blockquote>Saffron in Persian cooking is the difference between feeding someone and caring for them.</blockquote>
-
-    <h2>The Rituals of Preparation</h2>
-
-    <p>Serious Persian cooks do not add saffron directly to a pot. They bloom it. A pinch of threads is ground gently with a small amount of sugar using the back of a spoon, then dissolved in warm water, never boiling. This process, done correctly, releases the crocin and safranal compounds in a way that direct addition never achieves. The resulting liquid is a deep, vivid gold. A few tablespoons can colour and flavour an entire pot of rice.</p>
-
-    <p>This is why the quality of the saffron matters so profoundly. A thread with low crocin content produces a pale, insipid liquid regardless of how carefully it is bloomed. The ritual is only as good as the ingredient.</p>
-
-    <h2>A Note on Khoresh and Tea</h2>
-
-    <p>Saffron appears throughout the Persian kitchen beyond rice. Khoresh-e-fesenjaan, the walnut and pomegranate stew, sometimes includes a bloom of saffron to balance its darkness. Bastani, Persian ice cream, gets its colour and its haunting flavour from a generous amount of real saffron. And on winter mornings, a small pot of saffron tea, nothing more than threads steeped in near-boiling water with a little honey, is both medicine and comfort.</p>
-
-    <p>Each of these uses requires the same thing: saffron that actually tastes and smells and colours as it should. There is no substitute. There is no workaround. The ingredient has to be real.</p>
-
-    <div class="article-cta">
-      <div class="article-cta-text">"Grade I saffron. Batch verified. For every dish that deserves the real thing."</div>
-      <a href="index.html#shop" class="article-cta-btn">Shop Azaad Saffron</a>
-    </div>
-  </div>
-</div>
-
-<!-- ══════════════════════════════════════════ -->
-<!-- ── ARTICLE 3 ── -->
-<!-- ══════════════════════════════════════════ -->
-<div id="article3" class="article-full">
-
-  <div class="article-header">
-    <div class="article-header-inner">
-      <div class="article-header-cat">Understanding Quality</div>
-      <h1 class="article-header-title">What is ISO 3632, and why it is the <em>only number that matters</em> when buying saffron</h1>
-      <p class="article-header-sub">Every saffron package makes claims. ISO 3632 Grade I is the only one that requires independent verification. Here is what it means.</p>
-      <div class="article-header-meta">March 25, 2026 · 6 minute read · By the Azaad Saffron Team</div>
-    </div>
-  </div>
-
-  <div class="article-body">
-    <button class="article-back" onclick="showIndex()">Back to Journal</button>
-
-    <p>Walk into any grocery store that sells saffron and you will find packages using words like premium, authentic, Grade A+, pure, and superior. None of these words have a legal definition. None require testing. None mean anything beyond the marketing intent of whoever printed them.</p>
-
-    <p>ISO 3632 is different. It is an international standard developed by the International Organization for Standardization, formally published as ISO 3632-1:2011 (Specifications) and ISO 3632-2:2010 (Test Methods), that establishes measurable, testable criteria for saffron quality. It is the only quality framework in the global saffron trade that requires independent laboratory verification to claim.</p>
-
-    <h2>What ISO 3632 Actually Measures</h2>
-
-    <p>The standard measures three chemical compounds that are unique to genuine Crocus sativus saffron and directly responsible for its colour, flavour, and aroma.</p>
-
-    <p><strong>Crocin</strong> is measured as the colour strength at 440nm absorbance. This tells you how much colour the saffron will release. Grade I requires a minimum of 190 per ISO 3632-1:2011. High-quality saffron regularly exceeds 250. Safflower and synthetic dyes produce an entirely different colour profile that does not meet this standard.</p>
-
-    <p><strong>Picrocrocin</strong> is the flavour compound, measured at 257nm. This is what makes saffron taste bitter and earthy in the way that only saffron does. Grade I minimum is 70. A thread with no perceptible taste likely scores very low on picrocrocin.</p>
-
-    <p><strong>Safranal</strong> is the aroma compound, measured at 330nm. The Grade I range is 20 to 50. This is the compound responsible for saffron's distinctive hay-and-honey fragrance. It is also the most volatile: saffron stored improperly or for too long loses its safranal first, which is why aroma is often the first quality indicator to degrade.</p>
-
-    <p style="font-size:13px;color:var(--earth-lt);font-style:italic;margin-top:-0.5rem">Source: ISO 3632-1:2011, International Organization for Standardization. iso.org/standard/44523.html</p>
-
-    <blockquote>ISO 3632 does not measure how premium a brand's packaging looks. It measures what is actually in the thread.</blockquote>
-
-    <h2>The Three Grades</h2>
-
-    <p>ISO 3632 defines three commercial categories: Grade I, Grade II, and Grade III, with Grade I representing the highest quality. Most commodity saffron sold globally falls into Grade II or Grade III. Grade I is what serious cooks, Persian households, and discerning buyers seek out, and it is what every jar of Azaad is verified to meet before it reaches you.</p>
-
-    <h2>Why Batch-Specific Verification Matters</h2>
-
-    <p>A general ISO 3632 certification on a package tells you that at some point, some saffron from that producer met the standard. It does not tell you that the specific threads in the jar you are holding were tested. Saffron quality varies by harvest year, storage conditions, and handling. A producer certified last year may be selling this year's inferior harvest under the same certification.</p>
-
-    <p>Batch-specific verification, where a laboratory analyses a sample from the precise shipment that was packaged, is the only way to know that the threads in your jar, specifically, meet Grade I. This is the standard Azaad is built around. Every batch, documented. Every jar, traceable.</p>
-
-    <h2>How to Use This Information as a Buyer</h2>
-
-    <p>When evaluating any saffron purchase, ask three questions. Does the packaging cite ISO 3632 Grade I specifically, not just "Grade A" or "premium" or "certified"? Is there a batch or lot number that allows traceability? And is there a way to see the laboratory findings for that specific batch: a QR code, a certificate, a verification page?</p>
-
-    <p>If all three answers are yes, you have a product worth buying. If any of them is no, you are taking the seller's word for something that should be verifiable.</p>
-
-    <div class="article-cta">
-      <div class="article-cta-text">"Azaad publishes the independent batch findings for every jar. Scan and see."</div>
-      <a href="index.html#verify" class="article-cta-btn">See Our Batch Findings</a>
-    </div>
-  </div>
-</div>
-
-<!-- ══════════════════════════════════════════ -->
-<!-- ── ARTICLE 4 ── -->
-<!-- ══════════════════════════════════════════ -->
-<div id="article4" class="article-full">
-
-  <div class="article-header">
-    <div class="article-header-inner">
-      <div class="article-header-cat">How To Use It</div>
-      <h1 class="article-header-title">How to use saffron correctly. <em>Why most people are wasting it</em></h1>
-      <p class="article-header-sub">Adding saffron threads directly to a pot is one of the most common mistakes in the kitchen. Here is the technique that releases everything the thread has to offer.</p>
-      <div class="article-header-meta">March 25, 2026 · 5 minute read · By the Azaad Saffron Team</div>
-    </div>
-  </div>
-
-  <div class="article-body">
-    <button class="article-back" onclick="showIndex()">Back to Journal</button>
-
-    <p>Saffron is one of the most expensive ingredients in any kitchen. A small jar of genuine Grade I threads costs more per gram than most proteins, more than most spices by an order of magnitude. Given that, it is worth knowing how to use it properly. Most people do not, and the result is that a significant portion of what they paid for never makes it into the dish.</p>
-
-    <p>The single most common mistake is adding saffron threads directly to a pot, a pan, or a bowl of hot liquid. It seems logical that the heat will extract the colour and flavour. But this is not how saffron works, and this approach wastes a substantial amount of what the thread contains.</p>
-
-    <h2>Why Direct Addition Does Not Work</h2>
-
-    <p>Saffron's active compounds, crocin for colour, picrocrocin for flavour, and safranal for aroma, are bound within the cellular structure of the dried stigma. To release them properly, the thread needs to be broken down first. Dropping a whole thread into a pot of rice or a sauce means the compounds release unevenly and incompletely. You get some colour. You get almost none of the flavour and aroma.</p>
-
-    <p>The technique that solves this is called blooming, and it takes about three minutes.</p>
-
-    <h2>How to Bloom Saffron Correctly</h2>
-
-    <p>Take a small pinch of threads. For most recipes, between eight and twelve threads is sufficient for two to four servings. Place them on a clean, dry surface and use the back of a metal spoon to crush them gently into a rough powder. You do not need to grind them to fine dust, just break the structure of the thread.</p>
-
-    <p>Transfer the crushed threads to a small cup or ramekin. Add two to three tablespoons of warm water, not boiling and not cold. The ideal temperature is around 80°C, roughly the temperature of water that has just stopped bubbling. Boiling water can degrade safranal, which is the most heat-sensitive compound and the first thing you smell when you open the jar.</p>
-
-    <blockquote>The bloom takes ten minutes. What it produces is worth every second of waiting.</blockquote>
-
-    <p>Let the mixture steep for a minimum of ten minutes. You will watch the water turn from pale yellow to a deep, vivid gold as the crocin releases. The aroma in the room will change. After ten to fifteen minutes you have a concentrated saffron liquid, a bloom, that carries the full colour, flavour, and fragrance of the threads.</p>
-
-    <p>Add this liquid to your dish at the appropriate stage of cooking. For Persian rice it goes in with the final layer before steaming. For risotto it goes in with the last ladle of stock. For tea it goes directly into the cup.</p>
-
-    <h2>How Much Saffron to Use</h2>
-
-    <p>How much saffron to use is one of the most searched questions about the ingredient, and one that rarely gets a clear answer. The honest answer is that it depends on the quality of the saffron. A high-crocin, Grade I thread releases significantly more colour and flavour per gram than a lower-grade thread. You can use less and achieve more.</p>
-
-    <p>As a practical guide for Grade I saffron: for a pot of rice serving four to six people, a generous pinch of eight to twelve threads is sufficient. For saffron tea for one person, three to four threads bloomed in a small amount of hot water is enough. For a large batch of Persian rice for ten or more people, roughly thirty to forty threads, about half a gram, is a reasonable amount.</p>
-
-    <p>A common mistake is using too much. Excess saffron does not improve a dish. At high concentrations the bitterness of picrocrocin can become overwhelming. More is not better. The right amount of good saffron, properly bloomed, is always the answer.</p>
-
-    <h2>Storage: How to Protect What You Have Paid For</h2>
-
-    <p>Safranal, the aroma compound, is volatile. It begins to degrade the moment saffron is exposed to light, heat, or humidity. This is why quality saffron is sold in amber glass rather than clear glass or plastic. The amber blocks ultraviolet light, which is the primary cause of crocin degradation.</p>
-
-    <p>Store your saffron in its amber jar in a cool dark place; a cupboard away from the stove is ideal. Not the freezer, which introduces moisture when the jar warms back to room temperature. Not next to the hob, where temperature fluctuations accelerate degradation. A consistent, cool, dark environment will preserve Grade I saffron for eighteen to twenty-four months from the date of packaging.</p>
-
-    <h2>The Difference Good Technique Makes</h2>
-
-    <p>A Persian cook who has been making tahdig for forty years blooms saffron without thinking about it. It is not technique for its own sake. It is the accumulated knowledge of generations of cooks who learned through experience that this is simply how the ingredient works. The bloom takes three minutes of preparation and ten minutes of waiting. What it produces compared to direct addition is not a subtle difference. It is a different dish.</p>
-
-    <div class="article-cta">
-      <div class="article-cta-text">"Grade I saffron, properly bloomed, transforms a dish.<br>Start with threads worth blooming."</div>
-      <a href="index.html#shop" class="article-cta-btn">Shop Azaad Saffron Threads</a>
-    </div>
-  </div>
-</div>
-
-<!-- ── ARTICLE 5 ── -->
-<div id="article5" class="article-full">
-  <div class="article-header">
-    <div class="article-header-inner">
-      <div class="article-header-cat">Health &amp; Wellness</div>
-      <h1 class="article-header-title">What saffron actually does for your body. <em>Separating research from claims</em></h1>
-      <p class="article-header-sub">Saffron has been used in traditional medicine for thousands of years. Modern research is beginning to understand why, and what it does not support.</p>
-      <div class="article-header-meta">March 27, 2026 · 6 minute read · By the Azaad Saffron Team</div>
-    </div>
-  </div>
-
-  <div class="article-body">
-    <button class="article-back" onclick="showIndex()">Back to Journal</button>
-
-    <p>Saffron has been used in traditional medicine across Persian, Indian, Greek, and Chinese traditions for more than three thousand years. It has been prescribed for conditions ranging from depression and insomnia to digestive complaints and skin conditions. In recent decades, modern pharmacological research has begun investigating these traditional claims with clinical rigor, and the results are more nuanced than either enthusiastic wellness blogs or sceptical critics tend to acknowledge.</p>
-
-    <p>This article summarises what peer-reviewed research currently supports, what remains preliminary, and what is not supported by evidence. Because saffron is a food product and not a medicine, we are careful to present these findings as general nutritional information only. Nothing here constitutes medical advice, and anyone with health concerns should consult a qualified healthcare professional.</p>
-
-    <h2>What Saffron Contains</h2>
-
-    <p>Saffron's biological activity comes primarily from three compounds: crocin, picrocrocin, and safranal. These are the same compounds measured in ISO 3632 quality testing, which is one reason quality certification matters beyond just culinary performance.</p>
-
-    <p><strong>Crocin and crocetin</strong> are the carotenoid compounds responsible for saffron's golden colour. They are potent antioxidants and have been the subject of considerable research interest for their potential anti-inflammatory and neuroprotective properties. Crocin is water-soluble, which makes it highly bioavailable when saffron is steeped in liquid, another reason the blooming technique described in our earlier article matters not just for cooking but for extracting the full range of the spice's compounds.</p>
-
-    <p><strong>Safranal</strong> is the volatile compound responsible for saffron's distinctive aroma. Research published in Food Science and Nutrition (2025) identifies safranal as having antioxidant, antimicrobial, and anti-inflammatory properties in laboratory settings, though most of this research remains preclinical.</p>
-
-    <p><strong>Picrocrocin</strong> is responsible for saffron's characteristic bitter taste and contributes to its overall bioactive profile.</p>
-
-    <blockquote>The same compounds that give saffron its colour, flavour, and aroma are the ones most studied for their potential biological effects. This is why quality matters. A low-grade saffron with minimal crocin content is not the same ingredient, culinarily or nutritionally.</blockquote>
-
-    <h2>What the Research Supports</h2>
-
-    <p><strong>Mood and mild depression.</strong> This is the most researched area of saffron's health applications and the one with the strongest evidence base. Multiple randomised controlled trials have examined saffron supplementation for mild to moderate depression. A review of available trials suggests saffron extract at doses of around 30mg per day demonstrated effects comparable to low-dose antidepressant medication in some studies. The mechanism is thought to involve serotonin reuptake inhibition, similar in principle to pharmaceutical antidepressants. It is important to note that this research involves concentrated saffron extract supplements at specific doses, not culinary quantities of saffron added to food.</p>
-
-    <p><strong>Antioxidant activity.</strong> Crocin and crocetin are established antioxidants in laboratory settings. Antioxidants neutralise free radicals, unstable molecules that contribute to cellular damage and are implicated in ageing and chronic disease. This is well-documented at the molecular level. Whether the antioxidant activity of culinary amounts of saffron translates to meaningful clinical benefit in humans is less clear.</p>
-
-    <p><strong>PMS symptom relief.</strong> Several small studies have examined saffron's effects on premenstrual syndrome symptoms, with some showing reductions in irritability, depression, and physical symptoms. The research is promising but based on small sample sizes.</p>
-
-    <p><strong>Eye health.</strong> Research published in peer-reviewed ophthalmology journals has examined saffron supplementation for age-related macular degeneration, with some trials showing improvements in visual acuity. This research is ongoing.</p>
-
-    <h2>What Remains Preliminary</h2>
-
-    <p>A significant body of research into saffron's effects on memory, cognitive function, appetite regulation, and heart health exists primarily at the preclinical level, meaning laboratory or animal studies. These findings are promising but have not been consistently replicated in large-scale human trials. Research published in Food Science and Nutrition (2025) notes that while saffron's bioactive components exhibit significant antioxidant, antimicrobial, and anti-inflammatory activities in research settings, the translation of these findings to clinical recommendations requires further study.</p>
-
-    <p>This is not unusual in nutritional science. Many traditional food ingredients with long histories of medicinal use are at this stage of research. The traditional knowledge precedes the clinical evidence, and the clinical evidence is catching up. Saffron's pharmacological profile is genuinely interesting to researchers. The claims should simply be held in proportion to the current state of that evidence.</p>
-
-    <h2>What Is Not Supported</h2>
-
-    <p>Some wellness content makes very strong claims about saffron's health benefits that go well beyond what current evidence supports. Weight loss, cancer prevention, and dramatic hormonal effects are commonly cited in marketing contexts without adequate clinical basis. We do not repeat these claims. They may be directions that future research explores, but they are not established.</p>
-
-    <p>It is also worth noting that saffron should not be consumed in extremely large quantities. At very high doses, far beyond anything used in cooking, saffron can be toxic. Standard culinary use presents no known risk for healthy adults.</p>
-
-    <h2>The Culinary Perspective</h2>
-
-    <p>For most people reading this, saffron is first and foremost a culinary ingredient, and a remarkable one. The research context is worth knowing, but the most immediate reason to cook with genuine Grade I saffron is the same reason any serious cook cares about ingredient quality: it makes the food better.</p>
-
-    <p>The same crocin content that researchers study for its antioxidant properties is what gives your rice its colour. The same safranal that interests pharmacologists is what fills the kitchen with that unmistakeable fragrance when you open the jar. The quality of the ingredient and its culinary performance are inseparable from each other, and from any nutritional properties it may carry.</p>
-
-    <p style="font-size:13px;color:var(--earth-lt);font-style:italic;margin-top:1rem;border-top:1px solid rgba(200,134,10,0.15);padding-top:1rem">Sources: Tufail et al. (2025), "Functional, Nutraceutical and Health Endorsing Perspectives of Saffron," Food Science &amp; Nutrition, Wiley. doi:10.1002/fsn3.70721. Additional references: ISO 3632-1:2011. The health information in this article is for general educational purposes only and does not constitute medical advice. Consult a qualified healthcare professional before making any health decisions.</p>
-
-    <div class="article-cta">
-      <div class="article-cta-text">"The quality of the saffron and its culinary performance are inseparable from each other."</div>
-      <a href="index.html#shop" class="article-cta-btn">Shop Azaad Saffron Threads</a>
-    </div>
-  </div>
-</div>
-
-<!-- ── ARTICLE 6 ── -->
-<div id="article6" class="article-full">
-
-  <div class="article-header">
-    <div class="article-header-inner">
-      <div class="article-header-cat">Buying &amp; Storage</div>
-      <h1 class="article-header-title">How long does saffron last. <em>And why the grade you buy determines the answer</em></h1>
-      <p class="article-header-sub">Saffron does not expire the way food does. But it loses its colour, aroma, and flavour faster than most people realise. Here is what actually governs shelf life.</p>
-      <div class="article-header-meta">March 28, 2026 · 5 minute read · By the Azaad Saffron Team</div>
-    </div>
-  </div>
-
-  <div class="article-body">
-    <button class="article-back" onclick="showIndex()">Back to Journal</button>
-
-    <p>If you have ever found a jar of saffron at the back of a cupboard and wondered whether it is still worth using, you are asking the right question. Saffron is expensive. Knowing whether what you have is still performing at the level you paid for matters in a way that it does not with most spices.</p>
-
-    <p>The short answer is that saffron does not spoil in the way that food does. You will not get ill from old saffron. What you will get is a thread that has lost most of what made it worth buying in the first place: the colour that blooms gold in warm water, the fragrance that fills the kitchen, the bitterness that tells you the dish has depth. Those qualities degrade over time, and they degrade faster than most people expect.</p>
-
-    <h2>What Is Actually Expiring</h2>
-
-    <p>Saffron's character comes from three chemical compounds: crocin, which gives it colour; picrocrocin, which gives it its distinctive bitter flavour; and safranal, which produces the aroma. These are the same compounds measured in ISO 3632 quality testing, and they are the same compounds that degrade with time.</p>
-
-    <p>Safranal is the most volatile. It is a delicate organic compound that begins breaking down the moment saffron is exposed to light, heat, oxygen, or humidity. The aroma is typically the first thing you notice fading in an old jar. Crocin is more stable but still degrades, especially under UV light, which is why quality saffron is always packaged in amber glass rather than clear. Picrocrocin follows a similar pattern.</p>
-
-    <p>When people say their saffron has no smell or produces only a pale yellow colour, they are usually describing a thread from which safranal and crocin have already significantly degraded. The thread is technically still saffron. It is just no longer performing as saffron.</p>
-
-    <blockquote>The question is not whether saffron expires. The question is how much of what you paid for is still in the jar.</blockquote>
-
-    <h2>How Long Does Saffron Actually Last</h2>
-
-    <p>Properly stored Grade I saffron, sealed in amber glass and kept in a cool, dark cupboard, will maintain strong colour, flavour, and aroma for eighteen to twenty-four months from the harvest date. After that, you will begin to notice a gradual decline. By three years, even well-stored saffron will have lost a meaningful portion of its potency.</p>
-
-    <p>The harvest date matters more than the purchase date. A jar of saffron sitting on a shop shelf for twelve months before you buy it has already used up half its prime window. This is one reason batch transparency is so important: knowing when the saffron was harvested tells you how much of its life is left when it reaches you.</p>
-
-    <p>Lower grade saffron degrades faster, not slower. A thread that begins with a crocin reading of 120 will reach near-zero colour strength much sooner than a Grade I thread starting at 230 or above. The higher the initial quality, the more the compound has to give before it is gone. Buying good saffron and storing it correctly is not just about getting better flavour today. It is about getting usable flavour for longer.</p>
-
-    <h2>The Four Things That Accelerate Degradation</h2>
-
-    <p>Light is the primary enemy, particularly ultraviolet light. Even indirect sunlight will degrade crocin noticeably within weeks. A jar left on a windowsill or near a bright counter will lose its colour much faster than one stored in a closed cupboard. Amber glass blocks ultraviolet but is not a complete shield, which is why the location of storage matters even when the packaging is correct.</p>
-
-    <p>Heat causes the volatile safranal compound to evaporate rapidly. Storing saffron near the stove, near an oven, or anywhere that experiences regular heat cycles will significantly shorten its useful life. The inside of a cupboard above the hob is one of the worst places in a kitchen for saffron storage, despite being where many people keep their spices.</p>
-
-    <p>Moisture is the only condition that can make saffron genuinely unsafe. Saffron that has absorbed humidity can develop mould. A properly dried, well-packaged thread has minimal moisture content and is stable for years, but once moisture enters, the degradation is rapid and the thread should be discarded. This is also why the freezer, while appealing as a preservation method, is not recommended: condensation forms on the threads each time the jar moves between temperatures.</p>
-
-    <p>Oxygen accelerates the oxidation of crocin and picrocrocin. Every time you open the jar, you introduce fresh oxygen. This is why it makes sense to use clean, dry tweezers or a dry spoon when taking threads from the jar, rather than reaching in with fingers that may carry moisture.</p>
-
-    <h2>How to Tell If Your Saffron Is Still Good</h2>
-
-    <p>The simplest test is the water bloom, which we cover in detail in our article on identifying real saffron. Drop two or three threads into a small glass of warm water and wait ten minutes. Grade I saffron in good condition will produce a deep, vivid gold that spreads slowly through the water. The threads themselves will remain red. If the water barely changes colour, or if the threads bleach white within a minute or two, the saffron has either degraded significantly or was never high grade to begin with.</p>
-
-    <p>Smell is equally telling. Open the jar and inhale. Fresh Grade I saffron has an immediate, complex aroma: hay, honey, something faintly medicinal. If the smell is faint, flat, or entirely absent, the safranal has degraded. No storage technique will bring it back.</p>
-
-    <p>Colour is the third indicator. The threads should be a deep, rich crimson red. Saffron that has faded to a dull brownish-orange has likely been stored poorly or has sat in the jar too long.</p>
-
-    <h2>The Storage Approach That Works</h2>
-
-    <p>Amber glass in a dark cupboard away from any heat source is the correct setup. The inside of a kitchen drawer, a pantry shelf, or a spice cupboard positioned away from the stove are all suitable. Avoid the fridge: the temperature changes each time you open the door introduce condensation risk, and the humidity inside a refrigerator is higher than ideal. Avoid clear glass containers, which offer no UV protection.</p>
-
-    <p>If you buy saffron in a plastic bag or an unsealed envelope, transfer it to a small glass jar with a tight lid as soon as possible. Plastic is permeable to both air and moisture over time. The transfer takes thirty seconds and meaningfully extends the window before degradation becomes noticeable.</p>
-
-    <p>Buy in quantities you will use within a year. The economics of buying a large amount to save per-gram cost only hold if the saffron is still performing well when you reach the bottom of the jar. A fresh, smaller batch used promptly will deliver more value than a large batch that has sat half-used for three years.</p>
-
-    <h2>What This Means for What You Buy</h2>
-
-    <p>The grade of saffron you start with determines how long you have before it stops being worth using. A Grade I thread with a crocin reading above 200 and a safranal reading in the upper end of the standard range has more to give, and more margin before degradation becomes a problem in the dish. A low-grade thread may already be performing poorly on the day you buy it, and will decline to nothing within months.</p>
-
-    <p>Knowing the harvest date, knowing the grade, and knowing the specific compound readings of your batch are not just markers of quality at the moment of purchase. They tell you the ceiling of what the saffron can deliver and how long that ceiling is likely to hold. This is the case for batch-specific verification: not just so you know what you are buying today, but so you know how long it will remain worth using.</p>
-
-    <div class="article-cta">
-      <div class="article-cta-text">"Every jar of Azaad carries its batch findings. Colour strength, aroma reading, and harvest date, visible before you open it."</div>
-      <a href="index.html#verify" class="article-cta-btn">See Our Batch Findings</a>
-    </div>
-  </div>
-</div>
-
-<!-- ── ARTICLE 7 ── -->
-<div id="article7" class="article-full">
-
-  <div class="article-header">
-    <div class="article-header-inner">
-      <div class="article-header-cat">Local &amp; Community</div>
-      <h1 class="article-header-title">Where to buy real saffron in Orange County. <em>What to look for and what to avoid</em></h1>
-      <p class="article-header-sub">Orange County has one of the largest Persian, South Asian, and Middle Eastern communities in California. The saffron available locally does not always reflect that. Here is an honest guide to what you will find and what to look for.</p>
-      <div class="article-header-meta">March 29, 2026 · 5 minute read · By the Azaad Saffron Team</div>
-    </div>
-  </div>
-
-  <div class="article-body">
-    <button class="article-back" onclick="showIndex()">Back to Journal</button>
-
-    <p>Orange County has a significant and long-established Persian, South Asian, and Middle Eastern population, particularly concentrated in cities like Irvine, Anaheim, Anaheim Hills, and Tustin. These are communities where saffron is not a specialty item. It is a kitchen staple used weekly, not saved for special occasions. Khoresht, biryani, tahdig, sholeh zard: saffron appears throughout the cooking of these households in a way that makes quality a practical matter, not an indulgence.</p>
-
-    <p>And yet finding genuinely good saffron in Orange County is harder than it should be. The options that exist range from excellent to misleading, and the gap between what a package claims and what it contains is often significant. This article is an honest guide to what you are likely to find, what to look for, and what the labels actually mean.</p>
-
-    <h2>What You Will Find at Most Local Stores</h2>
-
-    <p>Persian and Middle Eastern grocery stores across Orange County stock saffron, and for many shoppers these are the first and most obvious place to look. The quality, however, varies considerably. Some stores carry well-sourced product with legitimate provenance. Others carry commodity saffron that has been repackaged under a premium-looking label with no independent verification behind the claims.</p>
-
-    <p>Indian grocery stores, particularly in the Anaheim and Irvine areas, similarly carry saffron as a regular stocking item. Again, the quality varies. Kesar branded products are common, and some are genuine. Many are not. The price point is often very low, which should prompt questions rather than confidence.</p>
-
-    <p>Mainstream supermarkets, including chain stores across Orange County, typically carry one or two saffron products in the spice aisle. These are almost universally low-grade commodity saffron, often packaged in clear plastic that has accelerated the degradation of whatever quality was present at harvest. They are not worth buying.</p>
-
-    <h2>What the Labels Actually Mean</h2>
-
-    <p>The words you will see most often on saffron packaging in local stores include premium, pure, Grade A, superior, and authentic. None of these terms have a legal definition. None require testing. Any producer can print them on any product.</p>
-
-    <p>The only quality designation that means something is ISO 3632 Grade I, the international standard developed by the International Organization for Standardization. Grade I requires a crocin reading of at least 190, a picrocrocin reading of at least 70, and a safranal reading between 20 and 50. These are the compounds that give saffron its colour, its bitter flavour, and its distinctive aroma respectively. A thread that meets Grade I has been verified to contain meaningful concentrations of all three.</p>
-
-    <p>Even ISO 3632 certification on the label is only as reliable as the testing behind it. A general certification tells you that the producer once had a batch tested. Batch-specific verification, where the actual shipment you are buying has been independently analysed, is the higher and more meaningful standard. Very few products available at retail in Orange County meet this bar.</p>
-
-    <h2>How to Evaluate What You Are Buying In-Store</h2>
-
-    <p>If you are buying saffron from a local store rather than directly from a verified source, there are three things you can assess before purchase. First, look at the packaging: amber glass is a positive sign. Clear plastic or clear glass means the saffron inside has been degrading under light since the day it was packaged, regardless of what grade it started as.</p>
-
-    <p>Second, look at the threads through the packaging if possible. Genuine Grade I saffron is deep crimson red. Threads that look brownish, pale, or have a high proportion of yellow or white style attached are lower grade. All-red stigmas with no yellow style attached is the characteristic of the highest grade material.</p>
-
-    <p>Third, look for a batch or lot number. The presence of a traceable lot number does not guarantee quality, but its absence makes any quality claim unverifiable. If there is no lot number, there is no way to trace where that saffron came from or when it was tested.</p>
-
-    <h2>Farmers Markets in Orange County</h2>
-
-    <p>Farmers markets across Orange County offer a different kind of buying experience: the ability to speak directly with the person selling the product, ask about sourcing and certification, and often smell or inspect before buying. For any ingredient where provenance matters, this is a significant advantage.</p>
-
-    <p>Azaad Saffron is available at Orange County farmers markets. Every jar comes with its batch-specific independent verification findings, including colour strength, flavour compound reading, and aroma measurement, accessible via a link on each jar. You can see exactly what is in the jar before you open it. That is not a common offer at a farmers market stall or anywhere else locally.</p>
-
-    <p>Specific market dates and locations are announced via our Instagram at @azaadsaffron. Following the account is the most reliable way to know where we will be.</p>
-
-    <h2>What to Look for Wherever You Buy</h2>
-
-    <p>Whether you are buying at a farmers market, a Persian grocery, an Indian supermarket, or online, the same questions apply. Does the seller cite ISO 3632 Grade I specifically, not just a vague premium or Grade A claim? Is there a batch number that allows traceability? Is there a way to see the independent laboratory findings for that specific batch?</p>
-
-    <p>If the answer to all three is yes, you have a product worth buying. If any of the three is no, you are trusting a claim rather than verifying it. The communities in Orange County that use saffron most have spent too long paying for products that did not deliver what they promised. That is the gap Azaad was built to close.</p>
-
-    <blockquote>The households in Irvine and Anaheim that cook with saffron every week deserve to know exactly what they are buying. That is not a complicated ask. It is the minimum.</blockquote>
-
-    <h2>Online versus Local</h2>
-
-    <p>For buyers in Orange County who cannot access a farmers market where Azaad is present, ordering directly from azaadsaffron.com when our online store launches will offer the same batch-verified product shipped to your door. Every jar will carry its findings. You will know the crocin reading, the safranal reading, and the harvest date before you open it.</p>
-
-    <p>Follow @azaadsaffron on Instagram to be notified at launch. If you have questions about sourcing, verification, or where to find us before then, reaching out via Instagram is the fastest way to get an answer.</p>
-
-    <div class="article-cta">
-      <div class="article-cta-text">"Grade I certified. Batch verified. Available at Orange County farmers markets and online soon."</div>
-      <a href="index.html#find" class="article-cta-btn">Find Azaad Near You</a>
-    </div>
-  </div>
-</div>
-
-<!-- ── FOOTER ── -->
 <footer>
   <div class="footer-brand-sm">AZAAD</div>
   <div class="footer-links-sm">
@@ -1071,20 +235,6 @@ footer {
   </div>
   <div class="footer-copy-sm">© 2026 Azaad Saffron</div>
 </footer>
-
-<script>
-function showArticle(id) {
-  document.getElementById('blog-index').style.display = 'none';
-  document.querySelectorAll('.article-full').forEach(a => a.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-  window.scrollTo(0, 0);
-}
-function showIndex() {
-  document.getElementById('blog-index').style.display = 'block';
-  document.querySelectorAll('.article-full').forEach(a => a.classList.remove('active'));
-  window.scrollTo(0, 0);
-}
-</script>
 
 </body>
 </html>
