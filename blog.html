@@ -115,10 +115,7 @@ nav {
   display: flex; align-items: center; gap: 10px;
   position: relative; z-index: 1;
 }
-.blog-tag::before {
-  content: ''; display: block; width: 24px; height: 1px;
-  background: var(--gold); flex-shrink: 0;
-}
+.blog-tag::before { display: none; }
 .blog-title {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(36px, 5vw, 60px);
@@ -291,10 +288,7 @@ nav {
   opacity: 0.7; margin-bottom: 1.25rem;
   display: flex; align-items: center; gap: 10px;
 }
-.article-header-cat::before {
-  content: ''; display: block; width: 24px; height: 1px;
-  background: var(--gold-pale); opacity: 0.7; flex-shrink: 0;
-}
+.article-header-cat::before { display: none; }
 .article-header-title {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(28px, 4vw, 48px);
@@ -502,32 +496,34 @@ footer {
       Latest Article
     </div>
 
-    <div class="article-card featured" onclick="showArticle('article6')" style="margin-bottom:2px">
+    <div class="article-card featured" onclick="showArticle('article7')" style="margin-bottom:2px">
       <div style="display:flex;flex-direction:column;gap:1rem;justify-content:center">
-        <div class="article-cat">Buying &amp; Storage</div>
-        <div style="font-family:'Cinzel',serif;font-size:8px;letter-spacing:3px;color:var(--crimson);text-transform:uppercase;padding:3px 10px;border:1px solid rgba(122,21,21,0.3);display:inline-block;width:fit-content">New — March 28, 2026</div>
-        <div class="article-title">How long does saffron last. <em>And why the grade you buy determines the answer</em></div>
-        <div class="article-excerpt">Saffron does not expire the way food does. But it does lose its colour, aroma, and flavour faster than most people realise. Here is what actually governs shelf life, and why it starts with the grade in the jar.</div>
+        <div class="article-cat">Local &amp; Community</div>
+        <div style="font-family:'Cinzel',serif;font-size:8px;letter-spacing:3px;color:var(--crimson);text-transform:uppercase;padding:3px 10px;border:1px solid rgba(122,21,21,0.3);display:inline-block;width:fit-content">New — March 29, 2026</div>
+        <div class="article-title">Where to buy real saffron in Orange County. <em>What to look for and what to avoid</em></div>
+        <div class="article-excerpt">Orange County has a large Persian, South Asian, and Middle Eastern community that knows exactly what real saffron should be. Finding it locally is harder than it should be. Here is an honest guide.</div>
         <div class="article-meta">
-          <span class="article-date">March 28, 2026 · 5 min read</span>
+          <span class="article-date">March 29, 2026 · 5 min read</span>
         </div>
         <div class="article-read">Read Article</div>
       </div>
       <div class="featured-visual">
         <div class="featured-panel">
-          <div class="panel-number">06</div>
+          <div class="panel-number">07</div>
           <svg width="70" height="70" viewBox="0 0 140 140" fill="none">
-            <rect x="30" y="35" width="80" height="90" rx="4" stroke="#C8860A" stroke-width="1" opacity="0.3" fill="none"/>
-            <rect x="38" y="43" width="64" height="74" rx="2" fill="#C8860A" opacity="0.06"/>
-            <line x1="50" y1="65" x2="90" y2="65" stroke="#C8860A" stroke-width="1" opacity="0.4"/>
-            <line x1="50" y1="80" x2="90" y2="80" stroke="#C8860A" stroke-width="1" opacity="0.25"/>
-            <line x1="50" y1="95" x2="75" y2="95" stroke="#C8860A" stroke-width="1" opacity="0.25"/>
-            <path d="M70 18 Q76 30 70 42" stroke="#C23232" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
-            <path d="M70 18 Q64 30 70 42" stroke="#C23232" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
-            <ellipse cx="70" cy="15" rx="4" ry="6" fill="#C23232" opacity="0.8"/>
-            <circle cx="70" cy="43" r="3.5" fill="#C8860A" opacity="0.85"/>
+            <circle cx="70" cy="62" r="32" stroke="#C8860A" stroke-width="1" opacity="0.25" fill="none"/>
+            <circle cx="70" cy="62" r="10" fill="#C8860A" opacity="0.5"/>
+            <circle cx="70" cy="62" r="5" fill="#C8860A" opacity="0.9"/>
+            <path d="M70 94 L70 118" stroke="#C8860A" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+            <path d="M70 30 Q78 44 70 62" stroke="#C23232" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+            <path d="M70 30 Q62 44 70 62" stroke="#C23232" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+            <ellipse cx="70" cy="27" rx="4" ry="6" fill="#C23232" opacity="0.85"/>
+            <circle cx="45" cy="55" r="3" fill="#C8860A" opacity="0.3"/>
+            <circle cx="95" cy="55" r="3" fill="#C8860A" opacity="0.3"/>
+            <circle cx="55" cy="80" r="3" fill="#C8860A" opacity="0.3"/>
+            <circle cx="85" cy="80" r="3" fill="#C8860A" opacity="0.3"/>
           </svg>
-          <div class="panel-text">"Grade I saffron, stored correctly, should last you two years without losing its character."</div>
+          <div class="panel-text">"Grade I saffron, grown to a standard, now available in Southern California."</div>
         </div>
       </div>
     </div>
@@ -539,7 +535,15 @@ footer {
 
     <div class="articles-grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
 
-      <div class="article-card" onclick="showArticle('article5')">
+      <div class="article-card" onclick="showArticle('article6')">
+        <div class="article-cat">Buying &amp; Storage</div>
+        <div class="article-title">How long does saffron last. <em>And why the grade you buy determines the answer</em></div>
+        <div class="article-excerpt">Saffron does not expire the way food does. But it loses its colour, aroma, and flavour faster than most people realise. Here is what actually governs shelf life.</div>
+        <div class="article-meta"><span class="article-date">March 28, 2026 · 5 min read</span></div>
+        <div class="article-read">Read Article</div>
+      </div>
+
+            <div class="article-card" onclick="showArticle('article5')">
         <div class="article-cat">Health &amp; Wellness</div>
         <div class="article-title">What saffron actually does for your body. <em>Separating research from claims</em></div>
         <div class="article-excerpt">Saffron has been used in traditional medicine for thousands of years. Modern research is beginning to understand why. Here is what the science actually says, and what it does not.</div>
@@ -962,6 +966,78 @@ footer {
     <div class="article-cta">
       <div class="article-cta-text">"Every jar of Azaad carries its batch findings. Colour strength, aroma reading, and harvest date, visible before you open it."</div>
       <a href="index.html#verify" class="article-cta-btn">See Our Batch Findings</a>
+    </div>
+  </div>
+</div>
+
+<!-- ── ARTICLE 7 ── -->
+<div id="article7" class="article-full">
+
+  <div class="article-header">
+    <div class="article-header-inner">
+      <div class="article-header-cat">Local &amp; Community</div>
+      <h1 class="article-header-title">Where to buy real saffron in Orange County. <em>What to look for and what to avoid</em></h1>
+      <p class="article-header-sub">Orange County has one of the largest Persian, South Asian, and Middle Eastern communities in California. The saffron available locally does not always reflect that. Here is an honest guide to what you will find and what to look for.</p>
+      <div class="article-header-meta">March 29, 2026 · 5 minute read · By the Azaad Saffron Team</div>
+    </div>
+  </div>
+
+  <div class="article-body">
+    <button class="article-back" onclick="showIndex()">Back to Journal</button>
+
+    <p>Orange County has a significant and long-established Persian, South Asian, and Middle Eastern population, particularly concentrated in cities like Irvine, Anaheim, Anaheim Hills, and Tustin. These are communities where saffron is not a specialty item. It is a kitchen staple used weekly, not saved for special occasions. Khoresht, biryani, tahdig, sholeh zard: saffron appears throughout the cooking of these households in a way that makes quality a practical matter, not an indulgence.</p>
+
+    <p>And yet finding genuinely good saffron in Orange County is harder than it should be. The options that exist range from excellent to misleading, and the gap between what a package claims and what it contains is often significant. This article is an honest guide to what you are likely to find, what to look for, and what the labels actually mean.</p>
+
+    <h2>What You Will Find at Most Local Stores</h2>
+
+    <p>Persian and Middle Eastern grocery stores across Orange County stock saffron, and for many shoppers these are the first and most obvious place to look. The quality, however, varies considerably. Some stores carry well-sourced product with legitimate provenance. Others carry commodity saffron that has been repackaged under a premium-looking label with no independent verification behind the claims.</p>
+
+    <p>Indian grocery stores, particularly in the Anaheim and Irvine areas, similarly carry saffron as a regular stocking item. Again, the quality varies. Kesar branded products are common, and some are genuine. Many are not. The price point is often very low, which should prompt questions rather than confidence.</p>
+
+    <p>Mainstream supermarkets, including chain stores across Orange County, typically carry one or two saffron products in the spice aisle. These are almost universally low-grade commodity saffron, often packaged in clear plastic that has accelerated the degradation of whatever quality was present at harvest. They are not worth buying.</p>
+
+    <h2>What the Labels Actually Mean</h2>
+
+    <p>The words you will see most often on saffron packaging in local stores include premium, pure, Grade A, superior, and authentic. None of these terms have a legal definition. None require testing. Any producer can print them on any product.</p>
+
+    <p>The only quality designation that means something is ISO 3632 Grade I, the international standard developed by the International Organization for Standardization. Grade I requires a crocin reading of at least 190, a picrocrocin reading of at least 70, and a safranal reading between 20 and 50. These are the compounds that give saffron its colour, its bitter flavour, and its distinctive aroma respectively. A thread that meets Grade I has been verified to contain meaningful concentrations of all three.</p>
+
+    <p>Even ISO 3632 certification on the label is only as reliable as the testing behind it. A general certification tells you that the producer once had a batch tested. Batch-specific verification, where the actual shipment you are buying has been independently analysed, is the higher and more meaningful standard. Very few products available at retail in Orange County meet this bar.</p>
+
+    <h2>How to Evaluate What You Are Buying In-Store</h2>
+
+    <p>If you are buying saffron from a local store rather than directly from a verified source, there are three things you can assess before purchase. First, look at the packaging: amber glass is a positive sign. Clear plastic or clear glass means the saffron inside has been degrading under light since the day it was packaged, regardless of what grade it started as.</p>
+
+    <p>Second, look at the threads through the packaging if possible. Genuine Grade I saffron is deep crimson red. Threads that look brownish, pale, or have a high proportion of yellow or white style attached are lower grade. All-red stigmas with no yellow style attached is the characteristic of the highest grade material.</p>
+
+    <p>Third, look for a batch or lot number. The presence of a traceable lot number does not guarantee quality, but its absence makes any quality claim unverifiable. If there is no lot number, there is no way to trace where that saffron came from or when it was tested.</p>
+
+    <h2>Farmers Markets in Orange County</h2>
+
+    <p>Farmers markets across Orange County offer a different kind of buying experience: the ability to speak directly with the person selling the product, ask about sourcing and certification, and often smell or inspect before buying. For any ingredient where provenance matters, this is a significant advantage.</p>
+
+    <p>Azaad Saffron is available at Orange County farmers markets. Every jar comes with its batch-specific independent verification findings, including colour strength, flavour compound reading, and aroma measurement, accessible via a link on each jar. You can see exactly what is in the jar before you open it. That is not a common offer at a farmers market stall or anywhere else locally.</p>
+
+    <p>Specific market dates and locations are announced via our Instagram at @azaadsaffron. Following the account is the most reliable way to know where we will be.</p>
+
+    <h2>What to Look for Wherever You Buy</h2>
+
+    <p>Whether you are buying at a farmers market, a Persian grocery, an Indian supermarket, or online, the same questions apply. Does the seller cite ISO 3632 Grade I specifically, not just a vague premium or Grade A claim? Is there a batch number that allows traceability? Is there a way to see the independent laboratory findings for that specific batch?</p>
+
+    <p>If the answer to all three is yes, you have a product worth buying. If any of the three is no, you are trusting a claim rather than verifying it. The communities in Orange County that use saffron most have spent too long paying for products that did not deliver what they promised. That is the gap Azaad was built to close.</p>
+
+    <blockquote>The households in Irvine and Anaheim that cook with saffron every week deserve to know exactly what they are buying. That is not a complicated ask. It is the minimum.</blockquote>
+
+    <h2>Online versus Local</h2>
+
+    <p>For buyers in Orange County who cannot access a farmers market where Azaad is present, ordering directly from azaadsaffron.com when our online store launches will offer the same batch-verified product shipped to your door. Every jar will carry its findings. You will know the crocin reading, the safranal reading, and the harvest date before you open it.</p>
+
+    <p>Follow @azaadsaffron on Instagram to be notified at launch. If you have questions about sourcing, verification, or where to find us before then, reaching out via Instagram is the fastest way to get an answer.</p>
+
+    <div class="article-cta">
+      <div class="article-cta-text">"Grade I certified. Batch verified. Available at Orange County farmers markets and online soon."</div>
+      <a href="index.html#find" class="article-cta-btn">Find Azaad Near You</a>
     </div>
   </div>
 </div>
