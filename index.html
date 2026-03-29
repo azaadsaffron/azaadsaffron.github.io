@@ -342,9 +342,11 @@ nav {
 }
 .hero-tag::before {
   content: '';
+  display: block;
   width: 32px;
   height: 1px;
   background: var(--gold);
+  flex-shrink: 0;
 }
 
 .hero-headline {
@@ -529,9 +531,11 @@ section {
 }
 .section-tag::before {
   content: '';
+  display: block;
   width: 24px;
   height: 1px;
   background: var(--gold);
+  flex-shrink: 0;
 }
 
 .section-heading {
@@ -1623,7 +1627,7 @@ footer {
     </div>
     <div class="comm-card">
       <div class="comm-script">زعفران</div>
-      <div class="comm-name">Persian · Za'feran</div>
+      <div class="comm-name">Farsi · Za'feran</div>
       <div class="comm-desc">For tahdig, saffron rice, and the tea your family has always made.</div>
     </div>
     <div class="comm-card">
@@ -1818,14 +1822,10 @@ footer {
 
   <div class="footer-bottom">
     <div class="footer-copy">© 2026 Azaad Saffron · azaadsaffron.com</div>
-    <div style="display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap">
-      <a href="privacy.html" style="font-size:11px;color:rgba(237,228,208,0.35);font-style:italic;text-decoration:none;transition:color 0.2s" onmouseover="this.style.color='rgba(237,228,208,0.7)'" onmouseout="this.style.color='rgba(237,228,208,0.35)'">Privacy Policy</a>
-      <a href="terms.html" style="font-size:11px;color:rgba(237,228,208,0.35);font-style:italic;text-decoration:none;transition:color 0.2s" onmouseover="this.style.color='rgba(237,228,208,0.7)'" onmouseout="this.style.color='rgba(237,228,208,0.35)'">Terms &amp; Conditions</a>
-      <div class="footer-pills">
-        <div class="footer-pill">ISO 3632</div>
-        <div class="footer-pill">Grade I</div>
-        <div class="footer-pill">Batch Verified</div>
-      </div>
+    <div class="footer-pills">
+      <div class="footer-pill">ISO 3632</div>
+      <div class="footer-pill">Grade I</div>
+      <div class="footer-pill">Batch Verified</div>
     </div>
   </div>
 </footer>
