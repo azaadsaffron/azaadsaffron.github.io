@@ -1203,6 +1203,18 @@ footer {
   .product-grid, .find-grid { grid-template-columns: 1fr; }
   .footer-inner { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
   footer { padding: 3rem 2rem 2rem; }
+  .trust-bar { padding: 1rem 1.5rem; gap: 1rem; }
+  .trust-div { display: none; }
+}
+
+@media (max-width: 480px) {
+  .footer-inner { grid-template-columns: 1fr; }
+  .trust-bar { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+  .hero-left { padding: 5rem 1.25rem 3rem; }
+  .community-row { gap: 1rem; }
+  .comm-card { min-width: 100%; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; }
+  .email-signup-section { padding: 3rem 1.5rem !important; }
 }
 </style>
 <!-- ── ANALYTICS ── -->
@@ -1720,7 +1732,7 @@ footer {
 </div>
 
 <!-- ═══ EMAIL SIGNUP ═══ -->
-<div style="background:var(--cream-dk);padding:5rem 6rem;text-align:center">
+<div style="background:var(--cream-dk);padding:5rem 4rem;text-align:center" class="email-signup-section">
   <div style="max-width:520px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:1.25rem">
     <div style="font-family:'Cinzel',serif;font-size:9px;letter-spacing:5px;color:var(--gold);text-transform:uppercase">
       Stay Informed
@@ -1731,7 +1743,7 @@ footer {
     <p style="font-size:16px;font-style:italic;color:var(--earth-mid);line-height:1.7;font-weight:300">
       Farmers market dates, new batch announcements, and early access — direct to your inbox. Nothing else.
     </p>
-    <form action="https://azaadsaffron.us17.list-manage.com/subscribe/post?u=cd7199c77af040962b23ff481&amp;id=9cc8bc795a&amp;f_id=008c4fe0f0" method="POST" target="_blank" style="display:flex;gap:0;width:100%;max-width:420px;margin-top:0.5rem">
+    <form action="https://azaadsaffron.us17.list-manage.com/subscribe/post?u=cd7199c77af040962b23ff481&amp;id=9cc8bc795a&amp;f_id=008c4fe0f0" method="POST" target="_blank" style="display:flex;gap:0;width:100%;max-width:420px;margin-top:0.5rem;flex-wrap:wrap">
       <input type="email" name="EMAIL" placeholder="Your email address" required
         style="flex:1;padding:12px 16px;border:1px solid rgba(200,134,10,0.3);border-right:none;background:var(--cream);font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--ink);outline:none;font-style:italic">
       <!-- Mailchimp bot protection - do not remove -->
