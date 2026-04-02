@@ -1309,152 +1309,128 @@ footer {
   </div>
 
   <div class="hero-right">
-    <!-- Tin SVG inline -->
-    <svg width="220" height="300" viewBox="0 0 220 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Tin SVG inline - flat spice tin proportions -->
+    <svg width="280" height="200" viewBox="0 0 280 200" fill="none" xmlns="http://www.w3.org/2000/svg">
       <defs>
-        <!-- Tin body gradient - dark crimson -->
         <linearGradient id="tin-body" x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0%"   stop-color="#2A0808"/>
-          <stop offset="18%"  stop-color="#4A0A0A"/>
-          <stop offset="45%"  stop-color="#6B1212"/>
-          <stop offset="72%"  stop-color="#4A0A0A"/>
-          <stop offset="100%" stop-color="#1A0505"/>
-        </linearGradient>
-        <!-- Tin lid gradient -->
-        <linearGradient id="tin-lid" x1="0" y1="0" x2="1" y2="0">
           <stop offset="0%"   stop-color="#1A0505"/>
-          <stop offset="20%"  stop-color="#3A0808"/>
-          <stop offset="50%"  stop-color="#5C0F0F"/>
-          <stop offset="80%"  stop-color="#3A0808"/>
-          <stop offset="100%" stop-color="#1A0505"/>
+          <stop offset="18%"  stop-color="#3D0808"/>
+          <stop offset="45%"  stop-color="#5C0F0F"/>
+          <stop offset="72%"  stop-color="#3D0808"/>
+          <stop offset="100%" stop-color="#120404"/>
         </linearGradient>
-        <!-- Gold band gradient -->
+        <linearGradient id="tin-lid-top" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%"   stop-color="#120404"/>
+          <stop offset="20%"  stop-color="#2A0808"/>
+          <stop offset="50%"  stop-color="#4A0A0A"/>
+          <stop offset="80%"  stop-color="#2A0808"/>
+          <stop offset="100%" stop-color="#120404"/>
+        </linearGradient>
         <linearGradient id="tin-gold" x1="0" y1="0" x2="1" y2="0">
           <stop offset="0%"   stop-color="transparent"/>
-          <stop offset="15%"  stop-color="#9B6A0A"/>
+          <stop offset="12%"  stop-color="#9B6A0A"/>
           <stop offset="35%"  stop-color="#C8860A"/>
           <stop offset="50%"  stop-color="#E8A820"/>
           <stop offset="65%"  stop-color="#C8860A"/>
-          <stop offset="85%"  stop-color="#9B6A0A"/>
+          <stop offset="88%"  stop-color="#9B6A0A"/>
           <stop offset="100%" stop-color="transparent"/>
         </linearGradient>
-        <!-- Label area gradient - cream parchment -->
         <linearGradient id="tin-label" x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0%"   stop-color="#C8A870"/>
-          <stop offset="12%"  stop-color="#EDE4D0"/>
+          <stop offset="0%"   stop-color="#C4A060"/>
+          <stop offset="10%"  stop-color="#EDE4D0"/>
           <stop offset="50%"  stop-color="#FAF6EE"/>
-          <stop offset="88%"  stop-color="#EDE4D0"/>
-          <stop offset="100%" stop-color="#C8A870"/>
+          <stop offset="90%"  stop-color="#EDE4D0"/>
+          <stop offset="100%" stop-color="#C4A060"/>
         </linearGradient>
-        <!-- Highlight sheen -->
         <linearGradient id="tin-sheen" x1="0" y1="0" x2="1" y2="0">
           <stop offset="0%"   stop-color="rgba(255,255,255,0)"/>
-          <stop offset="30%"  stop-color="rgba(255,255,255,0.06)"/>
-          <stop offset="45%"  stop-color="rgba(255,255,255,0.12)"/>
-          <stop offset="60%"  stop-color="rgba(255,255,255,0.04)"/>
+          <stop offset="40%"  stop-color="rgba(255,255,255,0.07)"/>
+          <stop offset="55%"  stop-color="rgba(255,255,255,0.13)"/>
+          <stop offset="70%"  stop-color="rgba(255,255,255,0.04)"/>
           <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
         </linearGradient>
-        <!-- Drop shadow -->
+        <linearGradient id="lid-side" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%"   stop-color="#080202"/>
+          <stop offset="25%"  stop-color="#1F0606"/>
+          <stop offset="50%"  stop-color="#2E0808"/>
+          <stop offset="75%"  stop-color="#1F0606"/>
+          <stop offset="100%" stop-color="#080202"/>
+        </linearGradient>
         <radialGradient id="tin-shadow" cx="50%" cy="50%" r="50%">
-          <stop offset="0%"   stop-color="rgba(26,5,5,0.45)"/>
-          <stop offset="100%" stop-color="rgba(26,5,5,0)"/>
+          <stop offset="0%"   stop-color="rgba(10,2,2,0.5)"/>
+          <stop offset="100%" stop-color="rgba(10,2,2,0)"/>
         </radialGradient>
-        <!-- Lid side gradient -->
-        <linearGradient id="tin-lid-side" x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0%"   stop-color="#0D0303"/>
-          <stop offset="25%"  stop-color="#2A0808"/>
-          <stop offset="50%"  stop-color="#3D0A0A"/>
-          <stop offset="75%"  stop-color="#2A0808"/>
-          <stop offset="100%" stop-color="#0D0303"/>
+        <linearGradient id="lid-face" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%"   stop-color="#3D0808"/>
+          <stop offset="40%"  stop-color="#2A0606"/>
+          <stop offset="100%" stop-color="#1A0404"/>
         </linearGradient>
       </defs>
 
       <!-- Drop shadow -->
-      <ellipse cx="110" cy="285" rx="72" ry="10" fill="url(#tin-shadow)"/>
+      <ellipse cx="140" cy="188" rx="110" ry="9" fill="url(#tin-shadow)"/>
 
-      <!-- ── TIN BODY ── -->
-      <!-- Main cylindrical body -->
-      <rect x="28" y="72" width="164" height="202" rx="4" fill="url(#tin-body)"/>
+      <!-- ── TIN BODY (cylindrical, seen from slight above) ── -->
+      <!-- Body rectangle -->
+      <rect x="20" y="68" width="240" height="112" rx="3" fill="url(#tin-body)"/>
+      <!-- Body sheen -->
+      <rect x="20" y="68" width="240" height="112" rx="3" fill="url(#tin-sheen)"/>
 
-      <!-- Subtle vertical ridges for realism -->
-      <rect x="28" y="72" width="164" height="202" rx="4" fill="url(#tin-sheen)"/>
+      <!-- Bottom ellipse (gives cylinder depth) -->
+      <ellipse cx="140" cy="180" rx="120" ry="12" fill="url(#lid-side)"/>
+      <!-- Bottom rim highlight -->
+      <ellipse cx="140" cy="180" rx="120" ry="12" fill="none" stroke="url(#tin-gold)" stroke-width="0.8" opacity="0.5"/>
 
-      <!-- Top edge ridge -->
-      <rect x="26" y="69" width="168" height="8" rx="3" fill="url(#tin-lid-side)"/>
-      <ellipse cx="110" cy="69" rx="84" ry="5" fill="url(#tin-lid-side)"/>
-
-      <!-- Bottom edge ridge -->
-      <rect x="26" y="268" width="168" height="8" rx="3" fill="url(#tin-lid-side)"/>
-      <ellipse cx="110" cy="276" rx="84" ry="5" fill="url(#tin-lid-side)"/>
-
-      <!-- ── GOLD BANDS ── -->
-      <rect x="28" y="82" width="164" height="4" fill="url(#tin-gold)" opacity="0.9"/>
-      <rect x="28" y="265" width="164" height="4" fill="url(#tin-gold)" opacity="0.9"/>
+      <!-- Gold bands top and bottom of body -->
+      <rect x="20" y="70" width="240" height="5" fill="url(#tin-gold)" opacity="0.85"/>
+      <rect x="20" y="175" width="240" height="5" fill="url(#tin-gold)" opacity="0.85"/>
 
       <!-- ── LABEL AREA ── -->
-      <rect x="36" y="100" width="148" height="156" rx="2" fill="url(#tin-label)"/>
-      <!-- Label border -->
-      <rect x="39" y="103" width="142" height="150" rx="1" fill="none" stroke="#C8860A" stroke-width="0.8" opacity="0.4"/>
-      <!-- Inner label border -->
-      <rect x="43" y="107" width="134" height="142" rx="1" fill="none" stroke="#C8860A" stroke-width="0.4" opacity="0.25"/>
+      <rect x="30" y="82" width="220" height="88" rx="2" fill="url(#tin-label)"/>
+      <!-- Label outer border -->
+      <rect x="33" y="85" width="214" height="82" rx="1" fill="none" stroke="#C8860A" stroke-width="0.8" opacity="0.45"/>
+      <!-- Label inner border -->
+      <rect x="37" y="89" width="206" height="74" rx="1" fill="none" stroke="#C8860A" stroke-width="0.4" opacity="0.22"/>
 
       <!-- ── LABEL CONTENT ── -->
       <!-- Brand name -->
-      <text x="110" y="134" font-family="'Cinzel', serif" font-size="20" font-weight="600" fill="#4A0A0A" text-anchor="middle" letter-spacing="8">AZAAD</text>
-
-      <!-- Gold rule under brand name -->
-      <line x1="62" y1="141" x2="158" y2="141" stroke="#C8860A" stroke-width="0.75" opacity="0.6"/>
-
+      <text x="140" y="114" font-family="'Cinzel', serif" font-size="22" font-weight="600" fill="#4A0A0A" text-anchor="middle" letter-spacing="9">AZAAD</text>
+      <!-- Gold rule -->
+      <line x1="72" y1="120" x2="208" y2="120" stroke="#C8860A" stroke-width="0.8" opacity="0.55"/>
       <!-- Farsi -->
-      <text x="110" y="160" font-family="'Noto Nastaliq Urdu', serif" font-size="14" fill="#7A5A0A" text-anchor="middle">آزاد</text>
-
-      <!-- Thin rule -->
-      <line x1="75" y1="166" x2="145" y2="166" stroke="#C8860A" stroke-width="0.4" opacity="0.3"/>
-
-      <!-- Crocus illustration -->
-      <g transform="translate(82, 172)">
-        <line x1="28" y1="24" x2="16" y2="7" stroke="#8B6A0A" stroke-width="1.1" stroke-linecap="round"/>
-        <ellipse cx="15" cy="5" rx="2.8" ry="4.8" fill="#7A1515" transform="rotate(-18 15 5)" opacity="0.85"/>
-        <line x1="28" y1="24" x2="28" y2="5" stroke="#8B6A0A" stroke-width="1.1" stroke-linecap="round"/>
-        <ellipse cx="28" cy="3" rx="2.8" ry="4.8" fill="#5C0F0F" opacity="0.9"/>
-        <line x1="28" y1="24" x2="40" y2="7" stroke="#8B6A0A" stroke-width="1.1" stroke-linecap="round"/>
-        <ellipse cx="41" cy="5" rx="2.8" ry="4.8" fill="#7A1515" transform="rotate(18 41 5)" opacity="0.85"/>
-        <circle cx="28" cy="26" r="3.5" fill="#C8860A" opacity="0.85"/>
-        <circle cx="28" cy="26" r="1.8" fill="#E8A820"/>
-      </g>
-
-      <!-- Product description -->
-      <text x="110" y="224" font-family="'Cinzel', serif" font-size="6.5" fill="#2C1810" text-anchor="middle" letter-spacing="3">SAFFRON THREADS</text>
-      <text x="110" y="234" font-family="'Cinzel', serif" font-size="5.5" fill="#5C3A1E" text-anchor="middle" letter-spacing="2" opacity="0.7">0.5g · NET WEIGHT</text>
-
-      <!-- Tagline rule -->
-      <line x1="62" y1="239" x2="158" y2="239" stroke="rgba(74,10,10,0.12)" stroke-width="0.5"/>
-
+      <text x="140" y="136" font-family="'Noto Nastaliq Urdu', serif" font-size="13" fill="#7A5A0A" text-anchor="middle">آزاد · زعفران</text>
+      <!-- Rule -->
+      <line x1="90" y1="141" x2="190" y2="141" stroke="#C8860A" stroke-width="0.4" opacity="0.3"/>
+      <!-- Product name -->
+      <text x="140" y="152" font-family="'Cinzel', serif" font-size="6.5" fill="#2C1810" text-anchor="middle" letter-spacing="3.5">SAFFRON THREADS · 0.5g</text>
       <!-- Tagline -->
-      <text x="110" y="248" font-family="'Cormorant Garamond', serif" font-size="7" font-style="italic" fill="#7A1515" text-anchor="middle" opacity="0.7">Every tin tells you exactly what it holds.</text>
+      <text x="140" y="162" font-family="'Cormorant Garamond', serif" font-size="7" font-style="italic" fill="#7A1515" text-anchor="middle" opacity="0.65">Every tin tells you exactly what it holds.</text>
 
-      <!-- ── CERTIFICATION BADGES ── -->
-      <rect x="52" y="254" width="34" height="9" rx="1" fill="rgba(74,10,10,0.06)" stroke="#7A1515" stroke-width="0.5" opacity="0.7"/>
-      <text x="69" y="260" font-family="'Cinzel', serif" font-size="4.5" fill="#7A1515" text-anchor="middle" letter-spacing="0.5">ISO 3632</text>
-
-      <rect x="92" y="254" width="28" height="9" rx="1" fill="rgba(74,10,10,0.06)" stroke="#7A1515" stroke-width="0.5" opacity="0.7"/>
-      <text x="106" y="260" font-family="'Cinzel', serif" font-size="4.5" fill="#7A1515" text-anchor="middle" letter-spacing="0.5">GRADE I</text>
-
-      <rect x="126" y="254" width="36" height="9" rx="1" fill="rgba(200,134,10,0.08)" stroke="#C8860A" stroke-width="0.5" opacity="0.7"/>
-      <text x="144" y="260" font-family="'Cinzel', serif" font-size="4" fill="#9B6A0A" text-anchor="middle" letter-spacing="0.3">BATCH VERIFIED</text>
-
-      <!-- ── LID ── -->
+      <!-- ── LID (overlapping top, gives pressed-lid look) ── -->
+      <!-- Lid side band -->
+      <rect x="16" y="40" width="248" height="32" rx="3" fill="url(#lid-side)"/>
       <!-- Lid top face (ellipse) -->
-      <ellipse cx="110" cy="69" rx="82" ry="18" fill="url(#tin-lid)"/>
-      <!-- Lid top rim highlight -->
-      <ellipse cx="110" cy="67" rx="82" ry="18" fill="none" stroke="url(#tin-gold)" stroke-width="1.2" opacity="0.7"/>
-      <!-- Lid top center brand mark -->
-      <ellipse cx="110" cy="69" rx="42" ry="9" fill="rgba(200,134,10,0.08)" stroke="rgba(200,134,10,0.25)" stroke-width="0.6"/>
-      <text x="110" y="72" font-family="'Cinzel', serif" font-size="8" font-weight="600" fill="#C8860A" text-anchor="middle" letter-spacing="4" opacity="0.8">AZAAD</text>
+      <ellipse cx="140" cy="40" rx="124" ry="20" fill="url(#lid-face)"/>
+      <!-- Lid top rim gold -->
+      <ellipse cx="140" cy="40" rx="124" ry="20" fill="none" stroke="url(#tin-gold)" stroke-width="1.2" opacity="0.75"/>
+      <!-- Inner lid ring -->
+      <ellipse cx="140" cy="40" rx="100" ry="15" fill="none" stroke="rgba(200,134,10,0.2)" stroke-width="0.6"/>
+      <!-- Lid sheen -->
+      <ellipse cx="140" cy="38" rx="90" ry="11" fill="rgba(255,255,255,0.04)"/>
+      <!-- Brand mark on lid -->
+      <ellipse cx="140" cy="40" rx="52" ry="8" fill="rgba(200,134,10,0.07)" stroke="rgba(200,134,10,0.2)" stroke-width="0.5"/>
+      <text x="140" y="43" font-family="'Cinzel', serif" font-size="9" font-weight="600" fill="#C8860A" text-anchor="middle" letter-spacing="5" opacity="0.85">AZAAD</text>
+
+      <!-- ── CERT BADGES on body below label ── -->
+      <rect x="62" y="152" width="32" height="8" rx="1" fill="rgba(74,10,10,0.06)" stroke="#7A1515" stroke-width="0.5" opacity="0.6"/>
+      <text x="78" y="158" font-family="'Cinzel', serif" font-size="4" fill="#7A1515" text-anchor="middle" letter-spacing="0.3">ISO 3632</text>
+      <rect x="100" y="152" width="26" height="8" rx="1" fill="rgba(74,10,10,0.06)" stroke="#7A1515" stroke-width="0.5" opacity="0.6"/>
+      <text x="113" y="158" font-family="'Cinzel', serif" font-size="4" fill="#7A1515" text-anchor="middle" letter-spacing="0.3">GRADE I</text>
+      <rect x="132" y="152" width="38" height="8" rx="1" fill="rgba(200,134,10,0.07)" stroke="#C8860A" stroke-width="0.5" opacity="0.6"/>
+      <text x="151" y="158" font-family="'Cinzel', serif" font-size="3.8" fill="#9B6A0A" text-anchor="middle" letter-spacing="0.2">BATCH VERIFIED</text>
     </svg>
   </div>
 </div>
-
 <!-- trust bar -->
 <div class="trust-bar">
   <div class="trust-item">
