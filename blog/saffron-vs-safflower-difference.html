@@ -143,6 +143,17 @@ footer { background: var(--ink); color: var(--cream); padding: 2rem 6rem; displa
   "image": "https://www.azaadsaffron.com/azaad_avatar.png"
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.azaadsaffron.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Journal", "item": "https://www.azaadsaffron.com/blog.html"},
+    {"@type": "ListItem", "position": 3, "name": "Saffron vs Safflower"}
+  ]
+}
+</script>
 </head>
 <body>
 <nav>
@@ -176,11 +187,20 @@ footer { background: var(--ink); color: var(--cream); padding: 2rem 6rem; displa
     <div class="article-header-cat">Know Your Ingredient</div>
     <h1 class="article-header-title">Saffron vs safflower. <em>How to tell the difference and why it matters</em></h1>
     <p class="article-header-sub">Safflower is the most common saffron adulterant in the world. It is cheap, it looks similar, and it is in more jars than most buyers realise. Here is how to tell them apart.</p>
-    <div class="article-header-meta">March 30, 2026 · 6 minute read · By the Azaad Saffron Team</div>
+    <div class="article-header-meta">March 30, 2026 · 6 minute read · By the Azaad Saffron Team · <span style="opacity:0.65">Updated March 30, 2026</span></div>
   </div>
 </div>
 
 <div class="article-body">
+<nav aria-label="Breadcrumb" style="padding:0.75rem 0;margin-bottom:0.5rem">
+  <div style="font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;color:var(--earth-lt);text-transform:uppercase;display:flex;align-items:center;gap:0.5rem;flex-wrap:wrap">
+    <a href="../index.html" style="color:var(--earth-lt);text-decoration:none;transition:color 0.2s" onmouseover="this.style.color='var(--crimson)'" onmouseout="this.style.color='var(--earth-lt)'">Home</a>
+    <span style="opacity:0.4">›</span>
+    <a href="../blog.html" style="color:var(--earth-lt);text-decoration:none;transition:color 0.2s" onmouseover="this.style.color='var(--crimson)'" onmouseout="this.style.color='var(--earth-lt)'">Journal</a>
+    <span style="opacity:0.4">›</span>
+    <span style="color:var(--earth-mid)">Saffron vs Safflower</span>
+  </div>
+</nav>
   <a href="../blog.html" class="article-back">← Back to The Journal</a>
   <div style="display:flex;flex-wrap:wrap;gap:1rem;margin-bottom:2rem">
     <a href="../blog/how-to-tell-if-saffron-is-real.html" class="article-back" style="margin-right:2rem">← Previous Article</a>
@@ -249,6 +269,20 @@ footer { background: var(--ink); color: var(--cream); padding: 2rem 6rem; displa
     <p>If you bought from a supermarket at a very low price, the likelihood of adulteration is high. If you bought from a Persian or Indian grocery and the price seemed too good, apply the same tests. The price of genuine Grade I saffron reflects the labour involved in harvesting it. A product priced significantly below market for real saffron is not real saffron.</p>
 
     <p>The communities that cook with saffron most frequently know this intuitively. The rice looks wrong. The kitchen does not smell the way it should. That recognition is not imagination. It is accurate sensory feedback from people who know what the ingredient is supposed to do.</p>
+  <div style="margin-top:3rem;padding-top:2rem;border-top:1px solid rgba(200,134,10,0.15)">
+    <div style="font-family:'Cinzel',serif;font-size:9px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:1.25rem">Continue Reading</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;background:rgba(200,134,10,0.1)">
+      <a href="how-to-tell-if-saffron-is-real.html" style="background:var(--cream-dk);padding:1.5rem;text-decoration:none;display:block;transition:background 0.2s" onmouseover="this.style.background='#e8dcc8'" onmouseout="this.style.background='var(--cream-dk)'">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:400;color:var(--ink);line-height:1.35;margin-bottom:0.5rem">How to Tell If Your Saffron Is Real</div>
+        <div style="font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:2px;color:var(--crimson);text-transform:uppercase">Read Article →</div>
+      </a>
+      <a href="what-is-iso-3632-saffron-grade.html" style="background:var(--cream-dk);padding:1.5rem;text-decoration:none;display:block;transition:background 0.2s" onmouseover="this.style.background='#e8dcc8'" onmouseout="this.style.background='var(--cream-dk)'">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:400;color:var(--ink);line-height:1.35;margin-bottom:0.5rem">What Is ISO 3632 Saffron Grade?</div>
+        <div style="font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:2px;color:var(--crimson);text-transform:uppercase">Read Article →</div>
+      </a>
+    </div>
+  </div>
+
   <div class="article-cta">
     <div class="article-cta-text">"Every jar of Azaad is independently batch verified. Crocin above 250. No safflower. No compromise."</div>
     <a href="../index.html#verify" class="article-cta-btn">See Our Batch Findings</a>
