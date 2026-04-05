@@ -768,11 +768,11 @@ section {
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 2px;
   margin-top: 3rem;
   background: rgba(200,134,10,0.1);
-  max-width: 800px;
+  max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -1206,7 +1206,8 @@ footer {
   .story-visual { display: none; }
   section, .product-section, .find-section, .community-section { padding: 4rem 2rem; }
   .verify-section, .origin-section, .testimonial-section { padding: 4rem 2rem; }
-  .product-grid, .find-grid { grid-template-columns: 1fr; }
+  .product-grid { grid-template-columns: repeat(2, 1fr); }
+  .find-grid { grid-template-columns: 1fr; }
   .footer-inner { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
   footer { padding: 3rem 2rem 2rem; }
   .trust-bar { padding: 1rem 1.5rem; gap: 1rem; }
@@ -1221,6 +1222,7 @@ footer {
 }
 @media (max-width: 480px) {
   .footer-inner { grid-template-columns: 1fr; }
+  .product-grid { grid-template-columns: 1fr !important; }
   [style*="grid-template-columns:repeat(4"] { grid-template-columns: repeat(2, 1fr) !important; }
   .trust-bar { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
   .hero-left { padding: 3rem 1.25rem 2.5rem; }
@@ -1836,6 +1838,18 @@ footer {
       <div style="font-size:10px;color:var(--earth-lt);font-style:italic;margin-top:-0.25rem">+ applicable sales tax</div>
       <div class="product-card-cta">Order via Instagram</div>
     </a>
+    <a href="https://www.instagram.com/azaadsaffron" target="_blank" class="product-card">
+      <div class="product-card-tag">For the Experienced Cook</div>
+      <div class="product-card-badge">ISO 3632 · Grade I</div>
+      <div class="product-card-name">Saffron Threads<br>2g Tin</div>
+      <div class="product-card-desc">For the cook who already knows what real saffron should smell like. A full month of serious kitchen use. Grade I certified, independently batch verified.</div>
+      <div class="product-card-price">
+        <span class="price-main">$50</span>
+        <span class="price-weight">/ 2g tin</span>
+      </div>
+      <div style="font-size:10px;color:var(--earth-lt);font-style:italic;margin-top:-0.25rem">+ applicable sales tax</div>
+      <div class="product-card-cta">Order via Instagram</div>
+    </a>
 
   </div>
   <p style="font-size:14px;font-style:italic;color:var(--earth-lt);text-align:center;margin-top:2rem;line-height:1.7">
@@ -2080,52 +2094,13 @@ footer {
   </div>
 </div>
 
-<!-- ═══ JOURNAL SCROLL TRAP ═══ -->
-<div style="background:var(--ink);padding:5rem 6rem;text-align:center">
-  <div style="max-width:1100px;margin:0 auto">
-
-    <div style="font-family:'Cinzel',serif;font-size:9px;letter-spacing:5px;color:var(--gold);text-transform:uppercase;margin-bottom:0.75rem;opacity:0.7">The Azaad Journal</div>
-    <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(26px,3.5vw,40px);font-weight:300;color:var(--cream);line-height:1.2;margin-bottom:0.75rem">
-      Everything you should know<br><em style="font-style:italic;color:var(--gold-lt)">about the ingredient.</em>
-    </h2>
-    <p style="font-size:15px;font-style:italic;color:rgba(237,228,208,0.5);margin-bottom:3rem;line-height:1.6">Honestly told. No filler. No marketing language.</p>
-
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2px;background:rgba(200,134,10,0.08);text-align:left">
-
-      <a href="blog/how-much-does-saffron-cost.html" style="background:rgba(255,255,255,0.02);padding:2rem 1.75rem;text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:0.75rem;transition:background 0.2s;border-top:2px solid rgba(200,134,10,0.3)" onmouseover="this.style.background='rgba(255,255,255,0.05)'" onmouseout="this.style.background='rgba(255,255,255,0.02)'">
-        <div style="font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;opacity:0.7">Buying &amp; Storage · April 2</div>
-        <div style="font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:400;color:var(--cream);line-height:1.3">How much does saffron cost. <em style="color:var(--gold-lt)">What the price tells you about quality</em></div>
-        <div style="font-size:13px;font-style:italic;color:rgba(237,228,208,0.5);line-height:1.6;flex:1">Retail prices range from $2 to $25 per gram. Understanding why that range exists is the most useful thing a buyer can know.</div>
-        <div style="font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-top:0.5rem;opacity:0.8">Read Article →</div>
-      </a>
-
-      <a href="blog/what-does-saffron-taste-like.html" style="background:rgba(255,255,255,0.02);padding:2rem 1.75rem;text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:0.75rem;transition:background 0.2s;border-top:2px solid rgba(200,134,10,0.3)" onmouseover="this.style.background='rgba(255,255,255,0.05)'" onmouseout="this.style.background='rgba(255,255,255,0.02)'">
-        <div style="font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;opacity:0.7">Know Your Ingredient · April 1</div>
-        <div style="font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:400;color:var(--cream);line-height:1.3">What does saffron taste like. <em style="color:var(--gold-lt)">The full flavour profile explained</em></div>
-        <div style="font-size:13px;font-style:italic;color:rgba(237,228,208,0.5);line-height:1.6;flex:1">Real saffron is floral, earthy, and distinctly bitter in a way that is entirely pleasant. Understanding the flavour is also how you know when what you have is not genuine.</div>
-        <div style="font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-top:0.5rem;opacity:0.8">Read Article →</div>
-      </a>
-
-      <a href="blog/why-is-saffron-so-expensive.html" style="background:rgba(255,255,255,0.02);padding:2rem 1.75rem;text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:0.75rem;transition:background 0.2s;border-top:2px solid rgba(200,134,10,0.3)" onmouseover="this.style.background='rgba(255,255,255,0.05)'" onmouseout="this.style.background='rgba(255,255,255,0.02)'">
-        <div style="font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;opacity:0.7">Know Your Ingredient · March 30</div>
-        <div style="font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:400;color:var(--cream);line-height:1.3">Why is saffron so expensive. <em style="color:var(--gold-lt)">The real reason behind the price</em></div>
-        <div style="font-size:13px;font-style:italic;color:rgba(237,228,208,0.5);line-height:1.6;flex:1">It takes approximately 150 flowers to produce one gram. Every thread is hand-picked at dawn during a two-week window each autumn.</div>
-        <div style="font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-top:0.5rem;opacity:0.8">Read Article →</div>
-      </a>
-
-    </div>
-
-    <a href="blog.html" style="display:inline-block;margin-top:2.5rem;font-family:'Cinzel',serif;font-size:8.5px;letter-spacing:3px;color:rgba(200,134,10,0.7);text-decoration:none;text-transform:uppercase;border-bottom:1px solid rgba(200,134,10,0.3);padding-bottom:3px;transition:color 0.2s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='rgba(200,134,10,0.7)'">View All Articles in The Journal</a>
-
-  </div>
-</div>
-
 <!-- ═══ BLOG PREVIEW ═══ -->
 <div style="padding:5rem 6rem;background:var(--cream-dk)" id="journal-preview">
   <div style="max-width:1200px;margin:0 auto">
     <div style="text-align:center;margin-bottom:2.5rem">
       <div class="section-tag">The Azaad Journal</div>
-      <h2 class="section-heading">Know what you are<br><em>buying.</em></h2>
+      <h2 class="section-heading">Everything you should know<br><em>about the ingredient.</em></h2>
+      <p style="font-size:15px;font-style:italic;color:var(--earth-lt);margin-top:0.5rem;line-height:1.6">Honestly told. No filler. No marketing language.</p>
     </div>
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:rgba(200,134,10,0.1)">
       <a href="blog/why-is-saffron-so-expensive.html" style="background:var(--cream);padding:2rem 1.5rem;text-decoration:none;display:flex;flex-direction:column;gap:0.75rem;transition:background 0.2s" onmouseover="this.style.background='#f0e8d4'" onmouseout="this.style.background='var(--cream)'">
@@ -2202,6 +2177,7 @@ footer {
       <div class="footer-col-title">Shop</div>
       <a href="#shop" class="footer-link">Saffron Threads 0.5g Tin</a>
       <a href="#shop" class="footer-link">Saffron Threads 1g Tin</a>
+      <a href="#shop" class="footer-link">Saffron Threads 2g Tin</a>
       
     </div>
 
