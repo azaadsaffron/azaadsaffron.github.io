@@ -4,48 +4,444 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Batch Verification — Azaad Saffron</title>
+<meta name="description" content="Verify the lab findings for your specific batch of Azaad Saffron. Every tin is traceable to its Certificate of Analysis.">
 <meta name="robots" content="noindex, follow">
-<link rel="canonical" href="https://www.azaadsaffron.com/verify.html">
 <link rel="icon" type="image/png" href="azaad_avatar.png">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-:root { --crimson: #7A1515; --crimson-deep: #4A0A0A; --gold: #C8860A; --cream: #FAF6EE; --cream-dk: #EDE4D0; --earth-mid: #5C3A1E; --earth-lt: #8B6040; --ink: #1A0E08; }
-body { background: var(--cream); color: var(--ink); font-family: 'Cormorant Garamond', Georgia, serif; min-height: 100vh; display: flex; flex-direction: column; }
-nav { background: var(--crimson-deep); padding: 0 2.5rem; height: 64px; display: flex; align-items: center; justify-content: space-between; }
-.nav-brand { font-family: 'Cinzel', serif; font-size: 18px; font-weight: 600; letter-spacing: 5px; color: var(--cream); text-decoration: none; }
-.nav-back { font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 3px; color: rgba(250,246,238,0.55); text-decoration: none; text-transform: uppercase; transition: color 0.2s; }
+:root {
+  --crimson: #7A1515;
+  --crimson-deep: #4A0A0A;
+  --gold: #C8860A;
+  --cream: #FAF6EE;
+  --cream-dk: #EDE4D0;
+  --earth-mid: #5C3A1E;
+  --earth-lt: #8B6040;
+  --ink: #1A0E08;
+}
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+nav {
+  background: var(--crimson-deep);
+  padding: 0 2.5rem;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-brand {
+  font-family: 'Cinzel', serif;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 5px;
+  color: var(--cream);
+  text-decoration: none;
+}
+.nav-back {
+  font-family: 'Cinzel', serif;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: rgba(250,246,238,0.55);
+  text-decoration: none;
+  text-transform: uppercase;
+}
 .nav-back:hover { color: var(--cream); }
-.page-wrap { max-width: 680px; margin: 0 auto; padding: 5rem 2rem 6rem; flex: 1; text-align: center; }
-h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 4vw, 42px); font-weight: 300; color: var(--ink); line-height: 1.2; margin-bottom: 1rem; }
+.page-wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 5rem 2rem 6rem;
+  flex: 1;
+}
+h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 300;
+  color: var(--ink);
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+}
 h1 em { font-style: italic; color: var(--crimson); }
-.sub { font-size: 18px; font-style: italic; color: var(--earth-mid); line-height: 1.8; margin-bottom: 3rem; font-weight: 300; }
-.notice { background: var(--cream-dk); border-left: 3px solid var(--gold); padding: 1.5rem 2rem; text-align: left; margin: 2rem 0; }
-.notice p { font-size: 16px; line-height: 1.85; color: var(--earth-mid); font-weight: 300; }
-.cta-link { display: inline-block; margin-top: 2rem; font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 3px; background: var(--crimson); color: var(--cream); padding: 14px 28px; text-decoration: none; text-transform: uppercase; transition: background 0.2s; }
-.cta-link:hover { background: var(--crimson-deep); }
-.page-footer { background: var(--ink); padding: 1.5rem 2.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+.sub {
+  font-size: 18px;
+  font-style: italic;
+  color: var(--earth-mid);
+  line-height: 1.8;
+  margin-bottom: 3rem;
+  font-weight: 300;
+}
+/* Lookup form */
+.lookup-section {
+  background: var(--crimson-deep);
+  padding: 2.5rem;
+  margin-bottom: 3rem;
+}
+.lookup-label {
+  font-family: 'Cinzel', serif;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: var(--gold);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+.lookup-row {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+.lookup-input {
+  flex: 1;
+  min-width: 200px;
+  padding: 0.9rem 1.25rem;
+  background: rgba(250,246,238,0.08);
+  border: 1px solid rgba(200,134,10,0.35);
+  color: var(--cream);
+  font-family: 'Cinzel', serif;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  outline: none;
+}
+.lookup-input::placeholder { color: rgba(250,246,238,0.3); }
+.lookup-btn {
+  padding: 0.9rem 1.75rem;
+  background: var(--crimson);
+  border: none;
+  color: var(--cream);
+  font-family: 'Cinzel', serif;
+  font-size: 8px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+.lookup-btn:hover { background: #5C0F0F; }
+.lookup-hint {
+  font-size: 13px;
+  font-style: italic;
+  color: rgba(250,246,238,0.4);
+  margin-top: 0.75rem;
+  line-height: 1.6;
+}
+
+/* Result panel — hidden by default */
+.result-panel {
+  display: none;
+  border: 1px solid rgba(200,134,10,0.25);
+  margin-bottom: 3rem;
+}
+.result-panel.show { display: block; }
+.result-header {
+  background: var(--crimson-deep);
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.result-batch {
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+.result-verified {
+  font-family: 'Cinzel', serif;
+  font-size: 8px;
+  letter-spacing: 2px;
+  color: #4CAF50;
+  text-transform: uppercase;
+  border: 1px solid #4CAF50;
+  padding: 4px 12px;
+}
+.result-body { padding: 2rem; }
+.result-meta {
+  font-size: 14px;
+  color: var(--earth-mid);
+  line-height: 1.9;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  background: rgba(200,134,10,0.1);
+  margin-bottom: 1.5rem;
+}
+.metric-card {
+  background: var(--cream-dk);
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+.metric-name {
+  font-family: 'Cinzel', serif;
+  font-size: 8px;
+  letter-spacing: 2px;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+.metric-value {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  font-weight: 400;
+  color: var(--crimson);
+  line-height: 1;
+  margin-bottom: 0.35rem;
+}
+.metric-bench {
+  font-size: 11px;
+  color: var(--earth-lt);
+  font-style: italic;
+}
+.result-footer {
+  background: var(--cream-dk);
+  padding: 1rem 2rem;
+  font-size: 13px;
+  color: var(--earth-lt);
+  font-style: italic;
+  line-height: 1.7;
+}
+
+/* Not found panel */
+.not-found {
+  display: none;
+  background: var(--cream-dk);
+  border-left: 3px solid var(--crimson);
+  padding: 1.5rem 2rem;
+  margin-bottom: 3rem;
+}
+.not-found.show { display: block; }
+.not-found p {
+  font-size: 16px;
+  line-height: 1.85;
+  color: var(--earth-mid);
+  font-weight: 300;
+}
+
+/* Coming soon notice */
+.notice {
+  background: var(--cream-dk);
+  border-left: 3px solid var(--gold);
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+}
+.notice p {
+  font-size: 16px;
+  line-height: 1.85;
+  color: var(--earth-mid);
+  font-weight: 300;
+}
+
+/* How it works */
+.how-section { margin-top: 3rem; }
+.how-title {
+  font-family: 'Cinzel', serif;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: var(--earth-lt);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+.how-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  background: rgba(200,134,10,0.1);
+}
+.how-step {
+  background: var(--cream-dk);
+  padding: 1.5rem;
+}
+.how-step-num {
+  font-family: 'Cinzel', serif;
+  font-size: 28px;
+  color: rgba(200,134,10,0.2);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+.how-step-text {
+  font-size: 15px;
+  color: var(--earth-mid);
+  line-height: 1.7;
+  font-weight: 300;
+  font-style: italic;
+}
+@media (max-width: 600px) {
+  nav { padding: 0 1.25rem; }
+  .page-wrap { padding: 3rem 1.25rem 4rem; }
+  .metrics-grid { grid-template-columns: 1fr; }
+  .how-steps { grid-template-columns: 1fr; }
+  .lookup-section { padding: 1.5rem; }
+  .result-body { padding: 1.25rem; }
+}
+footer {
+  background: var(--ink);
+  padding: 1.5rem 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
 .footer-copy { font-size: 11px; color: rgba(237,228,208,0.3); font-style: italic; }
-.footer-home { font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 3px; color: rgba(200,134,10,0.5); text-decoration: none; text-transform: uppercase; }
+.footer-home {
+  font-family: 'Cinzel', serif;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: rgba(200,134,10,0.5);
+  text-decoration: none;
+  text-transform: uppercase;
+}
 .footer-home:hover { color: var(--gold); }
 </style>
 </head>
 <body>
+
 <nav>
   <a href="index.html" class="nav-brand">AZAAD</a>
   <a href="index.html" class="nav-back">← Back to Site</a>
 </nav>
+
 <div class="page-wrap">
+
   <h1>Batch <em>Verification</em></h1>
-  <p class="sub">Every jar of Azaad carries the independent findings for its specific batch. Scan the QR code on your tin to see the results.</p>
-  <div class="notice">
-    <p>Batch verification records will be published here as each new batch ships. If you have a tin in hand and need the findings for your specific lot, please reach out via Instagram at @azaadsaffron and we will send them directly.</p>
+  <p class="sub">Every Azaad Saffron tin carries a lot number traceable to its Certificate of Analysis. Enter your lot code below to see the lab findings for your specific batch.</p>
+
+  <!-- Lookup form -->
+  <div class="lookup-section">
+    <label class="lookup-label" for="lot-input">Enter your lot code</label>
+    <div class="lookup-row">
+      <input type="text" id="lot-input" class="lookup-input" placeholder="e.g. AZ-001" maxlength="20" autocomplete="off">
+      <button class="lookup-btn" onclick="lookupBatch()">Verify Batch</button>
+    </div>
+    <p class="lookup-hint">Your lot code is printed on the bottom label of your tin next to "LOT CODE".</p>
   </div>
-  <a href="https://www.instagram.com/azaadsaffron" target="_blank" class="cta-link">Contact Us on Instagram</a>
+
+  <!-- Result panel -->
+  <div class="result-panel" id="result-panel">
+    <div class="result-header">
+      <div class="result-batch" id="result-batch-label">Batch AZ-001</div>
+      <div class="result-verified">Verified</div>
+    </div>
+    <div class="result-body">
+      <p class="result-meta" id="result-meta">Herat Province, Afghanistan · Harvest November 2025 · Tested by Afghanistan Ministry of Agriculture Quality Control Lab · ISO 3632-1:2010</p>
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-name">Crocin</div>
+          <div class="metric-value" id="result-crocin">—</div>
+          <div class="metric-bench">Grade I min: 200</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-name">Picrocrocin</div>
+          <div class="metric-value" id="result-picrocrocin">—</div>
+          <div class="metric-bench">Grade I min: 70</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-name">Safranal</div>
+          <div class="metric-value" id="result-safranal">—</div>
+          <div class="metric-bench">Optimal: 20 to 50</div>
+        </div>
+      </div>
+      <p id="result-extra" style="font-size:15px;color:var(--earth-mid);line-height:1.85;font-style:italic;margin-bottom:0.5rem;"></p>
+    </div>
+    <div class="result-footer">
+      Test results are exclusively limited to the above-referenced sample. Artificial colorants: Absent. No additives. 100% Crocus sativus.
+    </div>
+  </div>
+
+  <!-- Not found panel -->
+  <div class="not-found" id="not-found">
+    <p>That lot code was not found. Please check the bottom label of your tin and try again. If the problem persists, contact us at <a href="mailto:sales@azaadsaffron.com" style="color:var(--crimson);">sales@azaadsaffron.com</a> or on Instagram at <a href="https://www.instagram.com/azaadsaffron" target="_blank" style="color:var(--crimson);">@azaadsaffron</a>.</p>
+  </div>
+
+  <!-- How it works -->
+  <div class="how-section">
+    <div class="how-title">How batch verification works</div>
+    <div class="how-steps">
+      <div class="how-step">
+        <div class="how-step-num">01</div>
+        <div class="how-step-text">Find the lot code printed on the bottom label of your Azaad Saffron tin.</div>
+      </div>
+      <div class="how-step">
+        <div class="how-step-num">02</div>
+        <div class="how-step-text">Enter it above or scan the QR code on the tin to go directly to your batch record.</div>
+      </div>
+      <div class="how-step">
+        <div class="how-step-num">03</div>
+        <div class="how-step-text">See the actual lab findings for your specific batch: crocin, picrocrocin, and safranal readings from the COA.</div>
+      </div>
+    </div>
+  </div>
+
 </div>
-<footer class="page-footer">
+
+<footer>
   <div class="footer-copy">© 2026 Azaad Saffron · azaadsaffron.com</div>
   <a href="index.html" class="footer-home">Return to Site</a>
 </footer>
+
+<script>
+// Batch database — populate with real COA data when first batch arrives
+// Format: { 'LOT-CODE': { crocin, picrocrocin, safranal, origin, harvest, extra } }
+var BATCHES = {
+  // First batch will be added here once COA is received from Mohammad
+  // Example format:
+  // 'AZ-001': {
+  //   crocin: '296.3',
+  //   picrocrocin: '111.7',
+  //   safranal: '33.5',
+  //   origin: 'Herat Province, Afghanistan',
+  //   harvest: 'November 2025',
+  //   extra: 'Artificial colorants: Absent. Extraneous matter: 0.10%. Foreign matter: 0.01%.'
+  // }
+};
+
+function lookupBatch() {
+  var input = document.getElementById('lot-input').value.trim().toUpperCase();
+  var resultPanel = document.getElementById('result-panel');
+  var notFound = document.getElementById('not-found');
+
+  resultPanel.classList.remove('show');
+  notFound.classList.remove('show');
+
+  if (!input) return;
+
+  var batch = BATCHES[input];
+
+  if (batch) {
+    document.getElementById('result-batch-label').textContent = 'Batch ' + input;
+    document.getElementById('result-meta').textContent =
+      batch.origin + ' · Harvest ' + batch.harvest +
+      ' · Tested by Afghanistan Ministry of Agriculture Quality Control Lab · ISO 3632-1:2010';
+    document.getElementById('result-crocin').textContent = batch.crocin;
+    document.getElementById('result-picrocrocin').textContent = batch.picrocrocin;
+    document.getElementById('result-safranal').textContent = batch.safranal;
+    document.getElementById('result-extra').textContent = batch.extra || '';
+    resultPanel.classList.add('show');
+  } else {
+    notFound.classList.add('show');
+  }
+}
+
+// Allow Enter key to trigger lookup
+document.getElementById('lot-input').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') lookupBatch();
+});
+</script>
+
 </body>
 </html>
