@@ -325,7 +325,7 @@ footer {
   <div class="lookup-section">
     <label class="lookup-label" for="lot-input">Enter your lot code</label>
     <div class="lookup-row">
-      <input type="text" id="lot-input" class="lookup-input" placeholder="e.g. AZ-001" maxlength="20" autocomplete="off">
+      <input type="text" id="lot-input" class="lookup-input" placeholder="e.g. H25-L51" maxlength="20" autocomplete="off">
       <button class="lookup-btn" onclick="lookupBatch()">Verify Batch</button>
     </div>
     <p class="lookup-hint">Your lot code is printed on the bottom label of your tin next to "LOT CODE".</p>
@@ -398,16 +398,14 @@ footer {
 // Batch database — populate with real COA data when first batch arrives
 // Format: { 'LOT-CODE': { crocin, picrocrocin, safranal, origin, harvest, extra } }
 var BATCHES = {
-  // First batch will be added here once COA is received from Mohammad
-  // Example format:
-  // 'AZ-001': {
-  //   crocin: '296.3',
-  //   picrocrocin: '111.7',
-  //   safranal: '33.5',
-  //   origin: 'Herat Province, Afghanistan',
-  //   harvest: 'November 2025',
-  //   extra: 'Artificial colorants: Absent. Extraneous matter: 0.10%. Foreign matter: 0.01%.'
-  // }
+  'H25-L51': {
+    crocin: '270+',
+    picrocrocin: 'Pending',
+    safranal: 'Pending',
+    origin: 'Herat Province, Afghanistan',
+    harvest: 'November 2025',
+    extra: 'Artificial colorants: Absent. Best If Used By: 06/2029. Full COA on file.'
+  }
 };
 
 function lookupBatch() {
