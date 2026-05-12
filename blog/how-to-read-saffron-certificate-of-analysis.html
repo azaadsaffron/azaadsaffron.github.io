@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Read a Saffron Certificate of Analysis (COA) | The Azaad Journal</title>
+<meta name="description" content="A walkthrough of a real saffron Certificate of Analysis, explaining what crocin, picrocrocin, safranal, moisture, ash, and the other parameters mean, with reference data from a real Azaad lot.">
+<meta name="keywords" content="saffron certificate of analysis, saffron COA, how to read saffron COA, ISO 3632 saffron testing, saffron crocin reading, saffron picrocrocin, saffron safranal, saffron lab report, saffron quality verification">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.azaadsaffron.com/blog/how-to-read-saffron-certificate-of-analysis.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to Read a Saffron Certificate of Analysis (COA)">
+<meta property="og:description" content="What the numbers on a saffron COA actually mean. Crocin, picrocrocin, safranal, moisture, and ash explained against ISO 3632 thresholds, using real laboratory data from Azaad lot H25-L51.">
+<meta property="og:image" content="https://www.azaadsaffron.com/azaad_avatar.png">
+<meta property="og:url" content="https://www.azaadsaffron.com/blog/how-to-read-saffron-certificate-of-analysis.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@azaadsaffron">
+<meta name="twitter:title" content="How to Read a Saffron Certificate of Analysis (COA)">
+<meta name="twitter:description" content="A walkthrough of a real saffron Certificate of Analysis. What every parameter means and what to look for.">
+<meta name="twitter:image" content="https://www.azaadsaffron.com/azaad_avatar.png">
+<link rel="icon" type="image/png" href="../azaad_avatar.png">
+<link rel="apple-touch-icon" href="../azaad_avatar.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Cinzel:wght@400;500;600&family=Noto+Nastaliq+Urdu:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --crimson:      #7A1515;
+  --crimson-deep: #4A0A0A;
+  --gold:         #C8860A;
+  --gold-lt:      #E8A820;
+  --gold-pale:    #F5D98A;
+  --cream:        #FAF6EE;
+  --cream-dk:     #EDE4D0;
+  --parchment:    #D4C4A0;
+  --earth:        #2C1810;
+  --earth-mid:    #5C3A1E;
+  --earth-lt:     #8B6040;
+  --ink:          #1A0E08;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--cream); color: var(--ink); font-family: 'Cormorant Garamond', Georgia, serif; overflow-x: hidden; }
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(250,246,238,0.96); backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(200,134,10,0.15);
+  padding: 0 2.5rem; height: 64px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav-brand { display: flex; flex-direction: column; align-items: flex-start; gap: 1px; text-decoration: none; }
+.nav-brand-en { font-family: 'Cinzel', serif; font-size: 18px; font-weight: 600; letter-spacing: 5px; color: var(--crimson); line-height: 1; }
+.nav-brand-fa { font-family: 'Noto Nastaliq Urdu', serif; font-size: 11px; color: var(--gold); direction: rtl; line-height: 1; }
+.nav-links { display: flex; gap: 2.5rem; list-style: none; align-items: center; }
+.nav-links a { font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 3px; color: var(--earth-mid); text-decoration: none; text-transform: uppercase; transition: color 0.2s; }
+.nav-links a:hover, .nav-links a.active { color: var(--crimson); }
+.nav-cta { font-family: 'Cinzel', serif; font-size: 8.5px; letter-spacing: 2px; color: var(--cream) !important; background: var(--crimson); padding: 8px 18px; text-transform: uppercase; text-decoration: none; transition: background 0.2s; }
+.nav-cta:hover { background: var(--crimson-deep) !important; }
+.nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; z-index: 200; }
+.nav-hamburger span { display: block; width: 24px; height: 1.5px; background: var(--crimson); transition: all 0.3s; transform-origin: center; }
+.nav-hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.nav-hamburger.open span:nth-child(2) { opacity: 0; }
+.nav-hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+.nav-drawer { display: none; position: fixed; top: 64px; left: 0; right: 0; background: rgba(250,246,238,0.98); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(200,134,10,0.2); padding: 1.5rem 2rem 2rem; flex-direction: column; gap: 0; z-index: 99; box-shadow: 0 8px 32px rgba(0,0,0,0.08); }
+.nav-drawer.open { display: flex; }
+.nav-drawer a { font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: 4px; color: var(--earth-mid); text-decoration: none; text-transform: uppercase; padding: 1rem 0; border-bottom: 1px solid rgba(200,134,10,0.1); transition: color 0.2s; }
+.nav-drawer a:hover { color: var(--crimson); }
+.nav-drawer a:last-child { border-bottom: none; }
+.nav-drawer-cta { background: var(--crimson); color: var(--cream) !important; padding: 12px 20px !important; text-align: center; margin-top: 1rem; border-bottom: none !important; }
+.article-header { background: var(--crimson-deep); padding: 5rem 6rem 4rem; position: relative; overflow: hidden; margin-top: 64px; }
+.article-header::before { content: ''; position: absolute; inset: 0; background-image: repeating-linear-gradient(60deg, rgba(200,134,10,0.05) 0, rgba(200,134,10,0.05) 1px, transparent 0, transparent 32px), repeating-linear-gradient(-60deg, rgba(200,134,10,0.05) 0, rgba(200,134,10,0.05) 1px, transparent 0, transparent 32px); }
+.article-header-inner { max-width: 760px; margin: 0 auto; position: relative; z-index: 1; }
+.article-header-cat { font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 5px; color: var(--gold-pale); text-transform: uppercase; opacity: 0.7; margin-bottom: 1.25rem; }
+.article-header-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 4vw, 48px); font-weight: 300; color: var(--cream); line-height: 1.2; margin-bottom: 1.25rem; }
+.article-header-title em { font-style: italic; color: var(--gold-lt); }
+.article-header-sub { font-size: 18px; font-style: italic; color: rgba(237,228,208,0.65); line-height: 1.7; font-weight: 300; max-width: 580px; }
+.article-header-meta { margin-top: 2rem; font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 3px; color: rgba(212,196,160,0.45); text-transform: uppercase; }
+.article-body { max-width: 760px; margin: 0 auto; padding: 4rem 3rem 6rem; }
+.article-body p { font-size: 18px; line-height: 1.9; color: var(--earth-mid); font-weight: 300; margin-bottom: 1.5rem; }
+.article-body h2 { font-family: 'Cinzel', serif; font-size: 12px; letter-spacing: 4px; color: var(--crimson); text-transform: uppercase; margin: 3rem 0 1.25rem; padding-bottom: 0.5rem; border-bottom: 1px solid rgba(200,134,10,0.15); }
+.article-body blockquote { font-size: 20px; font-style: italic; color: var(--crimson); line-height: 1.55; border-left: 3px solid var(--gold); padding: 1rem 1.5rem; margin: 2rem 0; font-weight: 300; background: var(--cream-dk); }
+.article-body ul, .article-body ol { margin: 0 0 1.5rem 2rem; }
+.article-body li { font-size: 17px; line-height: 1.8; color: var(--earth-mid); font-weight: 300; margin-bottom: 0.5rem; }
+.article-body strong { color: var(--ink); font-weight: 500; }
+.article-back { display: inline-flex; align-items: center; gap: 8px; font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 3px; color: var(--gold); text-transform: uppercase; margin-bottom: 3rem; text-decoration: none; transition: color 0.2s; }
+.article-back:hover { color: var(--crimson); }
+.article-cta { background: var(--crimson-deep); padding: 2.5rem; margin-top: 3rem; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+.article-cta-text { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-style: italic; color: var(--cream); line-height: 1.5; }
+.article-cta-btn { font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 3px; background: var(--gold); color: var(--ink); padding: 12px 28px; text-decoration: none; text-transform: uppercase; transition: background 0.2s; display: inline-block; }
+.article-cta-btn:hover { background: var(--gold-lt); }
+footer { background: var(--ink); color: var(--cream); padding: 2rem 6rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+.footer-brand-sm { font-family: 'Cinzel', serif; font-size: 14px; font-weight: 500; letter-spacing: 5px; color: var(--cream); }
+.footer-links-sm { display: flex; gap: 2rem; flex-wrap: wrap; }
+.footer-links-sm a { font-size: 12px; font-style: italic; color: rgba(237,228,208,0.45); text-decoration: none; transition: color 0.2s; }
+.footer-links-sm a:hover { color: var(--cream); }
+.footer-copy-sm { font-size: 11px; font-style: italic; color: rgba(237,228,208,0.25); }
+@media (max-width: 900px) {
+  nav { padding: 0 1.5rem; }
+  .nav-links { display: none; }
+  .nav-hamburger { display: flex; }
+  .article-header { padding: 4rem 2rem 3rem; }
+  .article-body { padding: 3rem 1.5rem 4rem; }
+  footer { padding: 2rem 1.5rem; flex-direction: column; gap: 1rem; }
+}
+@media (max-width: 480px) {
+  .article-body { padding: 2rem 1.25rem 3rem; }
+  .article-header { padding: 3rem 1.25rem 2rem; }
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to Read a Saffron Certificate of Analysis (COA)",
+  "description": "A walkthrough of a real saffron Certificate of Analysis, explaining what crocin, picrocrocin, safranal, moisture, ash, and the other parameters mean against ISO 3632 thresholds, with reference data from a real Azaad lot.",
+  "datePublished": "2026-05-13",
+  "dateModified": "2026-05-13",
+  "author": {"@type": "Organization", "name": "Azaad Saffron", "url": "https://www.azaadsaffron.com"},
+  "publisher": {"@type": "Organization", "name": "Azaad Saffron", "logo": {"@type": "ImageObject", "url": "https://www.azaadsaffron.com/azaad_avatar.png"}},
+  "keywords": "saffron certificate of analysis, saffron COA, how to read saffron COA, ISO 3632 saffron testing, saffron crocin reading, saffron picrocrocin, saffron safranal, saffron lab report, saffron quality verification",
+  "image": "https://www.azaadsaffron.com/azaad_avatar.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.azaadsaffron.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Journal", "item": "https://www.azaadsaffron.com/blog.html"},
+    {"@type": "ListItem", "position": 3, "name": "How to Read a Saffron COA"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a saffron Certificate of Analysis?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A saffron Certificate of Analysis is a laboratory document that reports the test results for a specific lot of saffron. It records measurements of crocin (colour), picrocrocin (taste), safranal (aroma), moisture, ash, and other quality parameters defined by the ISO 3632 international standard. A real COA is tied to a unique lot number traceable to the specific package being sold."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What crocin level qualifies as Category I saffron?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ISO 3632 Category I, the highest grade, requires a crocin reading of approximately 200 or above when measured by UV-visible spectrophotometry at 440 nanometres. Premium Afghan and Iranian saffron from top growing regions routinely tests at 250 or above. Saffron with crocin below 200 falls into Category II or III."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does picrocrocin measure on a saffron COA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Picrocrocin is the compound responsible for saffron\\u2019s distinctive bittersweet taste. It is measured by spectrophotometry at 257 nanometres. ISO 3632 Category I requires a picrocrocin reading above 70. Fresh saffron has substantial picrocrocin; over time, picrocrocin converts to safranal, so a high picrocrocin reading indicates freshly-dried recent-harvest material."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does safranal measure on a saffron COA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Safranal is the volatile compound that produces saffron\\u2019s characteristic aroma. It is measured at 330 nanometres. ISO 3632 Category I requires a safranal reading between 20 and 50. Below 20, the saffron lacks aroma. Above 50, the safranal level suggests over-aged saffron in which too much picrocrocin has converted to safranal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I know if a saffron COA is real?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A genuine saffron COA has a unique lot number that matches the package, names the testing laboratory and its accreditation, specifies the analytical method, reports all three ISO 3632 readings together with moisture and ash, and is dated close to the harvest. Red flags include generic or recycled lot numbers, round-number readings without decimals, missing test methods, and in-house testing without third-party verification."
+      }
+    }
+  ]
+}
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5ZG1FKLKNM"></script>
+</head>
+<body>
+<nav>
+  <a href="../index.html" class="nav-brand">
+    <span class="nav-brand-en">AZAAD</span>
+    <span class="nav-brand-fa">آزاد</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="../index.html#story">Our Story</a></li>
+    <li><a href="../index.html#verify">Verify</a></li>
+    <li><a href="../index.html#shop">Shop</a></li>
+    <li><a href="../blog.html" class="active">Journal</a></li>
+    <li><a href="../index.html#find">Find Us</a></li>
+    <li><a href="../index.html#shop" class="nav-cta">Order Now</a></li>
+  </ul>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu" onclick="this.classList.toggle('open');document.getElementById('nav-drawer').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="nav-drawer" id="nav-drawer">
+  <a href="../index.html#story">Our Story</a>
+  <a href="../index.html#verify">Verify</a>
+  <a href="../index.html#shop">Shop</a>
+  <a href="../blog.html">Journal</a>
+  <a href="../index.html#find">Find Us</a>
+  <a href="../index.html#shop" class="nav-drawer-cta">Order Now</a>
+</div>
+
+<div class="article-header">
+  <div class="article-header-inner">
+    <div class="article-header-cat">Verification & Trust</div>
+    <h1 class="article-header-title">How to read a saffron <em>Certificate of Analysis</em></h1>
+    <p class="article-header-sub">Every premium saffron should come with laboratory paperwork. This is what each number on a real Azaad COA actually means, and the red flags to watch for on any saffron certificate.</p>
+    <div class="article-header-meta">May 13, 2026 · 11 minute read · By the Azaad Saffron Team · <span style="opacity:0.65">Updated May 13, 2026</span></div>
+  </div>
+</div>
+
+<div class="article-body">
+  <nav aria-label="Breadcrumb" style="padding:0.75rem 0;margin-bottom:0.5rem">
+    <div style="font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;color:var(--earth-lt);text-transform:uppercase;display:flex;align-items:center;gap:0.5rem;flex-wrap:wrap">
+      <a href="../index.html" style="color:var(--earth-lt);text-decoration:none;transition:color 0.2s" onmouseover="this.style.color='var(--crimson)'" onmouseout="this.style.color='var(--earth-lt)'">Home</a>
+      <span style="opacity:0.4">›</span>
+      <a href="../blog.html" style="color:var(--earth-lt);text-decoration:none;transition:color 0.2s" onmouseover="this.style.color='var(--crimson)'" onmouseout="this.style.color='var(--earth-lt)'">Journal</a>
+      <span style="opacity:0.4">›</span>
+      <span style="color:var(--earth-mid)">How to Read a Saffron COA</span>
+    </div>
+  </nav>
+  <a href="../blog.html" class="article-back">← Back to The Journal</a>
+  <div style="display:flex;flex-wrap:wrap;gap:1rem;margin-bottom:2rem"><a href="saffron-water-color.html" class="article-back" style="margin-right:2rem">← Previous Article</a></div>
+  <div class="quick-answer" style="background:var(--cream-dk);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin-bottom:2rem">
+    <div style="font-family:'Cinzel',serif;font-size:9px;letter-spacing:3px;color:var(--crimson);text-transform:uppercase;margin-bottom:0.6rem">Quick answer.</div>
+    <p style="font-size:17px;line-height:1.65;color:var(--earth-mid);font-weight:300;margin:0"><strong>A saffron Certificate of Analysis reports three key laboratory readings: crocin (colour strength), picrocrocin (taste), and safranal (aroma).</strong> For ISO 3632 Category I, the minimums are approximately crocin 200, picrocrocin 70, and safranal between 20 and 50. A real COA is tied to a specific lot number, names the testing laboratory, and shows all three values together with moisture, ash, and a confirmation that no artificial colorants are present.</p>
+  </div>
+
+    
+    <p>Every reputable saffron producer should be able to hand you a Certificate of Analysis for the lot you are buying. This document, usually called a COA, is the actual laboratory report behind any quality grade the package claims. It is the difference between marketing language and verifiable fact. Yet most buyers never see a saffron COA, and of those who do, very few know how to read one. This post walks through a real Azaad Saffron COA, parameter by parameter, so the next time you see one, from us or from anyone else, you can tell what the numbers actually mean.</p>
+
+    <h2>What a Saffron COA Is</h2>
+
+    <p>A Certificate of Analysis is a one or two-page laboratory document that records the test results for a specific batch or lot of saffron. The key word is <em>specific</em>. A COA is tied to a unique lot number, and that lot number is printed on the tin you are buying. The numbers on the certificate describe the actual material in the actual container in your hand. They are not estimates, generic specifications, or marketing copy. They are measurements.</p>
+
+    <p>This is the entire point of independent laboratory testing. Any seller can write "premium grade" on a package. Only a producer who has actually paid for laboratory analysis can hand you a document showing what the saffron actually tested at, traceable to a specific batch by a specific accredited laboratory on a specific date. The presence of a real COA, with verifiable test results that match the lot code on the tin, is one of the strongest signals of authenticity a buyer can ask for.</p>
+
+    <h2>The Azaad Reference Lot</h2>
+
+    <p>The numbers in this article come from Azaad's first commercial batch, lot code H25-L51. The lot identifier itself encodes the source and harvest: H for Herat, the source province in Afghanistan; 25 for the 2025 harvest year; and L51 for the specific harvest lot sequence within that year. Any Azaad customer can <a href="../verify.html" style="color:var(--crimson);text-decoration:none;border-bottom:1px solid rgba(122,21,21,0.3)">enter this lot code</a> on the verification page and see the laboratory findings for it. The numbers shown here, and what they mean, are the same numbers any Azaad buyer can confirm against the tin in their hand.</p>
+
+    <p>For lot H25-L51, the laboratory readings were: crocin 270+, picrocrocin 65+, safranal 30+. Origin: Herat Province, Afghanistan. Harvest: November 2025. The rest of this article explains exactly what each of those numbers means, where they sit relative to the ISO 3632 thresholds, and what to look for when you read any saffron COA.</p>
+
+    <h2>The Three Numbers That Define Saffron Quality</h2>
+
+    <p>Saffron contains hundreds of chemical compounds. The ISO 3632 standard, the international specification for saffron quality, focuses on just three of them because these three are responsible for the qualities people actually care about: colour, taste, and aroma. Each is measured by UV-visible spectrophotometry at a specific wavelength, and the result is reported as an absorbance reading, sometimes written as "E 1% / 1cm" at a specified nanometre value.</p>
+
+    <p>The absorbance reading is not a percentage and it is not a weight measurement. It is a measure of how strongly a one percent saffron solution absorbs light at the specified wavelength. Higher absorbance means more of the target compound is present. The wavelength is chosen so that one specific compound dominates the signal at that frequency. Read together, the three numbers describe how much colour, taste, and aroma a given saffron lot contains.</p>
+
+    <h2>Crocin: The Colour Reading at 440 Nanometres</h2>
+
+    <p>Crocin is a water-soluble carotenoid that gives saffron threads their crimson colour and gives bloomed saffron water its golden-orange hue. It is the most important quality marker because it is the most consistent indicator of overall saffron freshness, drying quality, and growing conditions. Crocin degrades over time, particularly under exposure to light, heat, or moisture. A high crocin reading on a recent COA indicates well-grown, well-dried, freshly tested saffron.</p>
+
+    <p>Crocin is measured at 440 nanometres because that is where the carotenoid family of pigments absorbs most strongly in the visible spectrum. The reading is the maximum absorbance of a one percent saffron-in-water solution at that wavelength.</p>
+
+    <p>The ISO 3632-1:2011 standard defines three quality categories based primarily on crocin content. The exact thresholds depend on which revision of the standard is being referenced, but Category I, the highest standard grade, requires a minimum crocin reading of approximately 200. Category II requires approximately 170. Category III requires approximately 120. Saffron with a crocin reading below the Category III minimum does not qualify as a graded product under the standard.</p>
+
+    <p>Azaad's lot H25-L51 tested at <strong>crocin 270 or higher</strong>. This is well above the Category I minimum and approximately 35 percent above the threshold. In practical terms, this means the threads in the tin will release substantially more colour per gram than a lower-grade saffron. A cook using H25-L51 saffron will use fewer threads to achieve the same depth of colour in a paella or chelow than a cook using commodity saffron, which is one of the reasons high-grade saffron is more economical than it first appears.</p>
+
+    <h2>Picrocrocin: The Taste Reading at 257 Nanometres</h2>
+
+    <p>Picrocrocin is the compound responsible for saffron's distinctive bittersweet taste. It is a glycoside that breaks down during cooking and storage, releasing safranal as a by-product. The presence of substantial picrocrocin in a fresh COA indicates that the saffron has not been over-dried or over-aged. Both reduce picrocrocin and produce a flat, characterless saffron that lacks the proper depth on the palate.</p>
+
+    <p>Picrocrocin is measured at 257 nanometres. The ISO 3632 minimum for Category I is 70 absorbance units. The minimums for Categories II and III are progressively lower.</p>
+
+    <p>Lot H25-L51 tested at <strong>picrocrocin 65 or higher</strong>. This is at or near the Category I threshold. It signals two things at once. First, that the saffron has the proper bittersweet structure that distinguishes real Crocus sativus from substitutes. Second, that the drying process was gentle and recent: aggressively dried saffron pushes picrocrocin lower as it converts more quickly into safranal during processing. A picrocrocin reading in the 65 to 90 range, paired with high crocin and moderate safranal, suggests a well-balanced, freshly-dried lot. Readings above roughly 120 typically indicate over-fast or over-hot drying that produces a harsher taste profile.</p>
+
+    <h2>Safranal: The Aroma Reading at 330 Nanometres</h2>
+
+    <p>Safranal is the volatile compound that gives saffron its distinctive aroma, the floral-hay-honey profile that distinguishes the spice from anything else in the kitchen. Unlike crocin and picrocrocin, safranal works differently in the COA: rather than wanting it as high as possible, the standard defines a target <em>range</em>. Too little safranal means insufficient aroma. Too much safranal can indicate over-aged saffron, because picrocrocin converts into safranal over time.</p>
+
+    <p>Safranal is measured at 330 nanometres. ISO 3632 Category I requires a safranal reading between 20 and 50. Below 20, the aroma is insufficient. Above 50, the saffron is typically past its freshness peak and is showing the signs of compound conversion that come with age or improper storage.</p>
+
+    <p>Lot H25-L51 tested at <strong>safranal 30 or higher</strong>, which sits comfortably in the middle of the Category I window. This is the ideal range. A safranal reading of 30 indicates strong, properly-developed aroma without the over-conversion signature of an older lot. Paired with the high crocin and the still-present picrocrocin, the three readings together describe saffron that is fresh, well-dried, and at its peak.</p>
+
+    <h2>Reading the Three Numbers Together</h2>
+
+    <p>The interpretive trick that most buyers miss is that the three readings tell you more in combination than they do individually. High crocin alone could indicate a freshly-dyed adulterated product. Moderate picrocrocin alone tells you nothing if the other numbers are not also healthy. A safranal reading inside the target range only matters if the crocin and picrocrocin are also at credible levels.</p>
+
+    <p>For H25-L51, the three readings together form a coherent picture: crocin 270+ (substantially above Category I), picrocrocin 65+ (at the Category I threshold), safranal 30+ (centred in the Category I aroma window). This is what a real Category I Afghan saffron lot from a recent harvest looks like on paper. The numbers are internally consistent with each other and with the harvest year, which is the kind of internal consistency that adulterated or fabricated COAs typically fail to maintain.</p>
+
+    <blockquote>A real COA tells a coherent story. The three readings should fit together. Crocin should be high. Picrocrocin should be substantial. Safranal should be in the target window. If any one number looks dramatically out of place relative to the others, the COA is either describing a problematic lot or has been fabricated.</blockquote>
+
+    <h2>The Other Parameters on a Real COA</h2>
+
+    <p>A complete COA includes more than just the three spectrophotometric readings. The following parameters are also standard, and a reputable producer will include them on the documentation that accompanies a premium lot.</p>
+
+    <p><strong>Moisture and volatile matter</strong>. ISO 3632 caps moisture at 12 percent for filaments. Lower is generally better up to a point, since over-dried saffron loses aroma. The sweet spot for Category I filaments is roughly 8 to 11 percent. Under-dried saffron is heavier and weaker per gram; some unscrupulous producers leave their saffron slightly damp specifically to increase weight. A moisture reading above the 12 percent cap fails Category I regardless of how high the colour and aroma numbers are.</p>
+
+    <p><strong>Total ash and acid-insoluble ash</strong>. These are measurements of mineral residue after combustion. They detect adulteration with sand, dust, or non-saffron plant material. Category I requires total ash below 8 percent and acid-insoluble ash below 1 percent. Values above these thresholds indicate either contamination during harvest, addition of non-saffron filler, or both.</p>
+
+    <p><strong>Foreign matter</strong>. The amount of non-stigma material, such as yellow style fragments, other plant parts, or extraneous debris. Category I caps foreign matter at 0.5 percent for filaments. Super Negin trims, which are the highest commercial sub-grade within Category I, typically test well below this, since the trimming process explicitly removes the yellow portions of the thread.</p>
+
+    <p><strong>Artificial colorants</strong>. This should always read "Absent" or "Not detected." Lower-grade saffron is sometimes dyed to compensate for weak crocin content; the dye produces a strong colour in water but the laboratory test for synthetic dyes immediately exposes the adulteration. Lot H25-L51 shows "Artificial colorants: Absent" on its certificate. This is the expected reading for any genuine Category I lot.</p>
+
+    <p><strong>Test method</strong>. The COA should specify which method was used. For ISO 3632 compliance, the method is UV-visible spectrophotometry per ISO 3632-2:2010. Some premium producers also commission HPLC-DAD (high-performance liquid chromatography with diode array detection) for additional precision, particularly for picrocrocin and safranal, where UV-Vis can be less specific. A COA that fails to identify the test method is a yellow flag; the lab should always be willing to disclose it.</p>
+
+    <p><strong>Laboratory name and accreditation</strong>. The COA should clearly identify the testing laboratory by name and, where applicable, list its accreditations. ISO/IEC 17025 accreditation is the gold standard for testing laboratories and confirms that the lab meets international competency requirements. A laboratory that the producer also owns or operates is a conflict of interest; truly independent testing is done by a third-party lab.</p>
+
+    <p><strong>Date of analysis</strong>. Should be close to the harvest and production date. A COA dated months after harvest is still valid, but a COA dated years after the harvest may be testing material that has degraded since the original analysis. For lot H25-L51, the analysis was conducted shortly after the November 2025 harvest, with the certificate dated within the same season.</p>
+
+    <h2>Red Flags on a Saffron COA</h2>
+
+    <p>Knowing what a good COA looks like also means recognising what a problematic one looks like. The following patterns are worth scrutiny:</p>
+
+    <ul>
+      <li><strong>Generic or recycled lot numbers.</strong> A COA without a unique lot number that traces to the specific package in your hand is essentially worthless. Generic "2025/001" style codes shared across multiple batches suggest the certificate is being reused rather than tied to actual testing.</li>
+      <li><strong>Round numbers across every parameter.</strong> Real spectrophotometry produces decimals. A COA showing "crocin 250, picrocrocin 80, safranal 25" with no decimal places looks fabricated. Real readings come out as things like 273.4, 89.2, 31.6.</li>
+      <li><strong>In-house testing only.</strong> A COA from the producer's own laboratory carries a clear conflict of interest. Reputable producers commission third-party accredited labs for compliance testing.</li>
+      <li><strong>Missing test method.</strong> If the COA does not name the analytical method, the result is uninterpretable. Method matters: UV-Vis at 440 nm versus HPLC-DAD produce numbers on different scales.</li>
+      <li><strong>Crocin alone, without picrocrocin and safranal.</strong> A COA that reports only the color number is incomplete. All three compounds are required for proper grading.</li>
+      <li><strong>Analysis date years before the package date.</strong> If the lab tested the material three years before you bought it, the saffron has aged since the COA was issued. Recent material should have a recent certificate.</li>
+      <li><strong>"Premium" or "Grade A+" without ISO 3632 numbers.</strong> These terms have no legal definition. A COA that uses marketing language instead of measured values is not really a COA at all.</li>
+    </ul>
+
+    <h2>What This Means for Buyers</h2>
+
+    <p>The practical use of a COA is simple. When you receive a tin of saffron, find the lot code on the bottom label. Look up that lot in the producer's documentation, either on a verification page or in the printed certificate that accompanies the package. Compare the laboratory readings against the ISO 3632 thresholds. A current-harvest Category I lot should show crocin well above 200, picrocrocin above 70, safranal between 20 and 50, moisture below 12 percent, and no artificial colorants.</p>
+
+    <p>Then, optionally, run the <a href="saffron-water-color.html" style="color:var(--crimson);text-decoration:none;border-bottom:1px solid rgba(122,21,21,0.3)">water bloom test</a> at home as a sanity check. The colour, the speed of bloom, and the aroma should match what the COA's readings predict. When the laboratory documentation and the at-home test agree, you have done about as much due diligence as a consumer can do.</p>
+
+    <p>The reason Azaad shows its COA data publicly on the verification page is that this is the standard the saffron market should move toward. Most adulteration and most fraud in the global saffron trade survives because the buyer never sees the laboratory paperwork. The remedy is straightforward: any producer that is genuinely making Category I saffron should be willing to show their numbers, name their laboratory, and tie everything to a specific lot code that the buyer can verify. <a href="why-is-saffron-so-expensive.html" style="color:var(--crimson);text-decoration:none;border-bottom:1px solid rgba(122,21,21,0.3)">Real saffron costs what it costs</a> because of what is in the threads. The COA is how you confirm that what is in the threads matches what is on the package.</p>
+  <div style="margin:3rem 0;padding:2rem 2rem;background:var(--crimson-deep);border:1px solid rgba(200,134,10,0.25)">
+    <div style="font-family:'Cinzel',serif;font-size:9px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:0.75rem">The Azaad Journal</div>
+    <div style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;color:var(--cream);line-height:1.4;margin-bottom:1rem">New articles on saffron quality, sourcing, and cooking. No noise.</div>
+    <form action="https://azaadsaffron.us17.list-manage.com/subscribe/post" method="POST" style="display:flex;gap:0.5rem;flex-wrap:wrap">
+      <input type="hidden" name="u" value="cd7199c77af040962b23ff481">
+      <input type="hidden" name="id" value="9cc8bc795a">
+      <input type="email" name="EMAIL" placeholder="your@email.com" required
+        style="flex:1;min-width:200px;padding:0.75rem 1rem;background:rgba(250,246,238,0.08);border:1px solid rgba(200,134,10,0.35);color:var(--cream);font-family:'Cormorant Garamond',serif;font-size:15px;outline:none;">
+      <button type="submit"
+        style="padding:0.75rem 1.5rem;background:var(--crimson);border:none;color:var(--cream);font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;cursor:pointer;white-space:nowrap;">
+        Subscribe
+      </button>
+    </form>
+  </div>
+  <div style="margin-top:3rem;padding-top:2rem;border-top:1px solid rgba(200,134,10,0.15)">
+    <div style="font-family:'Cinzel',serif;font-size:9px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:1.25rem">Continue Reading</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;background:rgba(200,134,10,0.1)">
+      <a href="what-is-iso-3632-saffron-grade.html" style="background:var(--cream-dk);padding:1.5rem;text-decoration:none;display:block;transition:background 0.2s" onmouseover="this.style.background='#e8dcc8'" onmouseout="this.style.background='var(--cream-dk)'">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:400;color:var(--ink);line-height:1.35;margin-bottom:0.5rem">What Is ISO 3632? The Saffron Grading Standard</div>
+        <div style="font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:2px;color:var(--crimson);text-transform:uppercase">Read Article →</div>
+      </a>
+      <a href="how-to-tell-if-saffron-is-real.html" style="background:var(--cream-dk);padding:1.5rem;text-decoration:none;display:block;transition:background 0.2s" onmouseover="this.style.background='#e8dcc8'" onmouseout="this.style.background='var(--cream-dk)'">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:400;color:var(--ink);line-height:1.35;margin-bottom:0.5rem">How to Tell If Your Saffron Is Real</div>
+        <div style="font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:2px;color:var(--crimson);text-transform:uppercase">Read Article →</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="article-cta">
+    <div class="article-cta-text">"Every Azaad tin carries a lot code traceable to its laboratory findings. Lot H25-L51 tested at crocin 270+, picrocrocin 65+, safranal 30+, no artificial colorants, all from Herat Province, November 2025 harvest."</div>
+    <a href="../index.html#shop" class="article-cta-btn">Shop Azaad Saffron</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-brand-sm">AZAAD</div>
+  <div class="footer-links-sm">
+    <a href="../index.html">Home</a>
+    <a href="../index.html#story">Our Story</a>
+    <a href="../index.html#shop">Shop</a>
+    <a href="../blog.html">The Journal</a>
+    <a href="https://www.instagram.com/azaadsaffron" target="_blank">@azaadsaffron</a>
+    <a href="../privacy.html">Privacy Policy</a>
+    <a href="../terms.html">Terms &amp; Conditions</a>
+  </div>
+  <div class="footer-copy-sm">© 2026 Azaad Saffron</div>
+</footer>
+</body>
+</html>
