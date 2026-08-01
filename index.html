@@ -1196,13 +1196,22 @@ footer {
   .nav-hamburger { display: flex; }
   .nav-cta { padding: 10px 18px; }
   .hero { grid-template-columns: 1fr; }
-  .hero-right { display: none; }
-  .hero-left { padding: 4rem 2rem 3rem; min-height: auto; }
+  .hero-right {
+    display: flex !important;
+    justify-content: center;
+    padding: 2rem 2rem 4rem;
+    max-height: none;
+  }
+  .hero-right > div {
+    max-width: 480px !important;
+  }
+  .hero-left { padding: 4rem 2rem 2rem; min-height: auto; }
   .story, .verify-inner, .origin-inner { grid-template-columns: 1fr; gap: 3rem; }
   .story-visual { display: none; }
   section, .product-section, .find-section, .community-section { padding: 4rem 2rem; }
   .verify-section, .origin-section, .testimonial-section { padding: 4rem 2rem; }
-  .product-grid { grid-template-columns: repeat(2, 1fr); }
+  .product-grid { grid-template-columns: 1fr !important; max-width: 480px; margin-left: auto; margin-right: auto; }
+  .product-card img { aspect-ratio: 16 / 10 !important; }
   .find-grid { grid-template-columns: 1fr; }
   .footer-inner { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
   footer { padding: 3rem 2rem 2rem; }
@@ -1211,7 +1220,9 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .hero-left { padding: 2.5rem 1.5rem 2rem !important; }
+  .hero-left { padding: 2.5rem 1.5rem 1rem !important; }
+  .hero-right { padding: 1rem 1.5rem 3rem !important; }
+  .hero-right > div { max-width: 100% !important; }
   .hero-headline { font-size: clamp(32px, 8vw, 52px); }
   .hero-actions { flex-direction: column; gap: 0.75rem; }
   .btn-primary, .btn-secondary { text-align: center; width: 100%; box-sizing: border-box; }
@@ -1221,12 +1232,14 @@ footer {
   .product-grid { grid-template-columns: 1fr !important; }
   [style*="grid-template-columns:repeat(4"] { grid-template-columns: repeat(2, 1fr) !important; }
   .trust-bar { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
-  .hero-left { padding: 3rem 1.25rem 2.5rem; }
+  .hero-left { padding: 3rem 1.25rem 1rem; }
+  .hero-right { padding: 0.5rem 1.25rem 2rem !important; }
   .community-row { gap: 1rem; }
   .comm-card { min-width: 100%; }
   .footer-bottom { flex-direction: column; align-items: flex-start; }
   .email-signup-section { padding: 3rem 1.5rem !important; }
   [style*="padding:5rem 6rem"] { padding: 3rem 1.5rem !important; }
+  .product-card img { aspect-ratio: 4 / 3 !important; }
 }
 
 /* ── STICKY SHOP BUTTON (mobile) ── */
