@@ -1626,8 +1626,8 @@ function loadAnalytics() {
   </div>
 
   <div class="hero-right">
-    <div style="width:100%;max-width:520px;display:flex;align-items:center;justify-content:center;position:relative;z-index:2">
-      <img src="images/azaad-hero-1oz.jpg" alt="Azaad Saffron 1 ounce tin with saffron threads, biryani, kheer, and traditional sweets" style="width:100%;height:auto;display:block;border-radius:4px;box-shadow:0 20px 60px rgba(20,10,5,0.55),0 8px 22px rgba(20,10,5,0.35);border:1px solid rgba(200,134,10,0.15)">
+    <div style="width:100%;max-width:560px;display:flex;align-items:center;justify-content:center;position:relative;z-index:2">
+      <img src="images/azaad-hero-1oz.jpg" alt="Azaad Saffron 1 ounce tin with saffron threads, biryani, kheer, and traditional sweets" onclick="openLightbox('images/azaad-hero-1oz.jpg','Azaad Saffron 1 ounce tin')" style="width:100%;height:auto;display:block;cursor:zoom-in;-webkit-mask-image:radial-gradient(ellipse at center, black 55%, transparent 92%);mask-image:radial-gradient(ellipse at center, black 55%, transparent 92%)">
     </div>
   </div>
 </div>
@@ -1848,8 +1848,9 @@ function loadAnalytics() {
 
   <div class="product-grid">
     <a href="https://www.instagram.com/azaadsaffron" target="_blank" class="product-card">
-      <div style="margin:-2.5rem -2rem 1.5rem -2rem;overflow:hidden;background:var(--cream-dk)">
+      <div style="margin:-2.5rem -2rem 1.5rem -2rem;overflow:hidden;background:var(--cream-dk);position:relative;cursor:zoom-in" onclick="event.preventDefault();event.stopPropagation();openLightbox('images/azaad-tin-1g.jpg','Azaad Saffron 1 gram tin')">
         <img src="images/azaad-tin-1g.jpg" alt="Azaad Saffron 1 gram tin. Grade I Super Negin saffron threads" style="width:100%;height:auto;display:block;aspect-ratio:4/3;object-fit:cover;object-position:center">
+        <div style="position:absolute;bottom:8px;right:8px;background:rgba(20,10,5,0.75);color:var(--gold-lt);font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;padding:4px 8px;text-transform:uppercase;pointer-events:none">View</div>
       </div>
       <div class="product-card-tag">For First-Time Cooks</div>
       <div class="product-card-badge">ISO 3632 · Grade I</div>
@@ -1864,8 +1865,9 @@ function loadAnalytics() {
     </a>
 
     <a href="https://www.instagram.com/azaadsaffron" target="_blank" class="product-card">
-      <div style="margin:-2.5rem -2rem 1.5rem -2rem;overflow:hidden;background:var(--cream-dk)">
+      <div style="margin:-2.5rem -2rem 1.5rem -2rem;overflow:hidden;background:var(--cream-dk);position:relative;cursor:zoom-in" onclick="event.preventDefault();event.stopPropagation();openLightbox('images/azaad-tin-4g.jpg','Azaad Saffron 4 gram tin')">
         <img src="images/azaad-tin-4g.jpg" alt="Azaad Saffron 4 gram tin. Grade I Super Negin saffron threads, cooking staple size" style="width:100%;height:auto;display:block;aspect-ratio:4/3;object-fit:cover;object-position:center">
+        <div style="position:absolute;bottom:8px;right:8px;background:rgba(20,10,5,0.75);color:var(--gold-lt);font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;padding:4px 8px;text-transform:uppercase;pointer-events:none">View</div>
       </div>
       <div class="product-card-tag">For the Kitchen</div>
       <div class="product-card-badge">ISO 3632 · Grade I</div>
@@ -1880,8 +1882,9 @@ function loadAnalytics() {
     </a>
 
     <a href="https://www.instagram.com/azaadsaffron" target="_blank" class="product-card">
-      <div style="margin:-2.5rem -2rem 1.5rem -2rem;overflow:hidden;background:var(--cream-dk)">
+      <div style="margin:-2.5rem -2rem 1.5rem -2rem;overflow:hidden;background:var(--cream-dk);position:relative;cursor:zoom-in" onclick="event.preventDefault();event.stopPropagation();openLightbox('images/azaad-tin-1oz.jpg','Azaad Saffron 1 ounce tin')">
         <img src="images/azaad-tin-1oz.jpg" alt="Azaad Saffron 1 ounce tin. Grade I Super Negin saffron threads, restaurant and catering size" style="width:100%;height:auto;display:block;aspect-ratio:4/3;object-fit:cover;object-position:center">
+        <div style="position:absolute;bottom:8px;right:8px;background:rgba(20,10,5,0.75);color:var(--gold-lt);font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;padding:4px 8px;text-transform:uppercase;pointer-events:none">View</div>
       </div>
       <div class="product-card-tag">For Restaurants &amp; Caterers</div>
       <div class="product-card-badge">ISO 3632 · Grade I</div>
@@ -2434,6 +2437,35 @@ document.addEventListener('click', function(e) {
     </p>
   </div>
 </div>
+
+<!-- ── LIGHTBOX MODAL (image click-to-expand) ── -->
+<div id="lightbox" onclick="closeLightbox()" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(15,7,4,0.95);z-index:9999;justify-content:center;align-items:center;padding:40px;cursor:zoom-out;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)">
+  <button onclick="closeLightbox()" aria-label="Close image" style="position:absolute;top:20px;right:20px;background:rgba(200,134,10,0.15);border:1px solid rgba(200,134,10,0.4);color:var(--gold-lt);width:44px;height:44px;border-radius:50%;font-size:22px;cursor:pointer;font-family:serif;line-height:1;display:flex;align-items:center;justify-content:center;transition:background 0.2s" onmouseover="this.style.background='rgba(200,134,10,0.3)'" onmouseout="this.style.background='rgba(200,134,10,0.15)'">&times;</button>
+  <div style="max-width:min(90vw,1200px);max-height:90vh;display:flex;flex-direction:column;align-items:center;gap:1rem" onclick="event.stopPropagation()">
+    <img id="lightbox-img" src="" alt="" style="max-width:100%;max-height:80vh;height:auto;width:auto;display:block;border-radius:4px;box-shadow:0 25px 70px rgba(0,0,0,0.6);border:1px solid rgba(200,134,10,0.2)">
+    <div id="lightbox-caption" style="font-family:'Cinzel',serif;font-size:11px;letter-spacing:3px;color:var(--gold-lt);text-transform:uppercase;text-align:center;opacity:0.9"></div>
+  </div>
+</div>
+
+<script>
+function openLightbox(imageSrc, caption) {
+  var lb = document.getElementById('lightbox');
+  var img = document.getElementById('lightbox-img');
+  var cap = document.getElementById('lightbox-caption');
+  img.src = imageSrc;
+  img.alt = caption || '';
+  cap.textContent = caption || '';
+  lb.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  document.getElementById('lightbox').style.display = 'none';
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeLightbox();
+});
+</script>
 
 </body>
 </html>
