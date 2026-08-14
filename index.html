@@ -3,6 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#7A1515">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="format-detection" content="telephone=no">
 
 <title>Azaad Saffron | Grade I Afghan Saffron, Lab Verified</title>
 <meta name="description" content="Grade I Afghan saffron threads, independently lab verified to ISO 3632. Super Negin from Herat Province. Every tin shows the lab findings before you open it.">
@@ -30,12 +34,26 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": ["Organization", "OnlineStore"],
   "name": "Azaad Saffron",
   "url": "https://azaadsaffron.com",
   "logo": "https://azaadsaffron.com/azaad_avatar.png",
   "image": "https://azaadsaffron.com/og-image.png",
   "description": "Grade I certified saffron threads, independently batch verified. Every tin tells you exactly what it holds.",
+  "email": "sales@azaadsaffron.com",
+  "areaServed": {
+    "@type": "Country",
+    "name": "United States"
+  },
+  "location": {
+    "@type": "Place",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Irvine",
+      "addressRegion": "CA",
+      "addressCountry": "US"
+    }
+  },
   "sameAs": [
     "https://www.instagram.com/azaadsaffron"
   ]
@@ -51,26 +69,6 @@
   "brand": {
     "@type": "Brand",
     "name": "Azaad Saffron"
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5",
-    "reviewCount": "1",
-    "bestRating": "5",
-    "worstRating": "1"
-  },
-  "review": {
-    "@type": "Review",
-    "reviewRating": {
-      "@type": "Rating",
-      "ratingValue": "5",
-      "bestRating": "5"
-    },
-    "author": {
-      "@type": "Person",
-      "name": "Azaad Saffron Customer"
-    },
-    "reviewBody": "Exceptional quality saffron. The batch verification gives complete confidence in what you are buying."
   },
   "offers": {
     "@type": "Offer",
@@ -91,7 +89,6 @@
       },
       "shippingDestination": {
         "@type": "DefinedRegion",
-        "addressRegion": "CA",
         "addressCountry": "US"
       },
       "deliveryTime": {
@@ -99,13 +96,13 @@
         "handlingTime": {
           "@type": "QuantitativeValue",
           "minValue": "1",
-          "maxValue": "3",
+          "maxValue": "2",
           "unitCode": "DAY"
         },
         "transitTime": {
           "@type": "QuantitativeValue",
-          "minValue": "1",
-          "maxValue": "3",
+          "minValue": "3",
+          "maxValue": "5",
           "unitCode": "DAY"
         }
       }
@@ -113,10 +110,7 @@
     "hasMerchantReturnPolicy": {
       "@type": "MerchantReturnPolicy",
       "applicableCountry": "US",
-      "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-      "merchantReturnDays": 30,
-      "returnMethod": "https://schema.org/ReturnByMail",
-      "returnFees": "https://schema.org/FreeReturn"
+      "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
     }
   }
 }
@@ -147,7 +141,37 @@
   --amber:        #C8852A;
 }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+* { -webkit-tap-highlight-color: rgba(122,21,21,0.15); }
+
+/* Keyboard focus visibility (accessibility) */
+a:focus-visible, button:focus-visible, input:focus-visible, [tabindex]:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+/* Skip link */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--crimson);
+  color: var(--cream);
+  padding: 12px 20px;
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  z-index: 1000;
+}
+.skip-link:focus {
+  left: 8px;
+  top: 8px;
+}
 
 body {
   background: var(--cream);
@@ -164,7 +188,7 @@ nav {
   background: rgba(250,246,238,0.96);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid rgba(200,134,10,0.15);
-  padding: 0 2.5rem;
+  padding: 0 2rem 0 2.5rem;
   height: 64px;
   display: flex;
   align-items: center;
@@ -196,9 +220,10 @@ nav {
 
 .nav-links {
   display: flex;
-  gap: 2.5rem;
+  gap: 1.75rem;
   list-style: none;
   align-items: center;
+  margin-left: auto;
 }
 .nav-links a {
   font-family: 'Cinzel', serif;
@@ -279,14 +304,20 @@ nav {
 
 .nav-cta {
   font-family: 'Cinzel', serif;
-  font-size: 8.5px;
+  font-size: 9px;
   letter-spacing: 2px;
-  color: var(--cream) !important;
-  background: var(--crimson);
-  padding: 8px 18px;
+  color: var(--crimson) !important;
+  background: transparent;
+  border: 1px solid var(--crimson);
+  padding: 7px 16px;
   text-transform: uppercase;
   text-decoration: none;
-  transition: background 0.2s;
+  border-radius: 2px;
+  transition: background 0.2s, color 0.2s;
+}
+.nav-cta:hover {
+  background: var(--crimson);
+  color: var(--cream) !important;
 }
 .nav-cta:hover { background: var(--crimson-deep) !important; }
 
@@ -413,6 +444,8 @@ nav {
   display: flex;
   flex-direction: column;
   gap: 3px;
+  align-items: center;
+  text-align: center;
 }
 .hstat-n {
   font-family: 'Cinzel', serif;
@@ -674,6 +707,8 @@ section {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  align-items: center;
+  text-align: center;
 }
 .vnum-n {
   font-family: 'Cinzel', serif;
@@ -827,24 +862,25 @@ section {
 
 .product-card-cta {
   font-family: 'Cinzel', serif;
-  font-size: 8px;
+  font-size: 9px;
   letter-spacing: 3px;
   color: var(--crimson);
   text-transform: uppercase;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
+  padding: 12px 4px;
+  min-height: 44px;
+  border: 1px solid var(--crimson);
+  border-radius: 2px;
+  transition: background 0.2s, color 0.2s;
 }
-.product-card-cta::after {
-  content: '';
-  flex: 1;
-  height: 1px;
+.product-card:hover .product-card-cta {
   background: var(--crimson);
-  opacity: 0.3;
-  transition: opacity 0.2s;
+  color: var(--cream);
 }
-.product-card:hover .product-card-cta::after { opacity: 0.7; }
 
 .product-card-badge {
   display: inline-flex;
@@ -929,6 +965,8 @@ section {
   flex-direction: column;
   gap: 4px;
   border: 1px solid rgba(200,134,10,0.1);
+  align-items: center;
+  text-align: center;
 }
 .ostat-n {
   font-family: 'Cinzel', serif;
@@ -1464,6 +1502,50 @@ footer {
     letter-spacing: 2px;
   }
 }
+
+/* FAQ */
+.faq-item {
+  border-bottom: 1px solid rgba(200,134,10,0.2);
+  padding: 0;
+}
+.faq-item:first-of-type { border-top: 1px solid rgba(200,134,10,0.2); }
+.faq-q {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(19px, 2.4vw, 24px);
+  font-weight: 500;
+  color: var(--ink);
+  cursor: pointer;
+  padding: 1.4rem 2.5rem 1.4rem 0;
+  list-style: none;
+  position: relative;
+  transition: color 0.2s;
+}
+.faq-q:hover { color: var(--crimson); }
+.faq-q::-webkit-details-marker { display: none; }
+.faq-q::after {
+  content: '+';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: var(--gold);
+  font-weight: 300;
+  transition: transform 0.2s;
+}
+details[open] .faq-q::after { content: '\2212'; }
+.faq-a {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--earth-mid);
+  padding: 0 2.5rem 1.6rem 0;
+  max-width: 90%;
+}
+@media (max-width: 768px) {
+  #faq { padding: 3.5rem 1.5rem !important; }
+  .faq-a { max-width: 100%; }
+}
 </style>
 
 <script>
@@ -1508,7 +1590,7 @@ function loadAnalytics() {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What makes Azaad Saffron Grade A+?",
+      "name": "What makes Azaad Saffron high quality?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Azaad Saffron is Afghan Super Negin grade, sourced from Herat Province. Every batch is independently tested to ISO 3632 Grade I standards with a minimum crocin reading of 270+. Each tin carries a lot number traceable to the original COA."
@@ -1516,10 +1598,10 @@ function loadAnalytics() {
     },
     {
       "@type": "Question",
-      "name": "How do I order Azaad Saffron in Orange County?",
+      "name": "How do I order Azaad Saffron?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Order by sending a direct message on Instagram at @azaadsaffron or emailing sales@azaadsaffron.com. We deliver locally within Orange County, California. Payment via Venmo."
+        "text": "Order directly from azaadsaffron.com. Each tin is available for one-click purchase with secure checkout. We ship nationally via USPS Ground Advantage with tracking. Orders typically arrive within 5-7 business days. Free US shipping on 4g and 1oz tins. 1g tins ship for $8 flat."
       }
     },
     {
@@ -1551,6 +1633,7 @@ function loadAnalytics() {
 </script>
 </head>
 <body>
+  <a href="#shop" class="skip-link">Skip to shop</a>
 
 <!-- ── COOKIE CONSENT BANNER ── -->
 <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent">
@@ -1565,7 +1648,6 @@ function loadAnalytics() {
   </div>
 </div>
 
-
 <a href="#shop" class="sticky-shop">Shop Now</a>
 <button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
 
@@ -1578,8 +1660,9 @@ function loadAnalytics() {
     <li><a href="#shop">Shop</a></li>
     <li><a href="#compare">Why Azaad</a></li>
     <li><a href="#verify">Batch Verify</a></li>
-    <li><a href="#find">Farmers Markets</a></li>
+    <li><a href="#find">How to Order</a></li>
     <li><a href="blog.html">Journal</a></li>
+    <li><a href="#faq">FAQ</a></li>
     <li><a href="#shop" class="nav-cta">Order Now</a></li>
   </ul>
   <button class="nav-hamburger" id="hamburger" aria-label="Menu">
@@ -1591,8 +1674,9 @@ function loadAnalytics() {
   <a href="#shop" onclick="closeMenu()">Shop</a>
   <a href="#compare" onclick="closeMenu()">Why Azaad</a>
   <a href="#verify" onclick="closeMenu()">Batch Verify</a>
-  <a href="#find" onclick="closeMenu()">Farmers Markets</a>
+  <a href="#find" onclick="closeMenu()">How to Order</a>
   <a href="blog.html">Journal</a>
+  <a href="#faq" onclick="closeMenu()">FAQ</a>
   <a href="#shop" class="nav-drawer-cta" onclick="closeMenu()">Order Now</a>
 </div>
 
@@ -1617,7 +1701,7 @@ function loadAnalytics() {
     </p>
 
     <div class="hero-actions">
-      <a href="https://www.instagram.com/azaadsaffron" target="_blank" class="btn-primary">Order via Instagram</a>
+      <a href="#shop" class="btn-primary">Shop the Collection</a>
       <a href="#verify" class="btn-secondary">See Batch Findings</a>
     </div>
 
@@ -1682,8 +1766,8 @@ function loadAnalytics() {
       <div class="why-item-body">Every tin carries its own lab findings. Scan the code. See what you are buying before you open it.</div>
     </div>
     <div class="why-item">
-      <div class="why-item-head">Local Presence</div>
-      <div class="why-item-body">Available at Orange County farmers markets. Open the tin. Smell it. Buy only if it is right.</div>
+      <div class="why-item-head">Shipped Direct</div>
+      <div class="why-item-body">Ordered online and shipped from Irvine, California with tracking. Real saffron delivered to your door, anywhere in the US.</div>
     </div>
     <div class="why-item">
       <div class="why-item-head">Nothing Hidden</div>
@@ -1859,7 +1943,7 @@ function loadAnalytics() {
   <h2 class="section-heading">Ancient in origin.<br><em>Honest in every tin.</em></h2>
 
   <div class="product-grid">
-    <a href="https://www.instagram.com/azaadsaffron" target="_blank" class="product-card">
+    <a href="https://buy.stripe.com/fZu5kFe688nX9CM3Fx7N600" target="_blank" rel="noopener" class="product-card">
       <div style="margin:-2.5rem -2rem 1.5rem -2rem;overflow:hidden;background:var(--cream-dk);position:relative;cursor:zoom-in" onclick="event.preventDefault();event.stopPropagation();openLightbox('images/azaad-tin-1g.jpg','Azaad Saffron 1 gram tin')">
         <img src="images/azaad-tin-1g.jpg" alt="Azaad Saffron 1 gram tin of Grade I Super Negin saffron threads from Afghanistan" width="1536" height="1024" loading="lazy" decoding="async" style="width:100%;height:auto;display:block;aspect-ratio:4/3;object-fit:cover;object-position:center">
         <div style="position:absolute;bottom:8px;right:8px;background:rgba(20,10,5,0.75);color:var(--gold-lt);font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;padding:4px 8px;text-transform:uppercase;pointer-events:none">View</div>
@@ -1872,10 +1956,11 @@ function loadAnalytics() {
         <span class="price-main">$28</span>
         <span class="price-weight">/ 1g tin</span>
       </div>
-      <div class="product-card-cta">Order via Instagram</div>
+      <div style="font-size:12px;color:var(--earth-mid);font-style:italic;margin-top:-0.25rem;font-weight:400">Plus $8 US shipping</div>
+      <div class="product-card-cta">Order Now</div>
     </a>
 
-    <a href="https://www.instagram.com/azaadsaffron" target="_blank" class="product-card">
+    <a href="https://buy.stripe.com/3cI28tgegbA9g1a4JB7N601" target="_blank" rel="noopener" class="product-card">
       <div style="margin:-2.5rem -2rem 1.5rem -2rem;overflow:hidden;background:var(--cream-dk);position:relative;cursor:zoom-in" onclick="event.preventDefault();event.stopPropagation();openLightbox('images/azaad-tin-4g.jpg','Azaad Saffron 4 gram tin')">
         <img src="images/azaad-tin-4g.jpg" alt="Azaad Saffron 4 gram tin of Grade I Super Negin saffron threads, kitchen cooking size" width="1254" height="1254" loading="lazy" decoding="async" style="width:100%;height:auto;display:block;aspect-ratio:4/3;object-fit:cover;object-position:center">
         <div style="position:absolute;bottom:8px;right:8px;background:rgba(20,10,5,0.75);color:var(--gold-lt);font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;padding:4px 8px;text-transform:uppercase;pointer-events:none">View</div>
@@ -1888,10 +1973,11 @@ function loadAnalytics() {
         <span class="price-main">$84</span>
         <span class="price-weight">/ 4g tin</span>
       </div>
-      <div class="product-card-cta">Order via Instagram</div>
+      <div style="font-size:12px;color:var(--earth-mid);font-style:italic;margin-top:-0.25rem;font-weight:400">Free US shipping</div>
+      <div class="product-card-cta">Order Now</div>
     </a>
 
-    <a href="https://www.instagram.com/azaadsaffron" target="_blank" class="product-card">
+    <a href="https://buy.stripe.com/14A7sN8L0bA9cOYekb7N602" target="_blank" rel="noopener" class="product-card">
       <div style="margin:-2.5rem -2rem 1.5rem -2rem;overflow:hidden;background:var(--cream-dk);position:relative;cursor:zoom-in" onclick="event.preventDefault();event.stopPropagation();openLightbox('images/azaad-tin-1oz.jpg','Azaad Saffron 1 ounce tin')">
         <img src="images/azaad-tin-1oz.jpg" alt="Azaad Saffron 1 ounce tin of Grade I Super Negin saffron threads, restaurant and catering size" width="1536" height="1024" loading="lazy" decoding="async" style="width:100%;height:auto;display:block;aspect-ratio:4/3;object-fit:cover;object-position:center">
         <div style="position:absolute;bottom:8px;right:8px;background:rgba(20,10,5,0.75);color:var(--gold-lt);font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;padding:4px 8px;text-transform:uppercase;pointer-events:none">View</div>
@@ -1904,18 +1990,18 @@ function loadAnalytics() {
         <span class="price-main">$525</span>
         <span class="price-weight">/ 1 oz tin</span>
       </div>
-      <div class="product-card-cta">Order via Instagram</div>
+      <div style="font-size:12px;color:var(--earth-mid);font-style:italic;margin-top:-0.25rem;font-weight:400">Free US shipping · Signature required</div>
+      <div class="product-card-cta">Order Now</div>
     </a>
 
   </div>
   <p style="font-size:14px;font-style:italic;color:var(--earth-lt);text-align:center;margin-top:2rem;line-height:1.7">
-    To order, send us a DM on Instagram at <a href="https://www.instagram.com/azaadsaffron" target="_blank" style="color:var(--crimson);text-decoration:none">@azaadsaffron</a> or email <a href="/cdn-cgi/l/email-protection#04776568617744657e65656077656262766b6a2a676b69" style="color:var(--crimson);text-decoration:none"><span class="__cf_email__" data-cfemail="ff8c9e939a8cbf9e859e9e9b8c9e99998d9091d19c9092">[email&#160;protected]</span></a> with your quantity and we will confirm availability. Payment via Venmo. We deliver locally in Orange County.
+    Every order ships from Irvine, California via USPS Ground Advantage with tracking. Orders are processed within 2 business days and typically arrive within 5-7 business days of purchase. Free US shipping on 4g and 1oz tins. 1g tins ship for $8 flat. See our <a href="shipping.html" style="color:var(--crimson);text-decoration:none">Shipping Policy</a> and <a href="returns.html" style="color:var(--crimson);text-decoration:none">Returns Policy</a> for details. Questions? Email <a href="mailto:sales@azaadsaffron.com" style="color:var(--crimson);text-decoration:none">sales@azaadsaffron.com</a>.
   </p>
   <p style="font-size:11px;font-style:italic;color:var(--earth-lt);text-align:center;margin-top:1.5rem;line-height:1.6;opacity:0.75;max-width:640px;margin-left:auto;margin-right:auto">
     Azaad Saffron is a food ingredient. Any references to saffron and health are for general educational purposes only and do not constitute medical advice. Our products are not intended to diagnose, treat, cure, or prevent any disease. See our full <a href="terms.html#health-disclaimer" style="color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(200,134,10,0.3)">Health Disclaimer</a>.
   </p>
 
-  
   <div style="margin-top:3rem;max-width:800px;margin-left:auto;margin-right:auto">
     <div style="text-align:center;margin-bottom:1.5rem">
       <div style="font-family:'Cinzel',serif;font-size:9px;letter-spacing:4px;color:var(--gold);text-transform:uppercase">How Much Do I Need?</div>
@@ -1948,7 +2034,6 @@ function loadAnalytics() {
     </p>
   </div>
 
-  
   <div style="margin-top:2rem;max-width:800px;margin-left:auto;margin-right:auto;text-align:center">
     <div style="font-family:'Cinzel',serif;font-size:9px;letter-spacing:4px;color:var(--gold);text-transform:uppercase;margin-bottom:1.25rem">How to Use Saffron</div>
     <div style="display:flex;align-items:flex-start;gap:0;background:var(--cream-dk);border:1px solid rgba(200,134,10,0.12)">
@@ -2105,22 +2190,10 @@ function loadAnalytics() {
 <div class="gold-rule"></div>
 
 <div class="find-section" id="find">
-  <div class="section-tag">Find Azaad</div>
-  <h2 class="section-heading">Verified at the source.<br><em>Trusted at the table.</em></h2>
+  <div class="section-tag">How Ordering Works</div>
+  <h2 class="section-heading">Ordered online.<br><em>Shipped to your door.</em></h2>
 
   <div class="find-grid">
-    <div class="find-card">
-      <div class="find-icon">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-          <circle cx="8" cy="8" r="6" stroke="#C8860A" stroke-width="1"/>
-          <circle cx="8" cy="8" r="2" fill="#C8860A" opacity="0.6"/>
-        </svg>
-      </div>
-      <div class="find-title">Farmers Markets</div>
-      <div class="find-desc">Visit us in person. Open the tin. Smell the difference before you buy.</div>
-      <div class="find-detail">Follow @azaadsaffron for market dates and locations near you.</div>
-    </div>
-
     <div class="find-card">
       <div class="find-icon">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -2128,9 +2201,23 @@ function loadAnalytics() {
           <path d="M5 4V3a3 3 0 016 0v1" stroke="#C8860A" stroke-width="1"/>
         </svg>
       </div>
-      <div class="find-title">Online · Coming Soon</div>
-      <div class="find-desc">Direct ordering through azaadsaffron.com is coming soon. Follow us to be notified at launch.</div>
-      <div class="find-detail">Every order will include batch findings<br>@azaadsaffron for updates</div>
+      <div class="find-title">Order Direct</div>
+      <div class="find-desc">Choose your tin size and check out securely on this site. Payment is handled by Stripe.</div>
+      <div class="find-detail">Cards, Apple Pay, and Google Pay accepted</div>
+    </div>
+
+    <div class="find-card">
+      <div class="find-icon">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M1 5h9v6H1z" stroke="#C8860A" stroke-width="1"/>
+          <path d="M10 7h3l2 2v2h-5z" stroke="#C8860A" stroke-width="1"/>
+          <circle cx="4" cy="12" r="1.3" stroke="#C8860A" stroke-width="1"/>
+          <circle cx="12" cy="12" r="1.3" stroke="#C8860A" stroke-width="1"/>
+        </svg>
+      </div>
+      <div class="find-title">Shipped From Irvine</div>
+      <div class="find-desc">Orders ship from Irvine, California within two business days via USPS Ground Advantage with tracking.</div>
+      <div class="find-detail">Most orders arrive within five to seven business days</div>
     </div>
 
     <div class="find-card">
@@ -2139,10 +2226,59 @@ function loadAnalytics() {
           <path d="M8 2L9.5 6.5H14L10.5 9L12 13.5L8 11L4 13.5L5.5 9L2 6.5H6.5L8 2Z" stroke="#C8860A" stroke-width="1" fill="none"/>
         </svg>
       </div>
-      <div class="find-title">Specialty Retail</div>
-      <div class="find-desc">Azaad will be available at select specialty grocery stores. Follow us for announcements.</div>
-      <div class="find-detail">Retail locations announced via @azaadsaffron</div>
+      <div class="find-title">Verified In Every Tin</div>
+      <div class="find-desc">Every tin carries a lot number and a QR code linking to the independent lab findings for that batch.</div>
+      <div class="find-detail">Nothing hidden. Nothing added.</div>
     </div>
+  </div>
+</div>
+
+<div style="padding:5rem 6rem;background:var(--cream)" id="faq">
+  <div style="max-width:820px;margin:0 auto">
+    <div style="text-align:center;margin-bottom:3rem">
+      <div class="section-tag" style="justify-content:center">Questions</div>
+      <h2 class="section-heading">Answers before<br><em>you order.</em></h2>
+    </div>
+
+    <details class="faq-item">
+      <summary class="faq-q">What makes Azaad saffron high quality?</summary>
+      <div class="faq-a">Azaad is Afghan Super Negin grade, sourced from Herat Province. Every batch is independently tested to ISO 3632 Grade I standards with a minimum crocin reading of 270 or higher. Each tin carries a lot number traceable to its original certificate of analysis, so you can confirm exactly what you are getting.</div>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-q">How can I verify my batch?</summary>
+      <div class="faq-a">Every tin includes a lot number. Scan the QR code on the tin, or visit azaadsaffron.com/verify and enter your lot number to see the independent lab findings for your specific batch. Nothing hidden, nothing added.</div>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-q">Why does saffron cost this much?</summary>
+      <div class="faq-a">Real Grade I saffron is hand-harvested from crocus flowers, and it takes roughly 150,000 flowers to produce a single kilogram. Genuine Grade I retails between 10 and 20 dollars per gram in 2026. Our 1 ounce tin works out to about 18 dollars per gram, which sits within the fair range for premium Super Negin. Anything priced far below that is usually adulterated, underweight, or not Grade I.</div>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-q">How long does saffron last?</summary>
+      <div class="faq-a">Stored in a cool, dark, airtight container, Grade I saffron keeps its quality for three to four years. Every Azaad tin is built for correct storage and carries a Best If Used By date.</div>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-q">Threads or powder, what is the difference?</summary>
+      <div class="faq-a">We sell only whole threads. Whole threads let you verify quality by sight and hold their potency far longer than ground powder. Powder degrades faster and is much easier to adulterate, which is why we never sell it.</div>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-q">How do I order and how fast does it ship?</summary>
+      <div class="faq-a">Order directly on this site with secure checkout through Stripe. Orders ship from Irvine, California within two business days via USPS Ground Advantage with tracking, and most arrive within five to seven business days. Free US shipping on the 4g and 1oz tins. The 1g tin ships for 8 dollars flat.</div>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-q">What if something is wrong with my order?</summary>
+      <div class="faq-a">If your order arrives damaged, incorrect, or does not arrive at all, email sales@azaadsaffron.com within seven days and we will make it right with a replacement, refund, or credit. See our Returns Policy for details.</div>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-q">How do I use saffron if it is my first time?</summary>
+      <div class="faq-a">Bloom the threads first. Steep a pinch in a few tablespoons of warm water or milk for 15 to 20 minutes, then add the liquid and threads to your dish. Our short guide at azaadsaffron.com/blog/how-to-bloom-saffron walks through it.</div>
+    </details>
   </div>
 </div>
 
@@ -2254,25 +2390,25 @@ function loadAnalytics() {
 <div style="background:var(--cream-dk);padding:5rem 4rem;text-align:center" class="email-signup-section">
   <div style="max-width:520px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:1.25rem">
     <div style="font-family:'Cinzel',serif;font-size:9px;letter-spacing:5px;color:var(--gold);text-transform:uppercase">
-      Stay Informed
+      Stay in the Loop
     </div>
     <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(22px,3vw,34px);font-weight:300;color:var(--ink);line-height:1.3">
-      Be the first to know<br><em style="font-style:italic;color:var(--crimson)">when Azaad launches.</em>
+      Cook with us<br><em style="font-style:italic;color:var(--crimson)">all year round.</em>
     </h2>
     <p style="font-size:16px;font-style:italic;color:var(--earth-mid);line-height:1.7;font-weight:300">
-      Farmers market dates, new batch announcements, and early access. Direct to your inbox. Nothing else.
+      Be the first to hear when we share new batch releases, recipes, and notes from our kitchen. No spam, no filler.
     </p>
-    <form action="https://azaadsaffron.us17.list-manage.com/subscribe/post?u=cd7199c77af040962b23ff481&amp;id=9cc8bc795a&amp;f_id=008c4fe0f0" method="POST" target="_blank" style="display:flex;gap:0;width:100%;max-width:420px;margin-top:0.5rem;flex-wrap:wrap">
+    <form action="https://azaadsaffron.us13.list-manage.com/subscribe/post?u=4bbde44bef9a6accca1970094&amp;id=87b83eb70a&amp;f_id=004626eaf0" method="POST" target="_blank" style="display:flex;gap:0;width:100%;max-width:420px;margin-top:0.5rem;flex-wrap:wrap">
       <input type="email" name="EMAIL" placeholder="Your email address" required
         style="flex:1;padding:12px 16px;border:1px solid rgba(200,134,10,0.3);border-right:none;background:var(--cream);font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--ink);outline:none;font-style:italic">
       <!-- Mailchimp bot protection - do not remove -->
       <div aria-hidden="true" style="position:absolute;left:-5000px">
-        <input type="text" name="b_cd7199c77af040962b23ff481_9cc8bc795a" tabindex="-1" value="">
+        <input type="text" name="b_4bbde44bef9a6accca1970094_87b83eb70a" tabindex="-1" value="">
       </div>
       <button type="submit"
         style="font-family:'Cinzel',serif;font-size:8.5px;letter-spacing:2px;background:var(--crimson);color:var(--cream);padding:12px 20px;border:none;cursor:pointer;text-transform:uppercase;white-space:nowrap;transition:background 0.2s"
         onmouseover="this.style.background='#4A0A0A'" onmouseout="this.style.background='#7A1515'">
-        Notify Me
+        Subscribe
       </button>
     </form>
     <p style="font-size:11px;color:var(--earth-lt);font-style:italic;opacity:0.7">
@@ -2314,11 +2450,13 @@ function loadAnalytics() {
       <a href="privacy.html" class="footer-link">Privacy Policy</a>
       <a href="terms.html" class="footer-link">Terms &amp; Conditions</a>
       <a href="terms.html#health-disclaimer" class="footer-link">Health Disclaimer</a>
+      <a href="shipping.html" class="footer-link">Shipping Policy</a>
+      <a href="returns.html" class="footer-link">Returns Policy</a>
     </div>
 
     <div class="footer-col">
       <div class="footer-col-title">Connect</div>
-      <a href="https://www.instagram.com/azaadsaffron" target="_blank" class="footer-link" style="display:flex;align-items:center;gap:8px">
+      <a href="https://www.instagram.com/azaadsaffron" target="_blank" rel="noopener" class="footer-link" style="display:flex;align-items:center;gap:8px">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id="ig-grad" x1="0" y1="24" x2="24" y2="0" gradientUnits="userSpaceOnUse">
@@ -2400,10 +2538,8 @@ document.addEventListener('click', function(e) {
 <div id="email-popup" style="display:none;position:fixed;inset:0;background:rgba(26,14,8,0.7);z-index:999;align-items:center;justify-content:center;padding:1.5rem;backdrop-filter:blur(4px)">
   <div style="background:var(--cream);max-width:480px;width:100%;position:relative;padding:3rem 2.5rem 2.5rem;border-top:4px solid var(--crimson)">
 
-    
     <button onclick="closePopup()" style="position:absolute;top:1rem;right:1rem;background:none;border:none;cursor:pointer;font-size:18px;color:var(--earth-lt);line-height:1;padding:4px 8px" aria-label="Close">×</button>
 
-    
     <div style="text-align:center;margin-bottom:1.25rem">
       <svg width="48" height="48" viewBox="0 0 140 140" fill="none">
         <path d="M70 68 Q58 52 50 30" stroke="#C8860A" stroke-width="2.5" stroke-linecap="round" opacity="0.85"/>
@@ -2424,20 +2560,20 @@ document.addEventListener('click', function(e) {
     </h3>
 
     <p style="font-size:15px;font-style:italic;color:var(--earth-mid);line-height:1.6;text-align:center;margin-bottom:1.5rem;font-weight:300">
-      Farmers market dates, new batch announcements, and early access. Nothing else. Unsubscribe any time.
+      New batch announcements, recipes, and notes from our kitchen. Nothing else. Unsubscribe any time.
     </p>
 
-    <form action="https://azaadsaffron.us17.list-manage.com/subscribe/post?u=cd7199c77af040962b23ff481&amp;id=9cc8bc795a&amp;f_id=008c4fe0f0" method="POST" target="_blank" style="display:flex;flex-direction:column;gap:10px">
+    <form action="https://azaadsaffron.us13.list-manage.com/subscribe/post?u=4bbde44bef9a6accca1970094&amp;id=87b83eb70a&amp;f_id=004626eaf0" method="POST" target="_blank" style="display:flex;flex-direction:column;gap:10px">
       <input type="email" name="EMAIL" placeholder="Your email address" required
         style="width:100%;padding:12px 16px;border:1px solid rgba(200,134,10,0.3);background:var(--cream);font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--ink);outline:none;font-style:italic">
       <!-- Mailchimp bot protection - do not remove -->
       <div aria-hidden="true" style="position:absolute;left:-5000px">
-        <input type="text" name="b_cd7199c77af040962b23ff481_9cc8bc795a" tabindex="-1" value="">
+        <input type="text" name="b_4bbde44bef9a6accca1970094_87b83eb70a" tabindex="-1" value="">
       </div>
       <button type="submit"
         style="width:100%;font-family:'Cinzel',serif;font-size:9px;letter-spacing:3px;background:var(--crimson);color:var(--cream);padding:13px;border:none;cursor:pointer;text-transform:uppercase;transition:background 0.2s"
         onmouseover="this.style.background='#4A0A0A'" onmouseout="this.style.background='#7A1515'">
-        Notify Me at Launch
+        Subscribe
       </button>
     </form>
 
@@ -2451,7 +2587,7 @@ document.addEventListener('click', function(e) {
 <div id="lightbox" onclick="closeLightbox()" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(15,7,4,0.95);z-index:9999;justify-content:center;align-items:center;padding:40px;cursor:zoom-out;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)">
   <button onclick="closeLightbox()" aria-label="Close image" style="position:absolute;top:20px;right:20px;background:rgba(200,134,10,0.15);border:1px solid rgba(200,134,10,0.4);color:var(--gold-lt);width:44px;height:44px;border-radius:50%;font-size:22px;cursor:pointer;font-family:serif;line-height:1;display:flex;align-items:center;justify-content:center;transition:background 0.2s" onmouseover="this.style.background='rgba(200,134,10,0.3)'" onmouseout="this.style.background='rgba(200,134,10,0.15)'">&times;</button>
   <div style="max-width:min(90vw,1200px);max-height:90vh;display:flex;flex-direction:column;align-items:center;gap:1rem" onclick="event.stopPropagation()">
-    <img id="lightbox-img" src="" alt="" style="max-width:100%;max-height:80vh;height:auto;width:auto;display:block;border-radius:4px;box-shadow:0 25px 70px rgba(0,0,0,0.6);border:1px solid rgba(200,134,10,0.2)">
+    <img id="lightbox-img" src="" alt="Azaad Saffron product photo enlarged" style="max-width:100%;max-height:80vh;height:auto;width:auto;display:block;border-radius:4px;box-shadow:0 25px 70px rgba(0,0,0,0.6);border:1px solid rgba(200,134,10,0.2)">
     <div id="lightbox-caption" style="font-family:'Cinzel',serif;font-size:11px;letter-spacing:3px;color:var(--gold-lt);text-transform:uppercase;text-align:center;opacity:0.9"></div>
   </div>
 </div>
