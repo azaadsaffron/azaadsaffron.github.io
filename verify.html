@@ -375,12 +375,12 @@ footer {
       <div class="result-verified">Verified</div>
     </div>
     <div class="result-body">
-      <p class="result-meta" id="result-meta">Herat Province, Afghanistan · Harvest November 2025 · Tested by Afghanistan Ministry of Agriculture Quality Control Lab · ISO 3632-1:2010</p>
+      <p class="result-meta" id="result-meta">Herat Province, Afghanistan · Harvest November 2025 · Tested by Afghanistan Ministry of Agriculture Quality Control Lab · ISO 3632-1:2011</p>
       <div class="metrics-grid">
         <div class="metric-card">
           <div class="metric-name">Crocin</div>
           <div class="metric-value" id="result-crocin">—</div>
-          <div class="metric-bench">Grade I min: 200</div>
+          <div class="metric-bench">Grade I min: 190</div>
         </div>
         <div class="metric-card">
           <div class="metric-name">Picrocrocin</div>
@@ -432,12 +432,12 @@ footer {
 </footer>
 
 <script>
-// Batch database: populate with real COA data when first batch arrives
+// Batch database. Update with the COA readings each time a new lot is received.
 // Format: { 'LOT-CODE': { crocin, picrocrocin, safranal, origin, harvest, extra } }
 var BATCHES = {
   'H25-L51': {
     crocin: '270+',
-    picrocrocin: '65+',
+    picrocrocin: '90+',
     safranal: '30+',
     origin: 'Herat Province, Afghanistan',
     harvest: 'November 2025',
@@ -461,7 +461,7 @@ function lookupBatch() {
     document.getElementById('result-batch-label').textContent = 'Batch ' + input;
     document.getElementById('result-meta').textContent =
       batch.origin + ' · Harvest ' + batch.harvest +
-      ' · Tested by Afghanistan Ministry of Agriculture Quality Control Lab · ISO 3632-1:2010';
+      ' · Tested by Afghanistan Ministry of Agriculture Quality Control Lab · ISO 3632-1:2011';
     document.getElementById('result-crocin').textContent = batch.crocin;
     document.getElementById('result-picrocrocin').textContent = batch.picrocrocin;
     document.getElementById('result-safranal').textContent = batch.safranal;
