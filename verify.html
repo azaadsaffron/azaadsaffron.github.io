@@ -212,10 +212,27 @@ h1 em { font-style: italic; color: var(--crimson); }
   line-height: 1;
   margin-bottom: 0.35rem;
 }
+.metric-sub {
+  font-size: 10px;
+  color: var(--earth-lt);
+  font-style: italic;
+  margin-bottom: 0.6rem;
+  letter-spacing: 0.3px;
+}
 .metric-bench {
   font-size: 11px;
   color: var(--earth-lt);
   font-style: italic;
+  line-height: 1.6;
+}
+.metric-claim {
+  display: block;
+  font-size: 10px;
+  color: var(--earth-lt);
+  font-style: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 0.35rem;
 }
 .result-footer {
   background: var(--cream-dk);
@@ -365,7 +382,7 @@ footer {
       <input type="text" id="lot-input" class="lookup-input" placeholder="e.g. H25-L51" maxlength="20" autocomplete="off">
       <button class="lookup-btn" onclick="lookupBatch()">Verify Batch</button>
     </div>
-    <p class="lookup-hint">Your lot code is printed on the bottom label of your tin next to "LOT CODE".</p>
+    <p class="lookup-hint">Your lot code is printed on the bottom label of your tin, and on the label of bulk pouches. Scanning the QR code brings you straight here with the code already filled in.</p>
   </div>
 
   <!-- Result panel -->
@@ -375,22 +392,31 @@ footer {
       <div class="result-verified">Verified</div>
     </div>
     <div class="result-body">
-      <p class="result-meta" id="result-meta">Herat Province, Afghanistan · Harvest November 2025 · Tested by Afghanistan Ministry of Agriculture Quality Control Lab · ISO 3632-1:2011</p>
+      <p class="result-meta" id="result-meta">Herat Province, Afghanistan · Harvest November 2025 · Tested by Saffron Quality Control Lab, Ministry of Agriculture, Irrigation &amp; Livestock, Afghanistan · ISO 3632-1:2010</p>
       <div class="metrics-grid">
         <div class="metric-card">
           <div class="metric-name">Crocin</div>
+          <div class="metric-sub">Colour strength</div>
           <div class="metric-value" id="result-crocin">—</div>
-          <div class="metric-bench">Grade I min: 190</div>
+          <div class="metric-bench">Category I minimum: 200
+            <span class="metric-claim">Label claim 270+</span>
+          </div>
         </div>
         <div class="metric-card">
           <div class="metric-name">Picrocrocin</div>
+          <div class="metric-sub">Flavour strength</div>
           <div class="metric-value" id="result-picrocrocin">—</div>
-          <div class="metric-bench">Grade I min: 70</div>
+          <div class="metric-bench">Category I minimum: 70
+            <span class="metric-claim">Label claim 90+</span>
+          </div>
         </div>
         <div class="metric-card">
           <div class="metric-name">Safranal</div>
+          <div class="metric-sub">Aroma strength</div>
           <div class="metric-value" id="result-safranal">—</div>
-          <div class="metric-bench">Optimal: 20 to 50</div>
+          <div class="metric-bench">Category I range: 20 to 50
+            <span class="metric-claim">Label claim 30+</span>
+          </div>
         </div>
       </div>
       <p id="result-extra" style="font-size:15px;color:var(--earth-mid);line-height:1.85;font-style:italic;margin-bottom:0.5rem;"></p>
@@ -436,12 +462,12 @@ footer {
 // Format: { 'LOT-CODE': { crocin, picrocrocin, safranal, origin, harvest, extra } }
 var BATCHES = {
   'H25-L51': {
-    crocin: '270+',
-    picrocrocin: '90+',
-    safranal: '30+',
+    crocin: '296.3',
+    picrocrocin: '111.7',
+    safranal: '33.5',
     origin: 'Herat Province, Afghanistan',
     harvest: 'November 2025',
-    extra: 'Artificial colorants: Absent. No additives. Best If Used By: 06/2029.'
+    extra: 'Purity: extraneous matter 0.10% (limit 0.5), foreign matter 0.01% (limit 0.1), moisture 7.5% (limit 10). Artificial colorants: Absent. Best If Used By: 06/2029.'
   }
 };
 
@@ -461,7 +487,7 @@ function lookupBatch() {
     document.getElementById('result-batch-label').textContent = 'Batch ' + input;
     document.getElementById('result-meta').textContent =
       batch.origin + ' · Harvest ' + batch.harvest +
-      ' · Tested by Afghanistan Ministry of Agriculture Quality Control Lab · ISO 3632-1:2011';
+      ' · Tested by Saffron Quality Control Lab, Ministry of Agriculture, Irrigation & Livestock, Afghanistan · ISO 3632-1:2010';
     document.getElementById('result-crocin').textContent = batch.crocin;
     document.getElementById('result-picrocrocin').textContent = batch.picrocrocin;
     document.getElementById('result-safranal').textContent = batch.safranal;
@@ -476,6 +502,28 @@ function lookupBatch() {
 document.getElementById('lot-input').addEventListener('keydown', function(e) {
   if (e.key === 'Enter') lookupBatch();
 });
+
+// Deep link: verify.html?lot=H25-L51 fills the field and runs the lookup,
+// so a QR code on the tin or pouch lands the reader straight on the result.
+(function autoLookupFromUrl() {
+  var lot = null;
+  try {
+    lot = new URLSearchParams(window.location.search).get('lot');
+  } catch (e) {
+    var m = window.location.search.match(/[?&]lot=([^&]+)/);
+    if (m) lot = decodeURIComponent(m[1]);
+  }
+  if (!lot) return;
+  var field = document.getElementById('lot-input');
+  field.value = lot.trim().toUpperCase();
+  lookupBatch();
+  var panel = document.getElementById('result-panel');
+  if (panel.classList.contains('show')) {
+    setTimeout(function () {
+      panel.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 150);
+  }
+})();
 </script>
 
 </body>
